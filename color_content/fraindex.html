@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	body {
+		background-color: lightgray;
+	}
+</style>
+<body>
+	 <a href="" onclick="changeLocation('總制度')">總制度</a><br>
+	 <a href="" onclick="changeLocation('五彩偏裝')">五彩偏裝</a><br>
+	 <a href="" onclick="changeLocation('碾玉裝')">碾玉裝</a><br>
+	 <a href="" onclick="changeLocation('青綠疊暈棱間裝')">青綠疊暈棱間裝</a><br>
+	 <a href="" onclick="changeLocation('解綠裝飾屋舍')">解綠裝飾屋舍</a><br>
+	 <a href="" onclick="changeLocation('丹粉刷飾屋舍')">丹粉刷飾屋舍</a><br>
+	 <a href="" onclick="changeLocation('雜間裝')">雜間裝</a><br>
+	 <a href="" onclick="changeLocation('煉桐油')">煉桐油</a>
+	
+</body>
+<script type="text/javascript">
+	
+	function changeLocation(location) {
+		parent.frames[0].location = 'scan.html#'+location;
+		parent.frames[1].location = 'text.html#'+location;
+	}
+</script>
+</html>
