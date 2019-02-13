@@ -1,0 +1,49 @@
+\begin{thebibliography}{1}
+
+\bibitem{YOLOv3}
+Joseph Redmon and Ali Farhadi.
+\newblock Yolov3: An incremental improvement.
+\newblock volume abs/1804.02767, 2018.
+
+\bibitem{7399427}
+C.~Yao, S.~Hung, G.~Li, I.~Chen, R.~Adhitya, and Y.~Lai.
+\newblock Manga vectorization and manipulation with procedural simple
+  screentone.
+\newblock pages 1070--1084, Feb. 2017.
+
+\bibitem{RedmonF17}
+Joseph Redmon and Ali Farhadi.
+\newblock Yolo9000: Better, faster, stronger.
+\newblock In {\em 2017 (IEEE) Conference on Computer Vision and Pattern
+  Recognition,(CVPR) 2017, Honolulu, HI, USA, July 21-26, 2017}, pages
+  6517--6525, 2017.
+
+\bibitem{DBLP:journals/corr/HeZRS15}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock {\em CoRR}, abs/1512.03385, 2015.
+
+\bibitem{Chen:etal:IROS2017}
+Zetao Chen, Fabiola Maffra, Inkyu Sa, and Margarita Chli.
+\newblock Only look once, mining distinctive landmarks from {ConvNet} for
+  visual place recognition.
+\newblock In {\em Proceedings of the {IEEE/RSJ} Conference on Intelligent
+  Robots and Systems ({IROS})}, 2017.
+
+\bibitem{DBLP:journals/corr/ZeilerF13}
+Matthew~D. Zeiler and Rob Fergus.
+\newblock Visualizing and understanding convolutional networks.
+\newblock {\em CoRR}, abs/1311.2901, 2013.
+
+\bibitem{DBLP:journals/corr/abs-1804-11191}
+Zhuwei Qin, Fuxun Yu, Chenchen Liu, and Xiang Chen.
+\newblock How convolutional neural network see the world - {A} survey of
+  convolutional neural network visualization methods.
+\newblock {\em CoRR}, abs/1804.11191, 2018.
+
+\bibitem{Roesch2017VisualizationON}
+Isabelle Roesch and Tobias G{\"u}nther.
+\newblock Visualization of neural network predictions for weather forecasting.
+\newblock In {\em VMV}, 2017.
+
+\end{thebibliography}

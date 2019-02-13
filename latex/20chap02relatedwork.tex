@@ -1,0 +1,553 @@
+\chapter{相關文獻討論}
+\label{c:2}
+
+%==========================================================================================
+\section{Manga Vectorization and Manipulation with Procedural Simple Screentone.}
+資料來源:\cite{7399427}\par
+影片:\href{video.mp4}{影片}
+       
+\begin{enumerate}
+\item Abstract—Manga are a popular artistic form around the world, and artists use simple line drawing and screentone to create all kinds of interesting productions.
+
+抽象漫畫是全世界流行的藝術形式，藝術家們用簡單的線條畫和網點來創作各種有趣的作品。
+
+
+\item Vectorization is helpful to digitally reproduce these elements for proper content and intention delivery on electronic devices. 
+
+矢量化有助於數字複製這些元素，以便在電子設備上正確傳送內容和意圖。
+
+
+\item Therefore, this study aims at transforming scanned Manga to a vector representation for interactive manipulation and real-time rendering with arbitrary resolution.
+
+因此，本研究旨在將掃描的漫畫轉換為交互式操作的矢量表示，並以任意的分辨率進行實時渲染。
+
+
+\item Our system first decomposes the patch into rough Manga elements including possible borders and shading regions using adaptive binarization and screentone detector.
+
+我們的系統首先使用自適應二值化和網點檢測器將補丁分解成粗糙的漫畫元素，包括可能的邊界和陰影區域。
+
+
+\item We classify detected screentone into simple and complex patterns: our system extracts simple screentone properties for refining screentone borders, estimating lighting, compensating missing strokes inside screentone regions, and later resolution independently rendering with our procedural shaders.
+
+我們將檢測到的網點分類為簡單和復雜的模式：我們的系統提取簡單的網點屬性，用於細化網點邊界，估計光照，補償網點區域內的缺失筆劃，以及後來使用程序著色器獨立渲染的分辨率。
+
+
+\item Our system treats the others as complex screentone areas and vectorizes them with our proposed line tracer which aims at locating boundaries of all shading regions and polishing all shading borders with the curve-based Gaussian refiner.
+
+我們的系統將其他視為複雜的屏幕區域，並使用我們提出的線追踪器對其進行矢量化處理，該追踪器旨在定位所有陰影區域的邊界，並使用基於曲線的高斯細化器來拋光所有陰影邊界。
+
+
+\item A user can lay down simple scribbles to cluster Manga elements intuitively for the formation of semantic components, and our system vectorizes these components into shading meshes along with embedded Be´zier curves as a unified foundation for consistent manipulation including pattern manipulation, deformation, and lighting addition.
+
+用戶可以放置簡單的塗鴉，以形成語義組件，直觀地對漫畫元素進行聚類，我們的系統將這些組件與矢量嵌入的Be'zier曲線一起矢量化為著色網格，作為包括圖案操作，變形和照明在內的一致操作的統一基礎加成。
+
+
+\item Our system can real-time and resolution independently render the shading regions with our procedural shaders and drawing borders with the curve-based shader.
+
+我們的系統可以實時和分辨率獨立地渲染陰影區域與我們的程序著色器和基於曲線的著色器繪製邊界。
+
+
+\item For Manga manipulation, the proposed vector representation can be not only magnified without artifacts but also deformed easily to generate interesting results.
+對於漫畫操作，所提出的矢量表示不僅可以被放大而沒有偽影，而且易於變形以產生有趣的結果。
+
+
+\end{enumerate}
+
+
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+可以讓漫畫放大且沒有偽影，而且能夠易於變形。
+
+
+\item  What is the proposed solution? 該論文解決的方法
+
+線追踪器對其進行矢量化處理，該追踪器旨在定位所有陰影區域的邊界，並使用基於曲線的高斯細化器來拋光所有陰影邊界。
+
+將這些組件與矢量嵌入的貝茲曲線一起矢量化為著色網格，作為包括圖案操作，變形和照明在內的一致操作的統一基礎加成。
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+Show the result.
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+有效的漫畫矢量化和元素分解的操縱管道，語義構件的構建和矢量化，以程式簡單的分佈著色。
+
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+希望開發一個多層次的網點探測器或其他類型的結構探測器來進行更強大的探測。
+
+希望開發一個識別程序和一個程序著色器來產生這些美學陰影效果。
+
+希望開發一個基於Gabor的標識符，用於避免屬性提取的複雜的網點模式。
+
+上下文組件的完成仍然需要大量的手動工作。更多的自動形狀分解與用戶交互較少，類似於抓斗切割是需要的。
+
+
+\end{enumerate}
+%==========================================================================================
+
+
+\section{YOLO9000:Better, Faster, Stronger.}
+資料來源:\cite{RedmonF17}\par
+影片:\href{YOLO 9000 Better Faster Stronger.mp4}{影片}
+       
+\begin{enumerate}
+\item We introduce YOLO9000, a state-of-the-art, real-time object detection system that can detect over 9000 object categories. 
+
+我們介紹YOLO9000，這是一種先進的實時物體檢測系統，可以檢測超過9000個對像類別。
+
+
+\item First we propose various improvements to the YOLO detection method, both novel and drawn from prior work. 
+
+首先，我們提出了對YOLO檢測方法的各種改進，既有新穎的，也有先前的工作。
+
+
+\item The improved model, YOLOv2, is state-of-the-art on standard detection tasks like PASCAL VOC and COCO. 
+
+改進型號YOLOv2是標準檢測任務（如PASCAL VOC和COCO）的最新技術。
+
+
+\item Using a novel, multi-scale training method the same YOLOv2 model can run at varying sizes, offering an easy tradeoff between speed and accuracy. At 67 FPS, YOLOv2 gets 76.8 mAP on VOC 2007. 
+
+使用新穎的多尺度訓練方法，相同的YOLOv2模型可以以不同的尺寸運行，在速度和準確度之間提供簡單的權衡。在67 FPS，YOLOv2在VOC 2007上獲得76.8 mAP。
+
+
+\item At 40 FPS, YOLOv2 gets 78.6 mAP, outperforming state-of-the-art methods like Faster RCNN with ResNet and SSD while still running significantly faster. 
+
+在40 FPS時，YOLOv2獲得78.6 mAP，優於最先進的方法，如使用ResNet和SSD的Faster RCNN，同時運行速度明顯更快。
+
+
+\item Finally we propose a method to jointly train on object detection and classification. Using this method we train YOLO9000 simultaneously on the COCO detection dataset and the ImageNet classification dataset. 
+
+最後，我們提出了一種聯合訓練物體檢測和分類的方法。使用此方法，我們在COCO檢測數據集和ImageNet分類數據集上同時訓練YOLO9000。
+
+
+\item Our joint training allows YOLO9000 to predict detections for object classes that don’t have labelled detection data. We validate our approach on the ImageNet detection task. 
+
+我們的聯合培訓允許YOLO9000預測沒有標記檢測數據的對像類的檢測。我們驗證了ImageNet檢測任務的方法。
+
+
+\item YOLO9000 gets 19.7 mAP on the ImageNet detection validation set despite only having detection data for 44 of the 200 classes. 
+
+YOLO9000在ImageNet檢測驗證集上獲得19.7 mAP，儘管只有200個類中的44個具有檢測數據。
+
+
+\item On the 156 classes not in COCO, YOLO9000 gets 16.0 mAP. 
+
+不在COCO的156個類別中，YOLO9000獲得16.0 mAP。
+
+\item But YOLO can detect more than just 200 classes; it predicts detections for more than 9000 different object categories. And it still runs in real-time.
+
+但是YOLO可以檢測到超過200個類別;它預測超過9000種不同對像類別的檢測。它仍然可以實時運行。
+
+\end{enumerate}
+
+
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+易於尋找要偵測的物體，且數量高達9000種，在時間上能夠在實現real-tiime的偵測。
+
+\item  What is the proposed solution? 該論文解決的方法
+
+提出了一種聯合訓練物體檢測和分類的方法，此新穎的多尺度訓練方法，可以在速度和準確度之間提供簡單的權衡。
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+YOLO9000在ImageNet檢測驗證集上獲得19.7 mAP而不在COCO的156個類別中，YOLO9000獲得16.0 mAP。
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+提出一種新穎的訓練方法，在物體的偵測上實現real-time。
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+希望使用類似的技術進行weakly的監督圖像分割。
+
+希望使用更好的演算法以改進偵測的結果。
+
+
+\end{enumerate}
+
+%==========================================================================================
+
+\section{Deep Residual Learning for Image Recognition. 卷積影像深度學習}
+資料來源:{Microsoft Research.2016 IEEE\cite{DBLP:journals/corr/HeZRS15}}
+影片:\href{Research Talk (in Hindi) Deep Residual Learning for Image Recognition.mp4}{影片}
+      
+\begin{enumerate}
+\item Deeper neural networks are more difficult to train. 
+
+更深入的神經網絡更難訓練。
+
+\item We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. 
+
+我們提出了一個殘留的學習框架，以便於對比以前使用的網絡深度更深的網絡進行培訓。
+
+\item We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. 
+
+我們明確地將層重新組合為參考層輸入的學習殘差函數，而不是學習未引用的函數。
+
+\item We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. 
+
+我們提供全面的經驗證據表明這些殘留網絡更容易優化，並且可以從顯著增加的深度獲得準確性。
+
+\item On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers—8× deeper than VGG nets [40] but still having lower complexity. 
+
+在ImageNet數據集上，我們評估了深度高達152層的殘留網絡 - 比VGG網絡深8倍[40]，但仍然具有較低的複雜度。
+
+\item An ensemble of these residual nets achieves 3.57％ error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. 
+
+這些殘留網絡的集合在ImageNet測試集上實現了3.57％的誤差。該結果在ILSVRC 2015分類任務中獲得第一名。
+
+\item We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. 
+
+我們還提供了100和1000層的CIFAR-10分析。表示的深度對於許多視覺識別任務而言至關重要。
+
+\item Solely due to our extremely deep representations, we obtain a 28％ relative improvement on the COCO object detection dataset. 
+
+僅僅由於我們極其深刻的表示，我們在COCO對象檢測數據集上獲得了28％的相對改進。
+
+\item Deep residual nets are foundations of our submissions to ILSVRC ＆ COCO 2015 competitions1 , where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.
+
+深度殘留網是我們向ILSVRC和COCO 2015競賽1提交的基礎，我們還在ImageNet檢測，ImageNet定位，COCO檢測和COCO分割任務中獲得了第一名。
+
+\end{enumerate}
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+讓殘留網絡更容易優化，並且可以增加的深度網路獲得準確性。
+
+
+\item  What is the proposed solution? 該論文解決的方法
+
+提出一個新的深度殘留的學習框架，培訓深度能比以往的深度網路更深。
+
+重新組合參考層的函數，而不是一直新增新的函數。
+
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+在ImageNet測試集上實作，而誤差只有3.57％
+
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+為ILSVRC(ImageNet Large Scale Visual Recognition Challenge)和COCO 競賽的基礎
+
+ImageNet大規模視覺識別挑戰（ILSVRC）評估大規模物體檢測和圖像分類的算法。一個高級別的動機是讓研究人員比較各種物體的檢測進度 - 利用相當昂貴的標籤工作。另一個動機是測量用於檢索和註釋的大規模圖像索引的計算機視覺的進展。
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+目前只是通過設計將deep層與thin層進行正則化，未來會改善其結果，結合更強的正規化方式。
+
+\end{enumerate}
+
+%==========================================================================================
+
+\section{Only Look Once, Mining Distinctive Landmarks from ConvNet for Visual Place Recognition.只看一次，在ConvNet找到特殊的地標，用於地點識別}
+資料來源:{2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)\cite{Chen:etal:IROS2017}}
+\\
+影片:\href{1331_VI.mp4}{影片}
+      
+\begin{enumerate}
+\item Recently, image representations derived from Convolutional Neural Networks (CNNs) have been demonstrated to achieve impressive performance on a wide variety of tasks, including place recognition.\\
+
+最近，已經證明來自卷積神經網絡（CNN）的圖像表示在包括位置識別在內的各種任務上實現了令人印象深刻的性能。
+
+\item In this paper, we take a step deeper into the internal structure of CNNs and propose novel CNN-based image features for place recognition by identifying salient regions and creating their regional representations directly from the convolutional layer activations.\\
+
+在本文中，我們更深入地了解CNN的內部結構，並通過識別顯著區域並直接從卷積層激活創建區域表示，提出用於位置識別的新穎的基於CNN的圖像特徵。
+
+\item A range of experiments is conducted on challenging datasets with varied conditions and viewpoints.  \\
+
+在具有不同條件和觀點的具有挑戰性的數據集上進行了一系列實驗。
+
+\item These reveal superior precision-recall characteristics and robustness against both viewpoint and appearance variations for the proposed approach over the state of the art. \\
+
+這些揭示了針對現有技術的所提出的方法的優異的精確回憶特性和針對視點和外觀變化的穩固性。
+
+\item By analyzing the feature encoding process of our approach, we provide insights into what makes an image presentation robust against external variations. \\
+
+通過分析我們方法的特徵編碼過程，我們可以深入了解圖像呈現對外部變化的穩固性。
+
+\end{enumerate}
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+實作卷積神經網路，改善演算法，應用在識別區域的特徵，並回饋一個相似的圖片。
+
+\item  What is the proposed solution? 該論文解決的方法
+
+部分解析卷積神經網路的運作過程與比較，以視覺化的方式呈現。
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+使用Caffe在TitanX的設備下輸入單張圖片，先經過VGG16網絡約為59.4𝑚𝑠，在經過他們在Matlab提出的方法編譯約349𝑚𝑠，最後進行兩圖像匹配約7𝑚𝑠，可以在近乎一秒內找出一個相似的圖片。
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+1.一種新穎的基於CNN的特徵編碼方法，用於創建能夠描述若干不同圖像區域的圖像表示，而無需向CNN饋送多個輸入。
+
+2.基於區域的視覺位置識別系統，可同時處理視點和條件的變化。
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+在本論文中，是使用CNN中預訓練過的對象進行辨識，因此未來希望改善CNN以提高性能。
+
+
+\end{enumerate}
+
+%==========================================================================================
+
+\section{Visualizing and Understanding Convolutional Networks}
+資料來源:{Dept. of Computer Science,New York University, USA\cite{DBLP:journals/corr/ZeilerF13}}
+\\
+影片:\href{1331_VI.mp4}{影片}
+      
+\begin{enumerate}
+
+\item Large Convolutional Network models have recently demonstrated impressive classification performance on the ImageNet benchmark Krizhevsky et al. [18]. 
+
+大型捲積網絡模型最近在ImageNet基準測試Krizhevsky等人上展示了令人印象深刻的分類性能。
+
+\item However there is no clear understanding of why they perform so well, or how they might be improved. 
+
+然而，沒有明確的理解他們為什麼表現如此之好，或者如何改進它們。
+
+\item In this paper we explore both issues. 
+
+在本文中，我們探討了這兩個問題。
+
+\item We introduce a novel visualization technique that gives insight into the function of intermediate feature layers and the operation of the classifier. 
+
+我們介紹了一種新穎的可視化技術，可以深入了解中間特徵層的功能和分類器的操作。
+
+\item Used in a diagnostic role, these visualizations allow us to find model architectures that outperform Krizhevsky et al. 
+
+這些可視化用於診斷角色，使我們能夠找到優於Krizhevsky等人的模型架構。
+
+\item on the ImageNet classification benchmark. 
+
+在ImageNet分類基准上。
+
+\item We also perform an ablation study to discover the performance contribution from different model layers. 
+
+我們還進行消融研究，以發現不同模型層的性能貢獻。
+
+\item We show our ImageNet model generalizes well to other datasets: when the softmax classifier is retrained, it convincingly beats the current state-ofthe-art results on Caltech-101 and Caltech-256 datasets.
+
+我們展示了我們的ImageNet模型很好地概括了其他數據集：當softmax分類器被重新訓練時，它令人信服地擊敗了Caltech-101和Caltech-256數據集的當前最先進的結果。
+
+\end{enumerate}
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+介紹卷積神經網路，並將中間的layer視覺化出來
+
+\item  What is the proposed solution? 該論文解決的方法
+
+實作並敘述卷積神經網路的原理，將其步驟以圖片展現出來。
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+比Caltech-101和Caltech-256數據集的分類結果更為精準。
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+其目的是詳細介紹卷積神經網路的原理，讓人更容易了解。
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+當時的卷積神經網路演算過程還較為簡易，可以挑戰其他卷積神經網路的應用。
+
+\end{enumerate}
+
+%==========================================================================================
+
+\section{Visualizing Convolutional Neural Networks for Image Classification}
+資料來源:{Dept. of Computer Science,New York University, USA\cite{DBLP:journals/corr/abs-1804-11191}}
+\\
+影片:\href{1331_VI.mp4}{影片}
+      
+\begin{enumerate}
+
+\item Deep convolutional neural networks have recently shown state of the art performance on image classiﬁcation problems. \\
+最近，深度卷積神經網絡顯示了圖像分類問題的最新性能。
+
+\item However, their inner workings remain a mystery to machine learning experts, particularly when compared to better studied and less complex algorithms such as SVM and Logistic Regression. 
+\\然而，他們的工作主要是神秘的機械學習專家，特別是與更好的研究和不太複雜的算法（如SVM和Logistic回歸）相比。
+
+\item As a result, constructing and debugging effective convolutional neural networks is time-consuming and error-prone, as it often involves a substantial amount of trial and error. \\
+因此，構建和調試有效的捲積神經網絡既費時又容易出錯，因為它經常涉及大量的反複試驗。
+
+\item We introduce deepViz, a system designed to allow experts to understand their models and diagnose issues with the model structure, enabling more rapid iteration during the model construction process and faster convergence to a suitable model for the task at hand.\\
+我們介紹了deepViz，這是一個系統，旨在讓專家了解他們的模型並診斷模型結構的問題，在模型構建過程中實現更快速的迭代，並且更快收斂到手頭任務的合適模型。
+
+\end{enumerate}
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+解析卷積神經網路的內容，在以視覺化呈現
+
+\item  What is the proposed solution? 該論文解決的方法
+
+該論文開發了Deep Viz 可以將卷積神經網路解析並呈現
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+能夠讓專家快速的了解卷積神經網路的架構，以便快速分析
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+提出了一個可視化工具deepViz，旨在幫助專家理解和診斷卷積神經網絡視覺分類問題。
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+未來可改善其可視化的技術，以更好的方式呈現
+
+\end{enumerate}
+
+%==========================================================================================
+
+\section{Visualization of Neural Network Predictions for Weather Forecasting}
+資料來源:{COMPUTER GRAPHICS forumVolume 00 (2018), number 0 pp. 1–12 \cite{Roesch2017VisualizationON}}
+\\
+影片:\href{Visualization of Neural Network Predictions for Weather Forecasting (VMV 2017).mp4}{影片}
+      
+\begin{enumerate}
+
+\item Recurrent neural networks are prime candidates for learning evolutions in multi-dimensional time series data. \\
+遞迴神經網絡是用於學習多維時間序列數據中的演化的主要者。\\
+
+\item The performance of such a network is judged by the loss function, which is aggregated into a scalar value that decreases during training. \\
+這種網絡的性能由損失函數判斷，該函數被聚合成在訓練期間減小的標量值。\\
+
+\item Observing only this number hides the variation that occurs within the typically large training and testing data sets. \\
+僅觀察此數字會隱藏通常較大的訓練和測試數據集中發生的變化。\\
+
+\item Understanding these variations is of highest importance to adjust network hyper-parameters, such as the number of neurons, number of layers or to adjust the training set to include more representative examples. \\
+理解這些變化對於調整網絡超參數是最重要的，例如神經元的數量，層數或調整訓練集以包括更具代表性的示例。\\
+
+\item In this paper, we design a comprehensive and interactive system that allows users to study the output of recurrent neural networks on both the complete training data and testing data. \\
+在本文中，我們設計了一個全面的交互式系統，允許用戶在完整的訓練數據和測試數據上研究遞歸神經網絡的輸出。\\
+
+\item We follow a coarse-to-fine strategy, providing overviews of annual, monthly and daily patterns in the time series and directly support a comparison of different hyper-parameter settings. \\
+我們遵循粗略到精細的策略，提供時間序列中年度，月度和日常模式的概述，並直接支持不同超參數設置的比較。\\
+
+\item We applied our method to a recurrent convolutional neural network that was trained and tested on 25 years of climate data to forecast meteorological attributes, such as temperature, pressure and wind velocity. \\
+我們將我們的方法應用於循環卷積神經網絡，該網絡經過25年的氣候數據訓練和測試，以預測氣象屬性，如溫度，壓力和風速。\\
+
+\item We further visualize the quality of the forecasting models, when applied to various locations on the Earth and we examine the combination of several forecasting models.\\
+我們進一步可視化預測模型的質量，當應用於地球上的各個位置時，我們檢查了幾種預測模型的組合。
+
+\end{enumerate}
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+RNN的常用方法是使用一系列先前時間步驟來預測下一步驟。會導致無法一次顯示的非常大的數據集。
+
+\item  What is the proposed solution? 該論文解決的方法
+
+設計了一個全面的交互式系統，允許用戶在完整的訓練數據和測試數據上研究遞歸神經網絡的輸出。
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+使用1990年至1999年的數據來訓練1990年至2016年的模型和數據。訓練時間為6小時。該分辨率在我們的初始測試中表現最佳。
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+評估誤差在2016年的溫度預測中取平均值，並在最大誤差為華氏10度。
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+改善現在的神經網路系統，加上殘差神經網路，以用來訓練及預測其他屬性。
+
+\end{enumerate}
+
+%==========================================================================================
+
+\section{Deep learning for computational biology}
+資料來源:{COMPUTER GRAPHICS forumVolume 00 (2018), number 0 pp. 1–12 \cite{Roesch2017VisualizationON}}
+\\
+影片:\href{Visualization of Neural Network Predictions for Weather Forecasting (VMV 2017).mp4}{影片}
+      
+\begin{enumerate}
+
+\item Technological advances in genomics and imaging have led to an explosion of molecular and cellular profiling data from large numbers of samples.  \\
+基因學和視覺化技術的進步導致大量分子和細胞樣本的分析數據以爆炸式的增長。\\
+
+\item This rapid increase in biological data dimension and acquisition rate is challenging conventional analysis strategies.  \\
+生物數據維度和採集速率的這種快速增長正在挑戰傳統的分析策略。\\
+
+\item Modern machine learning methods, such as deep learning, promise to leverage very large data sets for finding hidden structure within them, and for making accurate predictions.  \\
+現代機器學習方法，例如深度學習，有望利用大數據來尋找其中的隱藏結構，並進行準確的預測。\\
+
+\item In this review, we discuss applications of this new breed of analysis approaches in regulatory genomics and cellular imaging.  \\
+在本論文中，我們討論了這種新型分析方法在監管基因學和細胞成像中的應用。\\
+
+\item We provide background of what deep learning is, and the settings in which it can be successfully applied to derive biological insights.  \\
+我們提供深度學習的背景，以及可以成功應用以獲得生物學見解的設置。\\
+
+\item In addition to presenting specific applications and providing tips for practical use, we also highlight possible pitfalls and limitations to guide computational biologists when and how to make the most use of this new technology. \\
+除了提供具體應用並提供實際使用技巧外，我們還強調了可能存在的缺陷和局限性，以指導計算生物學家何時以及如何充分利用這項新技術。\\
+
+
+\end{enumerate}
+
+%==========================================================================================
+\subsection{回答下列問題}
+
+\begin{enumerate}
+\item  What are motivations for this work? 該論文解決的問題  
+
+在基因學及細胞成像成熟的現今，能夠快速辨識與預測是其中最重要的事項。
+
+\item  What is the proposed solution? 該論文解決的方法
+
+利用機器學習、監督式學習以及卷積神經網路作為物件偵測與分類。
+
+\item  What is the evaluation of the proposed solution?該論文作者如何評估其結果? (問卷,量測時間數據, 實驗…)
+
+在更深層數階層中，更能找到偵測物體的特徵，會更容易進行分類。
+
+\item  What are the contributions? 該論文的貢獻為和?
+
+讓計算生物學家尋找基因學中的隱藏結構，並進行準確的預測。
+
+\item  What are future directions for this research? 未來研究方向可以為何?
+
+改善參數與優化。使軟體能夠使用深度學習在更多的生物學問題上。
+
+\end{enumerate}

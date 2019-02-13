@@ -1,0 +1,89 @@
+\chapter{導論}
+\label{c:1}
+
+%==========================================================================================
+\section{導論}
+%首先界定您的研究問題的研究領域並說明此領域在廣度上的重要性。
+卷積神經網路為近年來在物件偵測及辨識度上表現最為突出的深度學習架構，本論文中，我們選定現在在物件偵測上效能與辨識度最高的YOLO(You Only Look Once)作為解析的範本，介紹卷積神經網路的運作過程，比較其他種物件偵測的演算法，拆解YOLO內部的運作過程，探討YOLO能夠領先於其他演算法的關鍵原因。\\
+%指出問題的研究動機:也就是在此研究領域上，有何新研究問題需要被解決？ 前人的成果中有那些缺失處或未考慮的因素？或有那一些傳統難題未被徹底解決的?
+在卷積神經網路中，目前我們所知若是將神經網路的深度加高，可以提升準確率，但過多的深度卻會造成其效率降低。所以現今大部分的演算法只能使用試誤法，以低效率的方式去測驗比較此演算法，粗略估計此演算法的深度與效能達到平衡，常常會有過高的深度或準確率未達預期的情形發生，為了解決此問題，本論文著重於解析卷積神經網路的架構及其運作方法，以簡單明瞭的方式闡述其過程，並且分析原本架構的問題，改善原本的架構。\\
+%與其他的比較
+以往的論文幾乎沒有以視覺化的方式解析卷積神經網路的運作原理，所以在本論文中，希望能以簡單清晰的方式讓人們了解卷積神經網路，並且能在網頁上呈現，其操作性較為直覺性，能夠馬上知道目前選取的位置的功能與效果。
+
+%前述的問題期望如何被解決：如降低演算法的時間複雜度或減少電源的耗費或降低網路部署的成本等。儘可能提出明確的方向，如可量化的數量或質性的改善。說明你要解決或是想更進一步瞭解的問題?
+%==========================================================================================
+\section{Figure}
+\label{ss:Figure}
+\begin{figure}[htpb!]
+  \centering
+    \includegraphics[width=0.5\textwidth]{fig/tiger.jpeg}
+    \caption{\label{fig:tiger}A picture of a tiger.}
+\end{figure}
+
+Figure~\ref{fig:tiger} is a picture of a tiger.
+
+
+
+%==========================================================================================
+\section{Table}
+\label{ss:Table}
+
+\href{http://en.wikibooks.org/wiki/LaTeX/Tables}{Table examples on WIKIBOOKS}.
+
+\begin{table}[htpb]\begin{center}
+\caption{Table Example 1}
+\begin{tabularx}{8cm}{llX}
+\hline
+Start & End  & Character Block Name \\
+\hline
+3400  & 4DB5 & CJK Unified Ideographs Extension A \\
+4E00  & 9FFF & CJK Unified Ideographs \\
+\hline
+\end{tabularx}
+ \end{center}\end{table}
+
+\begin{table}[htpb]\begin{center}
+\caption{Table Example 2}
+\begin{tabular}{llr}
+\hline
+\multicolumn{2}{c}{Item} \\
+\cline{1-2}
+Animal & Description & Price (\$) \\
+\hline
+Gnat  & per gram & 13.65 \\
+      & each     &  0.01 \\
+Gnu   & stuffed  & 92.50 \\
+Emu   & stuffed  & 33.33 \\
+Armadillo & frozen & 8.99 \\
+\hline
+\end{tabular}
+ \end{center}\end{table}
+
+ \begin{table}[htpb]\begin{center}
+	\label{t:prefix-table}
+	\caption{Table Example 3}
+	\renewcommand{\arraystretch}{1.0}
+	\begin{tabularx}{300pt}{|c|X| }
+		\hline
+		\multirow{1}{*}{\textbf{Allocation}} &
+		Allocation, Element, Type, Script
+		\\ \hline\hline
+		%------------------------------
+		\multirow{6}{*}{\textbf{Data Types}} &
+        Byte2, Byte3, and Byte4\\ &
+        Float2, Float3, Float4\\ &
+        Int2, Int3, Int4\\ &
+        Long2, Long3, Long4\\ &
+        Matrix2f, Matrix3f, Matrix4f\\ &
+        Short2, Short3, Short4
+        \\ \hline\hline
+		%------------------------------
+		\multirow{4}{*}{\textbf{Graphics}} &
+		Mesh\\&
+		ProgramFragment, ProgramRaster\\&
+		ProgramStore, ProgramVertex\\&
+		RSSurfaceView
+		\\ \hline
+		%------------------------------
+	\end{tabularx}
+\end{center}\end{table}
