@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  11 FEB 2019 16:39
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  18 FEB 2019 14:15
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1144,6 +1144,26 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 . Defining environment 'PSTcode' with sig. 'O{}' on line 309.
 .................................................
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip74
+\subfigcapskip=\skip75
+\subfigcaptopadj=\dimen332
+\subfigbottomskip=\skip76
+\subfigcapmargin=\dimen333
+\subfiglabelskip=\skip77
+\c@subfigure=\count301
+\c@lofdepth=\count302
+\c@subtable=\count303
+\c@lotdepth=\count304
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip78
+\subfig@bottom=\skip79
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\afterpage.sty"
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 \AP@output=\toks56
@@ -1152,12 +1172,12 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
-\TX@col@width=\dimen332
-\TX@old@table=\dimen333
-\TX@old@col=\dimen334
-\TX@target=\dimen335
-\TX@delta=\dimen336
-\TX@cols=\count301
+\TX@col@width=\dimen334
+\TX@old@table=\dimen335
+\TX@old@col=\dimen336
+\TX@target=\dimen337
+\TX@delta=\dimen338
+\TX@cols=\count305
 \TX@ftn=\toks57
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
@@ -1284,54 +1304,54 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headfont=\toks60
 \thm@notefont=\toks61
 \thm@headpunct=\toks62
-\thm@preskip=\skip74
-\thm@postskip=\skip75
-\thm@headsep=\skip76
+\thm@preskip=\skip80
+\thm@postskip=\skip81
+\thm@headsep=\skip82
 \dth@everypar=\toks63
 )
-\c@mydef-no-caption=\count302
+\c@mydef-no-caption=\count306
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\numprint\numprint.sty"
 Package: numprint 2012/08/20 v1.39 Print numbers (HH)
-\c@nprt@mantissa@digitsbefore=\count303
-\c@nprt@mantissa@digitsafter=\count304
-\c@nprt@exponent@digitsbefore=\count305
-\c@nprt@exponent@digitsafter=\count306
-\nprt@digitwidth=\skip77
-\nprt@sepwidth=\skip78
-\nprt@decimalwidth=\skip79
-\nprt@blockwidth=\skip80
+\c@nprt@mantissa@digitsbefore=\count307
+\c@nprt@mantissa@digitsafter=\count308
+\c@nprt@exponent@digitsbefore=\count309
+\c@nprt@exponent@digitsafter=\count310
+\nprt@digitwidth=\skip83
+\nprt@sepwidth=\skip84
+\nprt@decimalwidth=\skip85
+\nprt@blockwidth=\skip86
 \nprt@digittoks=\toks64
 \nprt@pretoks=\toks65
 \nprt@posttoks=\toks66
-\nprt@thisdigit=\count307
-\nprt@curpos=\count308
-\nprt@rndpos=\count309
-\c@nprt@digitsfirstblock=\count310
-\c@nprt@blockcnt=\count311
-\c@nprt@cntprint=\count312
+\nprt@thisdigit=\count311
+\nprt@curpos=\count312
+\nprt@rndpos=\count313
+\c@nprt@digitsfirstblock=\count314
+\c@nprt@blockcnt=\count315
+\c@nprt@cntprint=\count316
 
 No configuration file `numprint.cfg' found.)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip81
-\multirow@cntb=\count313
-\multirow@dima=\skip82
-\bigstrutjot=\dimen337
+\multirow@colwidth=\skip87
+\multirow@cntb=\count317
+\multirow@dima=\skip88
+\bigstrutjot=\dimen339
 ) (ntut.sty
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count314
-\Gm@cntv=\count315
-\c@Gm@tempcnt=\count316
-\Gm@bindingoffset=\dimen338
-\Gm@wd@mp=\dimen339
-\Gm@odd@mp=\dimen340
-\Gm@even@mp=\dimen341
-\Gm@layoutwidth=\dimen342
-\Gm@layoutheight=\dimen343
-\Gm@layouthoffset=\dimen344
-\Gm@layoutvoffset=\dimen345
+\Gm@cnth=\count318
+\Gm@cntv=\count319
+\c@Gm@tempcnt=\count320
+\Gm@bindingoffset=\dimen340
+\Gm@wd@mp=\dimen341
+\Gm@odd@mp=\dimen342
+\Gm@even@mp=\dimen343
+\Gm@layoutwidth=\dimen344
+\Gm@layoutheight=\dimen345
+\Gm@layouthoffset=\dimen346
+\Gm@layoutvoffset=\dimen347
 \Gm@dimlist=\toks67
 
 ("C:\Program Files\MiKTeX 2.9\tex\xelatex\xetexconfig\geometry.cfg"))
@@ -1341,12 +1361,12 @@ Package: fontspec 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fontspec\fontspec-xetex.sty"
 Package: fontspec-xetex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
 X
-\l_fontspec_script_int=\count317
-\l_fontspec_language_int=\count318
-\l_fontspec_strnum_int=\count319
-\l__fontspec_tmpa_dim=\dimen346
-\l__fontspec_tmpb_dim=\dimen347
-\l__fontspec_tmpc_dim=\dimen348
+\l_fontspec_script_int=\count321
+\l_fontspec_language_int=\count322
+\l_fontspec_strnum_int=\count323
+\l__fontspec_tmpa_dim=\dimen348
+\l__fontspec_tmpb_dim=\dimen349
+\l__fontspec_tmpc_dim=\dimen350
 \g__file_internal_ior=\read5
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
@@ -1373,7 +1393,7 @@ LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
 ("C:\Program Files\MiKTeX 2.9\tex\latex\euenc\eu1lmss.fd"
 File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-\tipaTiiicode=\count320
+\tipaTiiicode=\count324
 \tipasavetokens=\toks68
 \tipachecktokens=\toks69
 )
@@ -1482,15 +1502,15 @@ File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 . 
 . Defining command \DeclareFontsExtensions with sig. 'm' on line 599.
 .................................................
-\l__fontspec_tmp_int=\count321
+\l__fontspec_tmp_int=\count325
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fontspec\fontspec.cfg")
 LaTeX Info: Redefining \itshape on input line 2705.
 LaTeX Info: Redefining \slshape on input line 2710.
 LaTeX Info: Redefining \scshape on input line 2715.
 LaTeX Info: Redefining \upshape on input line 2720.
-\l__fontspec_em_int=\count322
-\l__fontspec_emdef_int=\count323
+\l__fontspec_em_int=\count326
+\l__fontspec_emdef_int=\count327
 LaTeX Info: Redefining \em on input line 2736.
 LaTeX Info: Redefining \emph on input line 2742.
 LaTeX Info: Redefining \- on input line 2746.
@@ -1511,26 +1531,26 @@ Package: xeCJK 2016/12/02 v3.4.4 Typesetting CJK scripts with XeLaTeX
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xtemplate\xtemplate.sty"
 Package: xtemplate 2016/11/21 v6760 L3 Experimental prototype document function
 s
-\l__xtemplate_tmp_dim=\dimen349
-\l__xtemplate_tmp_int=\count324
+\l__xtemplate_tmp_dim=\dimen351
+\l__xtemplate_tmp_int=\count328
 \l__xtemplate_tmp_muskip=\muskip18
-\l__xtemplate_tmp_skip=\skip83
+\l__xtemplate_tmp_skip=\skip89
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
 Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 )
-\l__xeCJK_tmp_int=\count325
+\l__xeCJK_tmp_int=\count329
 \l__xeCJK_tmp_box=\box84
-\l__xeCJK_tmp_dim=\dimen350
-\l__xeCJK_tmp_skip=\skip84
+\l__xeCJK_tmp_dim=\dimen352
+\l__xeCJK_tmp_skip=\skip90
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \xeCJKShipoutHook with sig. '' on line 148.
 .................................................
-\g__xeCJK_spacefactor_int=\count326
-\l__xeCJK_begin_int=\count327
-\l__xeCJK_end_int=\count328
+\g__xeCJK_spacefactor_int=\count330
+\l__xeCJK_begin_int=\count331
+\l__xeCJK_end_int=\count332
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1576,22 +1596,22 @@ Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 . 
 . Defining command \xeCJKResetCharClass with sig. '' on line 631.
 .................................................
-\l__xeCJK_last_skip=\skip85
-\g__xeCJK_node_int=\count329
-\c__xeCJK_CJK_node_dim=\dimen351
-\c__xeCJK_CJK-space_node_dim=\dimen352
-\c__xeCJK_default_node_dim=\dimen353
-\c__xeCJK_default-space_node_dim=\dimen354
-\c__xeCJK_CJK-widow_node_dim=\dimen355
-\c__xeCJK_normalspace_node_dim=\dimen356
-\l__xeCJK_ccglue_skip=\skip86
-\l__xeCJK_ecglue_skip=\skip87
+\l__xeCJK_last_skip=\skip91
+\g__xeCJK_node_int=\count333
+\c__xeCJK_CJK_node_dim=\dimen353
+\c__xeCJK_CJK-space_node_dim=\dimen354
+\c__xeCJK_default_node_dim=\dimen355
+\c__xeCJK_default-space_node_dim=\dimen356
+\c__xeCJK_CJK-widow_node_dim=\dimen357
+\c__xeCJK_normalspace_node_dim=\dimen358
+\l__xeCJK_ccglue_skip=\skip92
+\l__xeCJK_ecglue_skip=\skip93
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \xeCJKnobreak with sig. '' on line 1470.
 .................................................
-\l__xeCJK_widow_penalty_int=\count330
+\l__xeCJK_widow_penalty_int=\count334
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1624,25 +1644,25 @@ Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 . Declaring object type 'xeCJK/punctuation' taking \c_zero  argument(s) on
 . line 1925.
 .................................................
-\l__xeCJK_fixed_punct_width_dim=\dimen357
-\l__xeCJK_mixed_punct_width_dim=\dimen358
-\l__xeCJK_middle_punct_width_dim=\dimen359
-\l__xeCJK_fixed_margin_width_dim=\dimen360
-\l__xeCJK_mixed_margin_width_dim=\dimen361
-\l__xeCJK_middle_margin_width_dim=\dimen362
-\l__xeCJK_bound_punct_width_dim=\dimen363
-\l__xeCJK_bound_margin_width_dim=\dimen364
-\l__xeCJK_margin_minimum_dim=\dimen365
-\l__xeCJK_kerning_total_width_dim=\dimen366
-\l__xeCJK_same_align_margin_dim=\dimen367
-\l__xeCJK_different_align_margin_dim=\dimen368
-\l__xeCJK_kerning_margin_width_dim=\dimen369
-\l__xeCJK_kerning_margin_minimum_dim=\dimen370
-\l__xeCJK_bound_dim=\dimen371
-\l__xeCJK_reverse_bound_dim=\dimen372
-\l__xeCJK_minimum_bound_dim=\dimen373
-\l__xeCJK_kerning_margin_dim=\dimen374
-\l__xeCJK_original_margin_dim=\dimen375
+\l__xeCJK_fixed_punct_width_dim=\dimen359
+\l__xeCJK_mixed_punct_width_dim=\dimen360
+\l__xeCJK_middle_punct_width_dim=\dimen361
+\l__xeCJK_fixed_margin_width_dim=\dimen362
+\l__xeCJK_mixed_margin_width_dim=\dimen363
+\l__xeCJK_middle_margin_width_dim=\dimen364
+\l__xeCJK_bound_punct_width_dim=\dimen365
+\l__xeCJK_bound_margin_width_dim=\dimen366
+\l__xeCJK_margin_minimum_dim=\dimen367
+\l__xeCJK_kerning_total_width_dim=\dimen368
+\l__xeCJK_same_align_margin_dim=\dimen369
+\l__xeCJK_different_align_margin_dim=\dimen370
+\l__xeCJK_kerning_margin_width_dim=\dimen371
+\l__xeCJK_kerning_margin_minimum_dim=\dimen372
+\l__xeCJK_bound_dim=\dimen373
+\l__xeCJK_reverse_bound_dim=\dimen374
+\l__xeCJK_minimum_bound_dim=\dimen375
+\l__xeCJK_kerning_margin_dim=\dimen376
+\l__xeCJK_original_margin_dim=\dimen377
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1660,7 +1680,7 @@ Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 . 
 . Defining command \setCJKfallbackfamilyfont with sig. 'mom' on line 2528.
 .................................................
-\g__xeCJK_family_int=\count331
+\g__xeCJK_family_int=\count335
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1722,9 +1742,9 @@ Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 . 
 . Defining command \setCJKmathfont with sig. 'om' on line 3275.
 .................................................
-\l__xeCJK_fam_int=\count332
-\g__xeCJK_fam_allocation_int=\count333
-\l__xeCJK_verb_case_int=\count334
+\l__xeCJK_fam_int=\count336
+\g__xeCJK_fam_allocation_int=\count337
+\l__xeCJK_verb_case_int=\count338
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1735,7 +1755,7 @@ Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 . 
 . Defining command \xeCJKOffVerbAddon with sig. '' on line 3519.
 .................................................
-\l__xeCJK_verb_exspace_skip=\skip88
+\l__xeCJK_verb_exspace_skip=\skip94
 
 ("C:\Program Files\MiKTeX 2.9\tex\xelatex\xecjk\xunicode-addon.sty"
 Package: xunicode-addon 2016/12/02 v3.4.4 addon file for xunicode
@@ -1969,14 +1989,14 @@ File: xeCJK.cfg 2016/12/02 v3.4.4 Configuration file for xeCJK package
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\cjk\CJKfntef.sty"
 Package: CJKfntef 2015/04/18 4.8.4
-\CJK@fntefSkip=\skip89
-\CJK@nest=\count335
-\CJK@fntefDimen=\dimen376
+\CJK@fntefSkip=\skip95
+\CJK@nest=\count339
+\CJK@fntefDimen=\dimen378
 \CJK@underdotBox=\box87
 \CJK@ULbox=\box88
-\CJK@underanyskip=\dimen377
+\CJK@underanyskip=\dimen379
 )
-\g__fontspec_family_TimesNewRoman_int=\count336
+\g__fontspec_family_TimesNewRoman_int=\count340
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2005,7 +2025,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . Roman/BI/OT:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;+smcp
 ;"
 .................................................
-\g__fontspec_family_標楷體_int=\count337
+\g__fontspec_family_標楷體_int=\count341
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2025,7 +2045,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 "
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
-\g__fontspec_family_CourierNew_int=\count338
+\g__fontspec_family_CourierNew_int=\count342
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2061,11 +2081,11 @@ Package: CJKfntef 2015/04/18 4.8.4
  (ntutvars.tex))
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 117.
+(hyperref)                removing `\new@ifnextchar' on input line 118.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 117.
+(hyperref)                removing `\new@ifnextchar' on input line 118.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -2076,39 +2096,39 @@ Package: textpos 2016/06/07 v1.8
 Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
 \TP@textbox=\box89
 \TP@holdbox=\box90
-\TPHorizModule=\dimen378
-\TPVertModule=\dimen379
-\TP@margin=\dimen380
-\TP@absmargin=\dimen381
+\TPHorizModule=\dimen380
+\TPVertModule=\dimen381
+\TP@margin=\dimen382
+\TP@absmargin=\dimen383
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen382
-\TP@ox=\dimen383
-\TP@oy=\dimen384
+\TPboxrulesize=\dimen384
+\TP@ox=\dimen385
+\TP@oy=\dimen386
 \TP@tbargs=\toks70
-\TP@prevdepth=\dimen385
+\TP@prevdepth=\dimen387
 TextBlockOrigin set to 0pt x 0pt
 )
 TextBlockOrigin set to 0mm x 0mm
 ("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box91
-\beforetitleunit=\skip90
-\aftertitleunit=\skip91
-\ttl@plus=\dimen386
-\ttl@minus=\dimen387
+\beforetitleunit=\skip96
+\aftertitleunit=\skip97
+\ttl@plus=\dimen388
+\ttl@minus=\dimen389
 \ttl@toksa=\toks71
-\titlewidth=\dimen388
-\titlewidthlast=\dimen389
-\titlewidthfirst=\dimen390
+\titlewidth=\dimen390
+\titlewidthlast=\dimen391
+\titlewidthfirst=\dimen392
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titletoc.sty"
 Package: titletoc 2011/12/15 v1.6 TOC entries
-\ttl@leftsep=\dimen391
+\ttl@leftsep=\dimen393
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\cjk\CJKnumb.sty"
 Package: CJKnumb 2015/04/18 4.8.4
-\CJK@q=\count339
-\CJK@r=\count340
+\CJK@q=\count343
+\CJK@r=\count344
 )
 ("C:\Program Files\MiKTeX 2.9\tex\xelatex\xecjk\xeCJKfntef.sty"
 Package: xeCJKfntef 2016/12/02 v3.4.4 xeCJK font effect
@@ -2116,17 +2136,17 @@ Package: xeCJKfntef 2016/12/02 v3.4.4 xeCJK font effect
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
 \UL@box=\box92
 \UL@hyphenbox=\box93
-\UL@skip=\skip92
+\UL@skip=\skip98
 \UL@hook=\toks72
-\UL@height=\dimen392
-\UL@pe=\count341
-\UL@pixel=\dimen393
+\UL@height=\dimen394
+\UL@pe=\count345
+\UL@pixel=\dimen395
 \ULC@box=\box94
 Package: ulem 2012/05/18
-\ULdepth=\dimen394
+\ULdepth=\dimen396
 )
-\l__xeCJK_space_skip=\skip93
-\c__xeCJK_ulem-begin_node_dim=\dimen395
+\l__xeCJK_space_skip=\skip99
+\c__xeCJK_ulem-begin_node_dim=\dimen397
 \c__xeCJK_null_box=\box95
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -2185,50 +2205,54 @@ Package: ulem 2012/05/18
 . 
 . Redefining environment 'CJKfilltwosides' with sig. 'O{c}m' on line 1016.
 .................................................
-\c__xeCJK_filll_skip=\skip94
+\c__xeCJK_filll_skip=\skip100
 )
 ("C:\Program Files\MiKTeX 2.9\tex\xelatex\xecjk\xeCJK-listings.sty"
 Package: xeCJK-listings 2016/12/02 v3.4.4 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count342
-\l__xeCJK_listings_flag_int=\count343
+\l__xeCJK_listings_max_char_int=\count346
+\l__xeCJK_listings_flag_int=\count347
 )
-(thesis.aux)
+(thesis.aux
+
+LaTeX Warning: Label `fig:yolov3' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 146.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 147.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 146.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 146.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 147.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 147.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tipa\t3cmr.fd"
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    ... okay on input line 147.
 \AtBeginShipoutBox=\box98
-Package hyperref Info: Link coloring ON on input line 146.
+Package hyperref Info: Link coloring ON on input line 147.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2236,11 +2260,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count344
+\c@section@level=\count348
 )
-LaTeX Info: Redefining \ref on input line 146.
-LaTeX Info: Redefining \pageref on input line 146.
-LaTeX Info: Redefining \nameref on input line 146.
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
 
 (thesis.out) (thesis.out)
 \@outlinefile=\write8
@@ -2249,15 +2273,15 @@ LaTeX Info: Redefining \nameref on input line 146.
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
 (Font)                  TS1/TimesNewRoman(0)/m/n --> TS1/TimesNewRoman(0)/bx/n 
-on input line 146.
-Package gensymb Info: Math companion symbols declared on input line 146.
-LaTeX Info: Redefining \degree on input line 146.
-LaTeX Info: Redefining \celsius on input line 146.
+on input line 147.
+Package gensymb Info: Math companion symbols declared on input line 147.
+LaTeX Info: Redefining \degree on input line 147.
+LaTeX Info: Redefining \celsius on input line 147.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 146.
-LaTeX Info: Redefining \ohm on input line 146.
-Package gensymb Info: Using \textohm for \ohm on input line 146.
-Package gensymb Info: Using \textmu for \micro on input line 146.
+erthousand on input line 147.
+LaTeX Info: Redefining \ohm on input line 147.
+Package gensymb Info: Using \textohm for \ohm on input line 147.
+Package gensymb Info: Using \textmu for \micro on input line 147.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -2268,7 +2292,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 99.
 
 )
-\c@lstlisting=\count345
+\c@lstlisting=\count349
 
 ABD: EveryShipout initializing macros
 *geometry* detected driver: pdftex
@@ -2304,52 +2328,52 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 158.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 159.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 158.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 159.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 158
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 159
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 158
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 159
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 158.
+(Font)              <12> on input line 159.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 158.
+(Font)              <8> on input line 159.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 158.
-LaTeX Font Info:    Try loading font information for U+msa on input line 158.
+(Font)              <6> on input line 159.
+LaTeX Font Info:    Try loading font information for U+msa on input line 159.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 158.
+LaTeX Font Info:    Try loading font information for U+msb on input line 159.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for TS1+TimesNewRoman(0) on in
-put line 158.
-LaTeX Font Info:    No file TS1TimesNewRoman(0).fd. on input line 158.
+put line 159.
+LaTeX Font Info:    No file TS1TimesNewRoman(0).fd. on input line 159.
 
 
 LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead on input line 158.
+(Font)              using `TS1/cmr/m/n' instead on input line 159.
 
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
@@ -2408,21 +2432,21 @@ File: fig/logo_bg.png Graphic file (type QTm)
 ]
 File: fig/logo_horizontal.png Graphic file (type QTm)
  <use  "fig/logo_horizontal.png" >
-LaTeX Font Info:    Calculating math sizes for size <24> on input line 161.
+LaTeX Font Info:    Calculating math sizes for size <24> on input line 162.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24> on input line 161.
+(Font)              <24> on input line 162.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <16.79993> on input line 161.
+(Font)              <16.79993> on input line 162.
 
 
 LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/m/n' in size <24> not avai
 lable
-(Font)              size <24.88> substituted on input line 161.
+(Font)              size <24.88> substituted on input line 162.
 
 
 LaTeX Font Warning: Font shape `TS1/TimesNewRoman(0)/m/n' in size <16.79993> no
 t available
-(Font)              size <17.28> substituted on input line 161.
+(Font)              size <17.28> substituted on input line 162.
 
 File: fig/logo_bg.png Graphic file (type QTm)
 <use  "fig/logo_bg.png" > [1
@@ -2514,13 +2538,13 @@ File: fig/logo_bg.png Graphic file (type QTm)
 <use  "fig/logo_bg.png" > [5
 
 ])
-Underfull \hbox (badness 10000) detected at line 179
+Underfull \hbox (badness 10000) detected at line 180
 \EU1/標楷體(0)/bx/n/20.74 目 錄
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 179.
+(hyperref)                removing `\@ifnextchar' on input line 180.
 
 (thesis.toc
 Underfull \hbox (badness 10000) detected at line 5
@@ -2546,13 +2570,13 @@ File: fig/logo_bg.png Graphic file (type QTm)
 
 File: fig/logo_bg.png Graphic file (type QTm)
  <use  "fig/logo_bg.png" > [7]
-Underfull \hbox (badness 10000) detected at line 182
+Underfull \hbox (badness 10000) detected at line 183
 \EU1/標楷體(0)/bx/n/20.74 圖 目 錄
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 182.
+(hyperref)                removing `\@ifnextchar' on input line 183.
 
 (thesis.lof)
 \tf@lof=\write10
@@ -2562,13 +2586,13 @@ File: fig/logo_bg.png Graphic file (type QTm)
  <use  "fig/logo_bg.png" > [8
 
 ]
-Underfull \hbox (badness 10000) detected at line 183
+Underfull \hbox (badness 10000) detected at line 184
 \EU1/標楷體(0)/bx/n/20.74 表 目 錄
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 183.
+(hyperref)                removing `\@ifnextchar' on input line 184.
 
 (thesis.lot)
 \tf@lot=\write11
@@ -2579,43 +2603,71 @@ File: fig/logo_bg.png Graphic file (type QTm)
 
 ] (10chap01introduction.tex
 Chapter 1.
-File: fig/tiger.jpeg Graphic file (type QTm)
-<use  "fig/tiger.jpeg" >) (20chap02relatedwork.tex
+File: fig/yolopredictions.png Graphic file (type QTm)
+<use  "fig/yolopredictions.png" >
+File: fig/map50blue.png Graphic file (type QTm)
+ <use  "fig/map50blue.png" >
+File: fig/Optimization4.png Graphic file (type QTm)
+
+<use  "fig/Optimization4.png" >
+File: fig/Optimization5.png Graphic file (type QTm)
+ <use  "fig/Optimization5.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 7--30
+
+ []
+
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" >
-[1
+<use  "fig/logo_bg.png" > [1
 
 
 ]
+File: fig/system1.png Graphic file (type QTm)
+ <use  "fig/system1.png" >)
+(20chap02relatedwork.tex
 File: fig/logo_bg.png Graphic file (type QTm)
  <use  "fig/logo_bg.png" > [2]
-Chapter 2.
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [3
+
+<use  "fig/logo_bg.png" > [3]
+Chapter 2.
+
+LaTeX Warning: Citation `7399427' on page 4 undefined on input line 6.
+
+File: fig/logo_bg.png Graphic file (type QTm)
+<use  "fig/logo_bg.png" > [4
 
 ]
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [4]
+ <use  "fig/logo_bg.png" > [5]
+
+LaTeX Warning: Citation `RedmonF17' on page 6 undefined on input line 98.
+
+File: fig/logo_bg.png Graphic file (type QTm)
+<use  "fig/logo_bg.png" > [6]
+File: fig/logo_bg.png Graphic file (type QTm)
+ <use  "fig/logo_bg.png" > [7]
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [5]
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [6]
-File: fig/logo_bg.png Graphic file (type QTm)
+<use  "fig/logo_bg.png" > [8]
 
-<use  "fig/logo_bg.png" > [7]
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [8]
-File: fig/logo_bg.png Graphic file (type QTm)
+LaTeX Warning: Citation `DBLP:journals/corr/HeZRS15' on page 9 undefined on inp
+ut line 186.
 
+File: fig/logo_bg.png Graphic file (type QTm)
 <use  "fig/logo_bg.png" > [9]
+File: fig/logo_bg.png Graphic file (type QTm)
+ <use  "fig/logo_bg.png" > [10]
 Overfull \hbox (13.23518pt too wide) in paragraph at lines 263--263
 |[]\EU1/TimesNewRoman(0)/bx/n/17.28 Only Look Once, Mining Distinctive Landmark
 s from Con-
  []
 
+
+LaTeX Warning: Citation `Chen:etal:IROS2017' on page 11 undefined on input line
+ 264.
+
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [10]
+<use  "fig/logo_bg.png" > [11]
 Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
@@ -2636,7 +2688,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 281--282
  []
 
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [11]
+<use  "fig/logo_bg.png" > [12]
 Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
@@ -2653,19 +2705,32 @@ Missing character: There is no 𝑚 in font Times New Roman/OT:script=latn;langu
 e=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no 𝑠 in font Times New Roman/OT:script=latn;languag
 e=DFLT;mapping=tex-text;mapping=tex-text;!
+
+LaTeX Warning: Citation `DBLP:journals/corr/ZeilerF13' on page 13 undefined on 
+input line 323.
+
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [12]
+<use  "fig/logo_bg.png" > [13]
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [13]
+ <use  "fig/logo_bg.png" > [14]
 Overfull \hbox (15.9481pt too wide) in paragraph at lines 391--391
 |[]\EU1/TimesNewRoman(0)/bx/n/17.28 Visualizing Convolutional Neural Networks f
 or Image Clas-
  []
 
+
+LaTeX Warning: Citation `DBLP:journals/corr/abs-1804-11191' on page 15 undefine
+d on input line 392.
+
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [14]
+<use  "fig/logo_bg.png" > [15]
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [15]
+ <use  "fig/logo_bg.png" > [16]
+
+LaTeX Warning: Citation `Roesch2017VisualizationON' on page 17 undefined on inp
+ut line 441.
+
+
 Overfull \hbox (9.32568pt too wide) in paragraph at lines 447--449
 []\EU1/TimesNewRoman(0)/m/n/12 Recurrent neural networks are prime candidates f
 or learning evolutions in multi-dimensional
@@ -2698,7 +2763,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--458
  []
 
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [16]
+<use  "fig/logo_bg.png" > [17]
 Underfull \hbox (badness 10000) in paragraph at lines 459--461
 
  []
@@ -2714,7 +2779,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--467
  []
 
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [17]
+<use  "fig/logo_bg.png" > [18]
+
+LaTeX Warning: Citation `Roesch2017VisualizationON' on page 19 undefined on inp
+ut line 502.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 508--510
 
  []
@@ -2725,7 +2795,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 511--513
  []
 
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [18]
+<use  "fig/logo_bg.png" > [19]
 Underfull \hbox (badness 10000) in paragraph at lines 514--516
 
  []
@@ -2746,53 +2816,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 523--525
  []
 
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [19]) (30chap03methodology.tex
+<use  "fig/logo_bg.png" > [20]) (30chap03methodology.tex
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [20]
+<use  "fig/logo_bg.png" > [21]
 Chapter 3.
 ) (40chap04results.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [21
+ <use  "fig/logo_bg.png" > [22
 
 ]
 Chapter 4.
 ) (50chap05conclusions.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [22
+ <use  "fig/logo_bg.png" > [23
 
 ]
 Chapter 5.
 ) (AppendixA.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [23
+ <use  "fig/logo_bg.png" > [24
 
 ]) (AppendixB.tex
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [24
+<use  "fig/logo_bg.png" > [25
 
 ]) (Symbols.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [25
+ <use  "fig/logo_bg.png" > [26
 
 ])
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [26
+<use  "fig/logo_bg.png" > [27
 
 ] (thesis.bbl)
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [27
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
-
-(thesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 232.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 232.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
+ (thesis.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 233.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2801,15 +2865,21 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 47853 strings out of 428404
- 911816 string characters out of 3160537
- 1057717 words of memory out of 3000000
- 50536 multiletter control sequences out of 15000+200000
- 26727 words of font info for 86 fonts, out of 3000000 for 9000
+ 48007 strings out of 428404
+ 913989 string characters out of 3160537
+ 1054078 words of memory out of 3000000
+ 50681 multiletter control sequences out of 15000+200000
+ 26735 words of font info for 87 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 60i,18n,85p,10444b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,18n,85p,10466b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on thesis.pdf (38 pages).

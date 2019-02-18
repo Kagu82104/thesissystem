@@ -1,5 +1,10 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces A picture of a tiger.}}{2}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Yolo Predivtions.}}{1}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Yolo v3與其他演算法示意圖.}}{2}{figure.1.2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces 試誤法}}{2}{figure.1.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {三分搜尋}}}{2}{figure.1.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {總體平均}}}{2}{figure.1.3}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces 系統示意圖.}}{3}{figure.1.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

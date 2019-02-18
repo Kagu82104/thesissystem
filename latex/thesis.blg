@@ -1,6 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
-The style file: unsrt.bst
-Database file #1: thesisbib.bib
-Warning--empty booktitle in YOLOv3
-Warning--empty booktitle in 7399427
-(There were 2 warnings)
+I found no \citation commands---while reading file thesis.aux
+I found no \bibdata command---while reading file thesis.aux
+I found no \bibstyle command---while reading file thesis.aux
+(There were 3 error messages)
