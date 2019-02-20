@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  18 FEB 2019 14:15
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  20 FEB 2019 21:17
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2605,14 +2605,13 @@ File: fig/logo_bg.png Graphic file (type QTm)
 Chapter 1.
 File: fig/yolopredictions.png Graphic file (type QTm)
 <use  "fig/yolopredictions.png" >
-File: fig/map50blue.png Graphic file (type QTm)
- <use  "fig/map50blue.png" >
-File: fig/Optimization4.png Graphic file (type QTm)
+Underfull \hbox (badness 10000) in paragraph at lines 7--13
 
-<use  "fig/Optimization4.png" >
-File: fig/Optimization5.png Graphic file (type QTm)
- <use  "fig/Optimization5.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 7--30
+ []
+
+File: fig/map50blue.png Graphic file (type QTm)
+<use  "fig/map50blue.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 15--20
 
  []
 
@@ -2621,14 +2620,22 @@ File: fig/logo_bg.png Graphic file (type QTm)
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+File: fig/Optimization4.png Graphic file (type QTm)
+<use  "fig/Optimization4.png" >
+File: fig/Optimization5.png Graphic file (type QTm)
+ <use  "fig/Optimization5.png" >
 File: fig/system1.png Graphic file (type QTm)
- <use  "fig/system1.png" >)
+
+<use  "fig/system1.png" >
+File: fig/logo_bg.png Graphic file (type QTm)
+ <use  "fig/logo_bg.png" > [2])
 (20chap02relatedwork.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [2]
-File: fig/logo_bg.png Graphic file (type QTm)
-
-<use  "fig/logo_bg.png" > [3]
+ <use  "fig/logo_bg.png" > [3]
 Chapter 2.
 
 LaTeX Warning: Citation `7399427' on page 4 undefined on input line 6.
@@ -2876,7 +2883,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
 Here is how much of TeX's memory you used:
  48007 strings out of 428404
  913989 string characters out of 3160537
- 1054078 words of memory out of 3000000
+ 1057078 words of memory out of 3000000
  50681 multiletter control sequences out of 15000+200000
  26735 words of font info for 87 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191

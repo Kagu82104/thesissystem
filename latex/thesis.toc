@@ -7,7 +7,7 @@
 \contentsline {chapter}{\makebox [4cm][s]{表目錄}}{ix}{chapter*.6}
 \contentsline {chapter}{\numberline {1}導論}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}導論}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Table}{2}{section.1.2}
+\contentsline {section}{\numberline {1.2}Table}{3}{section.1.2}
 \contentsline {chapter}{\numberline {2}相關文獻討論}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Manga Vectorization and Manipulation with Procedural Simple Screentone.}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}回答下列問題}{6}{subsection.2.1.1}
