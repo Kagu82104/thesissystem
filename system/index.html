@@ -164,7 +164,7 @@
 <div class="text-center">
 	<img src="data/流程圖1.png" class="rounded img-fluid">
 </div>
-<div>
+<!-- <div>
 	<svg class="fc" width="100%" height="500">
     	<image x="50" y="0" width="416" height="416" xlink:href="data/dog-cycle-car.png" />
     	<rect x="520" y="104" width="208" height="208" style="fill:rgb(255, 240, 245);stroke-width:3;stroke:rgb(0,0,0)" />
@@ -174,19 +174,21 @@
     	<circle cx="1500" cy="208" r="80" style="fill:rgb(240,248,255);stroke-width:3;stroke:rgb(0,0,0)"/>
     	<text x="1500" y="214" text-anchor="middle" stroke="black" stroke-width="1px" font-size="25">Maxpool</text>
 	</svg>
-</div>
+</div> -->
 <div id="drawing"></div>
 <script type="text/javascript">
-	var dx=0,dy=0;
+	var dx=10,dy=0;
 	var rect;
-	var draw = SVG('drawing');
+	var draw = SVG('drawing').size(800,10000);
 	draw.id("draw");
-	draw.addClass("graph-auto");
+	//draw.addClass("graph-auto");
+	
 	var originalPic = draw.rect(602,452).attr({ fill: draw.image('data/dog-cycle-car.png',602,452),x:dx,y:dy });
-	dx +=652;
+	dy +=652;
 
-	var PicRGB = draw.image('data/con0_0.jpg').attr({ x: 652, y: 0 }).loaded(function(loader){this.size(loader.width,loader.height)});
-	dx += 462;
+	var PicRGB = draw.image('data/con0_0.jpg').attr({ x: dx, y: dy }).loaded(function(loader){this.size(loader.width,loader.height)});
+	dy += 462;
+
 	for (var i = 31; i >= 0; i--) {
 		var dx1=dx+i*5;
 		dy1=dy+i*5;
