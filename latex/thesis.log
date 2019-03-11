@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  25 FEB 2019 17:54
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  11 MAR 2019 14:32
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2832,35 +2832,41 @@ File: fig/logo_bg.png Graphic file (type QTm)
 
 <use  "fig/logo_bg.png" > [21]
 Chapter 3.
-) (40chap04results.tex
+File: fig/ch3_1.png Graphic file (type QTm)
+<use  "fig/ch3_1.png" >
+File: fig/ch3_2.png Graphic file (type QTm)
+ <use  "fig/ch3_2.png" >) (40chap04results.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [22
+
+<use  "fig/logo_bg.png" > [22
 
 ]
+File: fig/logo_bg.png Graphic file (type QTm)
+ <use  "fig/logo_bg.png" > [23]
 Chapter 4.
 ) (50chap05conclusions.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [23
+ <use  "fig/logo_bg.png" > [24
 
 ]
 Chapter 5.
 ) (AppendixA.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [24
+ <use  "fig/logo_bg.png" > [25
 
 ]) (AppendixB.tex
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [25
+<use  "fig/logo_bg.png" > [26
 
 ]) (Symbols.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [26
+ <use  "fig/logo_bg.png" > [27
 
 ])
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [27
+<use  "fig/logo_bg.png" > [28
 
 ] (thesis.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
@@ -2885,12 +2891,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 48007 strings out of 428404
- 913989 string characters out of 3160537
- 1053078 words of memory out of 3000000
- 50681 multiletter control sequences out of 15000+200000
+ 48011 strings out of 428404
+ 914033 string characters out of 3160537
+ 1080092 words of memory out of 3000000
+ 50683 multiletter control sequences out of 15000+200000
  26735 words of font info for 87 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  60i,18n,85p,10466b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.pdf (38 pages).
+Output written on thesis.pdf (39 pages).
