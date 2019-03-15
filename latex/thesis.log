@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  11 MAR 2019 14:32
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  15 MAR 2019 14:35
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2561,15 +2561,14 @@ Underfull \hbox (badness 10000) detected at line 7
 \EU1/標楷體(0)/bx/n/12 表 目 錄
  []
 
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [6
-
-])
+)
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [7]
+ <use  "fig/logo_bg.png" > [6
+
+]
 Underfull \hbox (badness 10000) detected at line 183
 \EU1/標楷體(0)/bx/n/20.74 圖 目 錄
  []
@@ -2583,7 +2582,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \openout10 = `thesis.lof'.
 
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [8
+ <use  "fig/logo_bg.png" > [7
 
 ]
 Underfull \hbox (badness 10000) detected at line 184
@@ -2599,7 +2598,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \openout11 = `thesis.lot'.
 
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [9
+ <use  "fig/logo_bg.png" > [8
 
 ] (10chap01introduction.tex
 Chapter 1.
@@ -2630,207 +2629,32 @@ File: fig/Optimization5.png Graphic file (type QTm)
  <use  "fig/Optimization5.png" >
 File: fig/system1.png Graphic file (type QTm)
 
-<use  "fig/system1.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 35--43
+<use  "fig/system1.png" >) (20chap02relatedwork.tex
+Underfull \hbox (badness 10000) in paragraph at lines 35--1
 
  []
 
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [2]) (20chap02relatedwork.tex
+<use  "fig/logo_bg.png" > [2]
 File: fig/logo_bg.png Graphic file (type QTm)
-
-<use  "fig/logo_bg.png" > [3]
+ <use  "fig/logo_bg.png" > [3]
 Chapter 2.
-
-LaTeX Warning: Citation `7399427' on page 4 undefined on input line 6.
-
 File: fig/logo_bg.png Graphic file (type QTm)
 <use  "fig/logo_bg.png" > [4
 
 ]
+Overfull \hbox (10.75766pt too wide) in paragraph at lines 63--64
+[]\EU1/TimesNewRoman(0)/m/n/12 CNN\EU1/標楷體(0)/m/n/12 、| \EU1/TimesNewRoman(0)/m
+/n/12 R-CNN\EU1/標楷體(0)/m/n/12 、| \EU1/TimesNewRoman(0)/m/n/12 Fast R-CNN\EU1/標楷
+體(0)/m/n/12 、| \EU1/TimesNewRoman(0)/m/n/12 Faster R-CNN\EU1/標楷體(0)/m/n/12 、| \
+EU1/TimesNewRoman(0)/m/n/12 Mask R-CNN\EU1/標楷體(0)/m/n/12 、| \EU1/TimesNewRoman(
+0)/m/n/12 SSD\EU1/標楷體(0)/m/n/12 、| \EU1/TimesNewRoman(0)/m/n/12 YOLO\EU1/標楷體(0)
+/m/n/12 、| \EU1/TimesNewRoman(0)/m/n/12 YOLOv2\EU1/標楷體(0)/m/n/12 、|
+ []
+
+) (30chap03methodology.tex
 File: fig/logo_bg.png Graphic file (type QTm)
  <use  "fig/logo_bg.png" > [5]
-
-LaTeX Warning: Citation `RedmonF17' on page 6 undefined on input line 98.
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [6]
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [7]
-File: fig/logo_bg.png Graphic file (type QTm)
-
-<use  "fig/logo_bg.png" > [8]
-
-LaTeX Warning: Citation `DBLP:journals/corr/HeZRS15' on page 9 undefined on inp
-ut line 186.
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [9]
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [10]
-Overfull \hbox (13.23518pt too wide) in paragraph at lines 263--263
-|[]\EU1/TimesNewRoman(0)/bx/n/17.28 Only Look Once, Mining Distinctive Landmark
-s from Con-
- []
-
-
-LaTeX Warning: Citation `Chen:etal:IROS2017' on page 11 undefined on input line
- 264.
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [11]
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
-
- []
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [12]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
-
- []
-
-Missing character: There is no 𝑚 in font Times New Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;mapping=tex-text;!
-Missing character: There is no 𝑠 in font Times New Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;mapping=tex-text;!
-Missing character: There is no 𝑚 in font Times New Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;mapping=tex-text;!
-Missing character: There is no 𝑠 in font Times New Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;mapping=tex-text;!
-Missing character: There is no 𝑚 in font Times New Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;mapping=tex-text;!
-Missing character: There is no 𝑠 in font Times New Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;mapping=tex-text;!
-
-LaTeX Warning: Citation `DBLP:journals/corr/ZeilerF13' on page 13 undefined on 
-input line 323.
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [13]
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [14]
-Overfull \hbox (15.9481pt too wide) in paragraph at lines 391--391
-|[]\EU1/TimesNewRoman(0)/bx/n/17.28 Visualizing Convolutional Neural Networks f
-or Image Clas-
- []
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/abs-1804-11191' on page 15 undefine
-d on input line 392.
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [15]
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [16]
-
-LaTeX Warning: Citation `Roesch2017VisualizationON' on page 17 undefined on inp
-ut line 441.
-
-
-Overfull \hbox (9.32568pt too wide) in paragraph at lines 447--449
-[]\EU1/TimesNewRoman(0)/m/n/12 Recurrent neural networks are prime candidates f
-or learning evolutions in multi-dimensional
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--452
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
-
- []
-
-
-Overfull \hbox (7.4331pt too wide) in paragraph at lines 456--458
-[]\EU1/TimesNewRoman(0)/m/n/12 Understanding these variations is of highest imp
-ortance to adjust network hyper-parameters,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 456--458
-
- []
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [17]
-Underfull \hbox (badness 10000) in paragraph at lines 459--461
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 462--464
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 465--467
-
- []
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [18]
-
-LaTeX Warning: Citation `Roesch2017VisualizationON' on page 19 undefined on inp
-ut line 502.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--510
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 511--513
-
- []
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [19]
-Underfull \hbox (badness 10000) in paragraph at lines 514--516
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 520--522
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 523--525
-
- []
-
-File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [20]) (30chap03methodology.tex
-File: fig/logo_bg.png Graphic file (type QTm)
-
-<use  "fig/logo_bg.png" > [21]
 Chapter 3.
 File: fig/ch3_1.png Graphic file (type QTm)
 <use  "fig/ch3_1.png" >
@@ -2838,35 +2662,35 @@ File: fig/ch3_2.png Graphic file (type QTm)
  <use  "fig/ch3_2.png" >) (40chap04results.tex
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [22
+<use  "fig/logo_bg.png" > [6
 
 ]
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [23]
+ <use  "fig/logo_bg.png" > [7]
 Chapter 4.
 ) (50chap05conclusions.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [24
+ <use  "fig/logo_bg.png" > [8
 
 ]
 Chapter 5.
 ) (AppendixA.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [25
+ <use  "fig/logo_bg.png" > [9
 
 ]) (AppendixB.tex
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [26
+<use  "fig/logo_bg.png" > [10
 
 ]) (Symbols.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [27
+ <use  "fig/logo_bg.png" > [11
 
 ])
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [28
+<use  "fig/logo_bg.png" > [12
 
 ] (thesis.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
@@ -2883,20 +2707,17 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 48011 strings out of 428404
- 914033 string characters out of 3160537
- 1080092 words of memory out of 3000000
- 50683 multiletter control sequences out of 15000+200000
+ 47962 strings out of 428404
+ 911848 string characters out of 3160537
+ 1075875 words of memory out of 3000000
+ 50634 multiletter control sequences out of 15000+200000
  26735 words of font info for 87 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  60i,18n,85p,10466b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.pdf (39 pages).
+Output written on thesis.pdf (22 pages).
