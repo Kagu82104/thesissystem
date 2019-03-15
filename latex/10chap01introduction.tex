@@ -21,7 +21,7 @@
 所以現今大部分的演算法只能使用試誤法，以低效率的方式去測驗比較此演算法，粗略估計此演算法的深度與效能達到平衡，常常會有過高的深度或準確率未達預期的情形發生，為了解決此問題，本論文著重於解析卷積神經網路的架構及其運作方法，以簡單明瞭的方式闡述其過程，並且分析原本架構的問題，改善原本的架構。\\
 
 \begin{figure}[H]
-\centering  
+\centering
 \subfigure[三分搜尋]{
 \label{Fig.sub.1}
 \includegraphics[width=0.45\textwidth]{fig/Optimization4.png}}
@@ -39,43 +39,4 @@
     \caption{\label{fig:系統1}系統示意圖.}
 \end{figure}
 %前述的問題期望如何被解決：如降低演算法的時間複雜度或減少電源的耗費或降低網路部署的成本等。儘可能提出明確的方向，如可量化的數量或質性的改善。說明你要解決或是想更進一步瞭解的問題?
-\\原本使用Yolo演算法時，必須先完成其環境安裝，並使用程式的指令才能完成其物件偵測。本論文提出一個線上的使用環境，只要將圖片拖曳到網頁中，就可以偵測到其內容出現的物件，大幅改善原本使用的限制。\\
-
-\section{Table}
-\label{ss:Table}
-
- \begin{table}[htpb]\begin{center}
-	\label{t:prefix-table}
-	\caption{各演算法派別比較}
-	\renewcommand{\arraystretch}{1.0}
-	\begin{tabularx}{300pt}{|c|X| }
-		\hline
-		\multirow{1}{*}{\textbf{名稱}} &
-		應用範圍
-		\\ \hline\hline
-		%------------------------------
-		\multirow{2}{*}{\textbf{符號論學派}} &
-        用逆向演算法,用哲學,心理學, 邏輯思路.
-        \\ \hline
-		%------------------------------
-		\multirow{1}{*}{\textbf{貝氏定理學派}} &
-		用機率推理, 用統計學
-		\\ \hline
-		%------------------------------
-		\multirow{2}{*}{\textbf{類比推理學派}} &
-		用支持向量機 (support vector machine), 相似度判斷學學習,受新理學,數學最佳化影響
-		\\ \hline
-		%------------------------------
-		\multirow{2}{*}{\textbf{類神經網路學派}} &
-		 用大腦逆向工程 (reverse engineering),用倒傳遞理論演算法 (back propagation), 受神經科學,物理學啟發
-		\\ \hline
-		%------------------------------
-		\multirow{2}{*}{\textbf{演化論學派}} &
-		 運用遺傳學(genetics), 演化生物學 (evolutionary biology) ,遺傳程式規劃 (genetic programming)
-		\\ \hline
-		%------------------------------
-		
-	\end{tabularx}
-\end{center}
-其中YOLO分類於類神經網路學派，使用卷積神經網路實現物件偵測的網路架構。
-\end{table}
+\\本論文將探討YOLO與其他物件偵測的演算法所花費的時間、偵測的準確率與其中的差異，將其結構拆解出來，一方面讓使用者了解其構造與運作模式，另一方面也讓使用者了解YOLO快速的原因，並探討參數的內容應該有如何調整才會有更好的結果。\\
