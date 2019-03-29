@@ -1,11 +1,11 @@
 $( document ).ready(function() {
   //window.onresize = updateWindow;
-  width  = $(document).width();
-  height = $(document).height();
-  origin_X = width/6;
-  origin_Y = height/6;
-  result_X = (width) * 3/6;
-  result_Y = height/6;
+  width  = $("#col1").width();
+  height = $("#col1").height();
+  origin_X = width/2;
+  origin_Y = 0;
+  result_X = (width) * 3/2;
+  result_Y = height/2;
     rule1();
 });
 
@@ -24,9 +24,7 @@ function rule1() {
 
 
 function Draw_Animation() {
-  var svgContainer_anime = d3.select("#animation").append("svg")
-                      .attr("width", "100%")
-                      .attr("height", "100%");
+  var svgContainer_anime = d3.select("#col1").append("svg").attr("width", "100%").attr("height", "100%");
   var sw = true;
   svgContainer_anime.on("mousedown", animate);
                       
@@ -39,50 +37,108 @@ function Draw_Animation() {
   var line_op;
   var Text = [];      //[0...2] = O, P, TEXT
   
-  line_row[0] = DrawLine_row(svgContainer_anime, origin_Y - unit_y - 10, origin_X - unit_x, origin_X + unit_x);               
-  line_row[1] = DrawLine_row(svgContainer_anime, origin_Y + unit_y + 10, origin_X - unit_x, origin_X + unit_x);
-  line_col[0] = DrawLine_col(svgContainer_anime, origin_X - unit_x - 10, origin_Y - unit_y, origin_Y + unit_y);
-  line_col[1] = DrawLine_col(svgContainer_anime, origin_X + unit_x + 10, origin_Y - unit_y, origin_Y + unit_y);
+  // line_row[0] = DrawLine_row(svgContainer_anime, origin_Y - unit_y - 10, origin_X - unit_x, origin_X + unit_x);               
+  // line_row[1] = DrawLine_row(svgContainer_anime, origin_Y + unit_y + 10, origin_X - unit_x, origin_X + unit_x);
+  // line_col[0] = DrawLine_col(svgContainer_anime, origin_X - unit_x - 10, origin_Y - unit_y, origin_Y + unit_y);
+  // line_col[1] = DrawLine_col(svgContainer_anime, origin_X + unit_x + 10, origin_Y - unit_y, origin_Y + unit_y);
+  //line (物件,終點位置x,起點位置x,終點位置y,起點位置y)
   
-  for (var i=0; i<2 ;i++)
-  {
-    Rect[i] = DrawRect(svgContainer_anime, origin_X - unit_x, origin_Y - unit_y*(1-i));
+  // Text[i+1] = DrawText(svgContainer_anime, "Convolution", origin_X-65, origin_Y+35+i*70);
+  for (var i =  0; i < 31; i++) {
+      Rect[i] = DrawConvolution(svgContainer_anime,origin_X-75, origin_Y+5+i*70,"#CA5237");
+    }
+
+  for (var i =  0; i < 30; i++) {     
+      line_col[i] = DrawLine_arrow(svgContainer_anime, origin_X,55+i*70, 75+i*70);
+    }
+    Text[0] = DrawText(svgContainer_anime, "data", origin_X-25, origin_Y+35);
+  for (var i = 1; i <=28; i++) {
+    if (i!=2&&i!=4&&i!=8&&i!=12&&i!=18&&i!=26) {
+      Text[i] = DrawText(svgContainer_anime, "Convolution_"+i, origin_X-65, origin_Y+35+i*70);
+    }else if(i!=26){
+      Text[i] = DrawText(svgContainer_anime, "Maxpool", origin_X-45, origin_Y+35+i*70);
+    }
   }
+  // for (var i=0; i<2 ;i++)
+  // {
+  //   Rect[i] = DrawRect(svgContainer_anime, origin_X - unit_x, origin_Y - unit_y*(1-i));
+  // }
   
-  Rect[2] = DrawRect(svgContainer_anime, origin_X - unit_x*3, origin_Y - unit_y).style("opacity", 0);
-  Rect[3] = DrawRect(svgContainer_anime, origin_X - unit_x*3, origin_Y).style("opacity", 0);
-  Rect[4] = DrawRect(svgContainer_anime, origin_X + unit_x, origin_Y - unit_y).style("opacity", 0);
-  Rect[5] = DrawRect(svgContainer_anime, origin_X + unit_x, origin_Y).style("opacity", 0);
+  // Rect[2] = DrawRect(svgContainer_anime, origin_X - unit_x*3, origin_Y - unit_y).style("opacity", 0);
+  // Rect[3] = DrawRect(svgContainer_anime, origin_X - unit_x*3, origin_Y).style("opacity", 0);
+  // Rect[4] = DrawRect(svgContainer_anime, origin_X + unit_x, origin_Y - unit_y).style("opacity", 0);
+  // Rect[5] = DrawRect(svgContainer_anime, origin_X + unit_x, origin_Y).style("opacity", 0);
   
   
-  jsonCircles[0] = [{ "x": origin_X - unit_x, "y": origin_Y - unit_y},
-             { "x": origin_X - unit_x, "y": origin_Y},
-             { "x": origin_X - unit_x, "y": origin_Y + unit_y},
-             { "x": origin_X + unit_x, "y": origin_Y - unit_y},
-             { "x": origin_X + unit_x, "y": origin_Y},
-             { "x": origin_X + unit_x, "y": origin_Y + unit_y}];
+  // jsonCircles[0] = [{ "x": origin_X - unit_x, "y": origin_Y - unit_y},
+  //            { "x": origin_X - unit_x, "y": origin_Y},
+  //            { "x": origin_X - unit_x, "y": origin_Y + unit_y},
+  //            { "x": origin_X + unit_x, "y": origin_Y - unit_y},
+  //            { "x": origin_X + unit_x, "y": origin_Y},
+  //            { "x": origin_X + unit_x, "y": origin_Y + unit_y}];
              
-  jsonCircles[1] = [{ "x": origin_X - unit_x*3, "y": origin_Y - unit_y},
-             { "x": origin_X - unit_x*3, "y": origin_Y},
-             { "x": origin_X - unit_x*3, "y": origin_Y + unit_y},
-             { "x": origin_X - unit_x, "y": origin_Y - unit_y},
-             { "x": origin_X - unit_x, "y": origin_Y},
-             { "x": origin_X - unit_x, "y": origin_Y + unit_y},
-             { "x": origin_X + unit_x, "y": origin_Y - unit_y},
-             { "x": origin_X + unit_x, "y": origin_Y},
-             { "x": origin_X + unit_x, "y": origin_Y + unit_y},
-             { "x": origin_X + unit_x*3, "y": origin_Y - unit_y},
-             { "x": origin_X + unit_x*3, "y": origin_Y},
-             { "x": origin_X + unit_x*3, "y": origin_Y + unit_y}];
+  // jsonCircles[1] = [{ "x": origin_X - unit_x*3, "y": origin_Y - unit_y},
+  //            { "x": origin_X - unit_x*3, "y": origin_Y},
+  //            { "x": origin_X - unit_x*3, "y": origin_Y + unit_y},
+  //            { "x": origin_X - unit_x, "y": origin_Y - unit_y},
+  //            { "x": origin_X - unit_x, "y": origin_Y},
+  //            { "x": origin_X - unit_x, "y": origin_Y + unit_y},
+  //            { "x": origin_X + unit_x, "y": origin_Y - unit_y},
+  //            { "x": origin_X + unit_x, "y": origin_Y},
+  //            { "x": origin_X + unit_x, "y": origin_Y + unit_y},
+  //            { "x": origin_X + unit_x*3, "y": origin_Y - unit_y},
+  //            { "x": origin_X + unit_x*3, "y": origin_Y},
+  //            { "x": origin_X + unit_x*3, "y": origin_Y + unit_y}];
   
-  circles_be = DrawCircle_F(svgContainer_anime, jsonCircles[0]);
+  // circles_be = DrawCircle_F(svgContainer_anime, jsonCircles[0]);
   
-  circles_af = DrawCircle_F(svgContainer_anime, jsonCircles[1]).style("opacity", 0);
+  // circles_af = DrawCircle_F(svgContainer_anime, jsonCircles[1]).style("opacity", 0);
   
-  line_op = DrawDashline(svgContainer_anime, origin_X, origin_Y - unit_y*2, origin_Y + unit_y*2);
+  // line_op = DrawDashline(svgContainer_anime, origin_X, origin_Y - unit_y*2, origin_Y + unit_y*2);//虛線
   
-  Text[0] = DrawText(svgContainer_anime, "O", origin_X + 5, origin_Y + 20);
+  // Text[0] = DrawText(svgContainer_anime, "O", origin_X + 5, origin_Y + 20);
   
+    function DrawConvolution(Src, x, y,color) {
+      var rect_t = Src.append("rect")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("width", 150)
+          .attr("height", 50)
+          .attr("fill", color)
+          .attr("stroke", "black")
+          .attr("stroke-width", 2);
+  return rect_t;
+}
+
+function DrawLine_arrow(Src, x, y1, y2) {
+  var line_col = Src.append("line")
+          .attr("x1", x)
+          .attr("y1", y1)
+          .attr("x2", x)
+          .attr("y2", y2)
+          .attr("stroke", "black")
+          .attr("stroke-width", 3)
+          .attr("marker-end","url(#arrow)");
+// var line_col1 = Src.append("line")
+//           .attr("x1", x+8)
+//           .attr("y1", y1+3)
+//           .attr("x2", x)
+//           .attr("y2", y2)
+//           .attr("stroke", "black")
+//           .attr("stroke-width", 3);  
+// var line_col2 = Src.append("line")
+//           .attr("x1", x-8)
+//           .attr("y1", y1+3)
+//           .attr("x2", x)
+//           .attr("y2", y2)
+//           .attr("stroke", "black")
+//           .attr("stroke-width", 3);              
+  return line_col;
+}
+
+
+
+
   function animate() {
     if(sw) {
       Rect[2].transition()
