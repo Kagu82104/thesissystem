@@ -25,6 +25,24 @@ function rule1() {
 
 function Draw_Animation() {
   var svgContainer_anime = d3.select("#col1").append("svg").attr("width", "100%").attr("height", "100%");
+  
+  var defs = svgContainer_anime.append("defs");
+ 
+  var arrowMarker = defs.append("marker")
+  .attr("id","arrow")
+  .attr("markerUnits","strokeWidth")
+  .attr("markerWidth","12")
+  .attr("markerHeight","12")
+  .attr("viewBox","0 0 12 12")
+  .attr("refX","6")
+  .attr("refY","6")
+  .attr("orient","auto");
+  
+  var arrow_path = "M2,2 L10,6 L2,10 L6,6 L2,2";
+						
+  arrowMarker.append("path")
+			.attr("d",arrow_path)
+			.attr("fill","#000");
   var sw = true;
   svgContainer_anime.on("mousedown", animate);
                       
@@ -45,20 +63,21 @@ function Draw_Animation() {
   
   // Text[i+1] = DrawText(svgContainer_anime, "Convolution", origin_X-65, origin_Y+35+i*70);
   for (var i =  0; i < 31; i++) {
-      Rect[i] = DrawConvolution(svgContainer_anime,origin_X-75, origin_Y+5+i*70,"#CA5237");
+      Rect[i] = DrawConvolution(svgContainer_anime,origin_X-75, origin_Y+5+i*120,"#CA5237");
     }
 
   for (var i =  0; i < 30; i++) {     
-      line_col[i] = DrawLine_arrow(svgContainer_anime, origin_X,55+i*70, 75+i*70);
+      line_col[i] = DrawLine_arrow(svgContainer_anime, origin_X,55+i*120, 115+i*120);
+      //line_col[i] = DrawLine_Branch(svgContainer_anime, origin_X+100,55+i*120, 110+i*120);
     }
     Text[0] = DrawText(svgContainer_anime, "data", origin_X-25, origin_Y+35);
-  for (var i = 1; i <=28; i++) {
-    if (i!=2&&i!=4&&i!=8&&i!=12&&i!=18&&i!=26) {
-      Text[i] = DrawText(svgContainer_anime, "Convolution_"+i, origin_X-65, origin_Y+35+i*70);
-    }else if(i!=26){
-      Text[i] = DrawText(svgContainer_anime, "Maxpool", origin_X-45, origin_Y+35+i*70);
-    }
-  }
+  // for (var i = 1; i <=28; i++) {
+  //   if (i!=2&&i!=4&&i!=8&&i!=12&&i!=18&&i!=26) {
+  //     Text[i] = DrawText(svgContainer_anime, "Convolution_"+i, origin_X-65, origin_Y+35+i*70);
+  //   }else if(i!=26){
+  //     Text[i] = DrawText(svgContainer_anime, "Maxpool", origin_X-45, origin_Y+35+i*70);
+  //   }
+  // }
   // for (var i=0; i<2 ;i++)
   // {
   //   Rect[i] = DrawRect(svgContainer_anime, origin_X - unit_x, origin_Y - unit_y*(1-i));
@@ -109,6 +128,28 @@ function Draw_Animation() {
           .attr("stroke-width", 2);
   return rect_t;
 }
+function DrawMaxpool(Src, x, y,color) {
+  var rect_t = Src.append("rect")
+      .attr("x", x)
+      .attr("y", y)
+      .attr("width", 150)
+      .attr("height", 50)
+      .attr("fill", color)
+      .attr("stroke", "black")
+      .attr("stroke-width", 2);
+return rect_t;
+}
+function DrawReOrg(Src, x, y,color) {
+  var rect_t = Src.append("rect")
+      .attr("x", x)
+      .attr("y", y)
+      .attr("width", 150)
+      .attr("height", 50)
+      .attr("fill", color)
+      .attr("stroke", "black")
+      .attr("stroke-width", 2);
+return rect_t;
+}
 
 function DrawLine_arrow(Src, x, y1, y2) {
   var line_col = Src.append("line")
@@ -136,7 +177,17 @@ function DrawLine_arrow(Src, x, y1, y2) {
   return line_col;
 }
 
-
+function DrawLine_Branch(Src, x, y1, y2) {
+  var line_col = Src.append("line")
+          .attr("x1", x)
+          .attr("y1", y1)
+          .attr("x2", x)
+          .attr("y2", y2)
+          .attr("stroke", "black")
+          .attr("stroke-width", 3)
+          .attr("marker-end","url(#arrow)");     
+  return line_col;
+}
 
 
   function animate() {
