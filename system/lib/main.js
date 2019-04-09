@@ -18,6 +18,15 @@ var result_Y;
 var unit_x  = 50;
 var unit_y  = 50;
 
+var jsonCircles = [];
+var line_row = [];    //Row(left to right, top to bottom). 
+var line_col = [];    //Column(top to bottom, left to right).
+var Rect = [];
+var circles_be;
+var circles_af;
+var line_op;
+var Text = [];      //[0...2] = O, P, TEXT
+
 function rule1() {
   Draw_Animation();
 }
@@ -42,19 +51,57 @@ function Draw_Animation() {
 						
   arrowMarker.append("path")
 			.attr("d",arrow_path)
-			.attr("fill","#000");
-  var sw = true;
-  svgContainer_anime.on("mousedown", animate);
-                      
-  var jsonCircles = [];
-  var line_row = [];    //Row(left to right, top to bottom). 
-  var line_col = [];    //Column(top to bottom, left to right).
-  var Rect = [];
-  var circles_be;
-  var circles_af;
-  var line_op;
-  var Text = [];      //[0...2] = O, P, TEXT
+      .attr("fill","#000");
+      
+  var svg_img = svgContainer_anime.append('image')
+  .attr('image-rendering','optimizeQuality')
+  .attr('x','0')
+  .attr('y','0');
+
+  var img = new Image();
+  var inputpic = "data/dog-cycle-car.png";
+
+  img.src = inputpic;
+  img.onload = function() 
+  {
+    var picwidth = this.width*0.5;
+    var picheight = this.height*0.5;
+
+    svg_img.attr('height', picheight)
+      .attr('width',width)
+      .attr('xlink:href', inputpic)
+    line_col[0] = DrawLine_arrow(svgContainer_anime, origin_X,picheight,500);
+  }
+
   
+  console.log(width);
+  var svg_img1 = svgContainer_anime.append('image')
+  .attr('image-rendering','optimizeQuality')
+  .attr('x','0')
+  .attr('y','500');
+  var img0 = new Image();
+  var outputpic = "data/predictions.png";
+  img0.src = outputpic;
+  img0.onload = function() 
+  {
+    var picwidth = this.width*0.5;
+    var picheight = this.height*0.5;
+
+    svg_img1.attr('height', picheight)
+      .attr('width',width)
+      .attr('xlink:href', outputpic)
+  }
+  
+    //var sw = true;
+  //svgContainer_anime.on("mousedown", animate);
+                      
+
+  
+  //Rect[0] = init(svgContainer_anime,origin_X,origin_Y,"data/dog-cycle-car.png");
+
+
+
+
   // line_row[0] = DrawLine_row(svgContainer_anime, origin_Y - unit_y - 10, origin_X - unit_x, origin_X + unit_x);               
   // line_row[1] = DrawLine_row(svgContainer_anime, origin_Y + unit_y + 10, origin_X - unit_x, origin_X + unit_x);
   // line_col[0] = DrawLine_col(svgContainer_anime, origin_X - unit_x - 10, origin_Y - unit_y, origin_Y + unit_y);
@@ -62,15 +109,16 @@ function Draw_Animation() {
   //line (物件,終點位置x,起點位置x,終點位置y,起點位置y)
   
   // Text[i+1] = DrawText(svgContainer_anime, "Convolution", origin_X-65, origin_Y+35+i*70);
-  for (var i =  0; i < 31; i++) {
+  /*for (var i =  0; i < 31; i++) {
       Rect[i] = DrawConvolution(svgContainer_anime,origin_X-75, origin_Y+5+i*120,"#CA5237");
-    }
+  }*/
 
-  for (var i =  0; i < 30; i++) {     
+  /*for (var i =  0; i < 30; i++) {     
       line_col[i] = DrawLine_arrow(svgContainer_anime, origin_X,55+i*120, 115+i*120);
       //line_col[i] = DrawLine_Branch(svgContainer_anime, origin_X+100,55+i*120, 110+i*120);
-    }
-    Text[0] = DrawText(svgContainer_anime, "data", origin_X-25, origin_Y+35);
+  }*/
+    //Text[0] = DrawText(svgContainer_anime, "data", origin_X-25, origin_Y+35);
+
   // for (var i = 1; i <=28; i++) {
   //   if (i!=2&&i!=4&&i!=8&&i!=12&&i!=18&&i!=26) {
   //     Text[i] = DrawText(svgContainer_anime, "Convolution_"+i, origin_X-65, origin_Y+35+i*70);
@@ -116,8 +164,18 @@ function Draw_Animation() {
   // line_op = DrawDashline(svgContainer_anime, origin_X, origin_Y - unit_y*2, origin_Y + unit_y*2);//虛線
   
   // Text[0] = DrawText(svgContainer_anime, "O", origin_X + 5, origin_Y + 20);
+
   
-    function DrawConvolution(Src, x, y,color) {
+function init(Src, x, y,data){
+  var initinput = Src.append("rect")
+  .attr("x", x)
+  .attr("y", y)
+  .attr("width", 416)
+  .attr("height", 416)
+  .attr("fill", data)
+return initinput;
+}
+function DrawConvolution(Src, x, y,color) {
       var rect_t = Src.append("rect")
           .attr("x", x)
           .attr("y", y)
