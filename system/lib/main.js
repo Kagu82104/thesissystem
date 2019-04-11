@@ -6,6 +6,7 @@ $( document ).ready(function() {
   origin_Y = 0;
   result_X = (width) * 3/2;
   result_Y = height/2;
+  below_y = 0
     rule1();
 });
 
@@ -17,7 +18,7 @@ var result_X;
 var result_Y;
 var unit_x  = 50;
 var unit_y  = 50;
-
+var below_y;
 var jsonCircles = [];
 var line_row = [];    //Row(left to right, top to bottom). 
 var line_col = [];    //Column(top to bottom, left to right).
@@ -55,6 +56,7 @@ function Draw_Animation() {
       
   var svg_img = svgContainer_anime.append('image')
   .attr('image-rendering','optimizeQuality')
+  .attr('id','inputimg')
   .attr('x','0')
   .attr('y','0');
 
@@ -62,38 +64,35 @@ function Draw_Animation() {
   var inputpic = "data/dog-cycle-car.png";
 
   img.src = inputpic;
-  img.onload = function() 
-  {
-    var picwidth = this.width*0.5;
-    var picheight = this.height*0.5;
+    var picwidth = width;
+    //var picheight = ;
 
-    svg_img.attr('height', picheight)
-      .attr('width',width)
-      .attr('xlink:href', inputpic)
-    line_col[0] = DrawLine_arrow(svgContainer_anime, origin_X,picheight,500);
-  }
-
+    svg_img.attr('width',picwidth).attr('xlink:href', inputpic);
+      below_y += img.height;  
+      
   
-  console.log(width);
   var svg_img1 = svgContainer_anime.append('image')
   .attr('image-rendering','optimizeQuality')
+  .attr('id','outputimg')
   .attr('x','0')
-  .attr('y','500');
-  var img0 = new Image();
+  .attr('y',below_y);
+  var img1 = new Image();
   var outputpic = "data/predictions.png";
-  img0.src = outputpic;
-  img0.onload = function() 
+  
+  img1.src = outputpic;
+  img1.onload = function() 
   {
     var picwidth = this.width*0.5;
     var picheight = this.height*0.5;
-
     svg_img1.attr('height', picheight)
-      .attr('width',width)
+      .attr('width',picwidth)
       .attr('xlink:href', outputpic)
+    
   }
   
-    //var sw = true;
-  //svgContainer_anime.on("mousedown", animate);
+  line_col[0] = DrawLine_arrow(svgContainer_anime, origin_X,30,below_y);
+    var sw = true;
+  svgContainer_anime.on("mousedown", animate);
                       
 
   
@@ -250,80 +249,82 @@ function DrawLine_Branch(Src, x, y1, y2) {
 
   function animate() {
     if(sw) {
-      Rect[2].transition()
-        .duration(1000)
-        .style("opacity", 1);
-      Rect[3].transition()
-        .duration(1000)
-        .style("opacity", 1);
-      Rect[4].transition()
-        .duration(1000)
-        .style("opacity", 1);
-      Rect[5].transition()
-        .duration(1000)
-        .style("opacity", 1);
-      line_row[0].transition()
-        .duration(1000)
-        .attr("x1", origin_X - unit_x*3)
-        .attr("x2", origin_X + unit_x*3);
-      line_row[1].transition()
-        .duration(1000)
-        .attr("x1", origin_X - unit_x*3)
-        .attr("x2", origin_X + unit_x*3);
-      line_col[0].transition()
-        .duration(1000)
-        .attr("x1", origin_X - unit_x*3 - 10)
-        .attr("x2", origin_X - unit_x*3 - 10);
-      line_col[1].transition()
-        .duration(1000)
-        .attr("x1", origin_X + unit_x*3 + 10)
-        .attr("x2", origin_X + unit_x*3 + 10);
-      circles_be.transition()
-        .duration(100)
-        .style("opacity", 0);
-      circles_af.transition()
-        .delay(500)
-        .duration(1000)
-        .style("opacity", 1);
+      svg_img1.transition()
+      .duration(1000)
+        .attr('y',800);
+      
+        
+      // Rect[3].transition()
+      //   .duration(1000)
+      //   .style("opacity", 1);
+      // Rect[4].transition()
+      //   .duration(1000)
+      //   .style("opacity", 1);
+      // Rect[5].transition()
+      //   .duration(1000)
+      //   .style("opacity", 1);
+      // line_row[0].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X - unit_x*3)
+      //   .attr("x2", origin_X + unit_x*3);
+      // line_row[1].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X - unit_x*3)
+      //   .attr("x2", origin_X + unit_x*3);
+      // line_col[0].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X - unit_x*3 - 10)
+      //   .attr("x2", origin_X - unit_x*3 - 10);
+      // line_col[1].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X + unit_x*3 + 10)
+      //   .attr("x2", origin_X + unit_x*3 + 10);
+      // circles_be.transition()
+      //   .duration(100)
+      //   .style("opacity", 0);
+      // circles_af.transition()
+      //   .delay(500)
+      //   .duration(1000)
+      //   .style("opacity", 1);
         
       sw = false;
     }
     else {
-      Rect[2].transition()
-        .duration(1000)
-        .style("opacity", 0);
-      Rect[3].transition()
-        .duration(1000)
-        .style("opacity", 0);
-      Rect[4].transition()
-        .duration(1000)
-        .style("opacity", 0);
-      Rect[5].transition()
-        .duration(1000)
-        .style("opacity", 0);
-      line_row[0].transition()
-        .duration(1000)
-        .attr("x1", origin_X - unit_x)
-        .attr("x2", origin_X + unit_x);
-      line_row[1].transition()
-        .duration(1000)
-        .attr("x1", origin_X - unit_x)
-        .attr("x2", origin_X + unit_x);
-      line_col[0].transition()
-        .duration(1000)
-        .attr("x1", origin_X - unit_x - 10)
-        .attr("x2", origin_X - unit_x - 10);
-      line_col[1].transition()
-        .duration(1000)
-        .attr("x1", origin_X + unit_x + 10)
-        .attr("x2", origin_X + unit_x + 10);
-      circles_be.transition()
-        .delay(500)
-        .duration(1000)
-        .style("opacity", 1);
-      circles_af.transition()
-        .duration(100)
-        .style("opacity", 0);
+      // Rect[2].transition()
+      //   .duration(1000)
+      //   .style("opacity", 0);
+      // Rect[3].transition()
+      //   .duration(1000)
+      //   .style("opacity", 0);
+      // Rect[4].transition()
+      //   .duration(1000)
+      //   .style("opacity", 0);
+      // Rect[5].transition()
+      //   .duration(1000)
+      //   .style("opacity", 0);
+      // line_row[0].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X - unit_x)
+      //   .attr("x2", origin_X + unit_x);
+      // line_row[1].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X - unit_x)
+      //   .attr("x2", origin_X + unit_x);
+      // line_col[0].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X - unit_x - 10)
+      //   .attr("x2", origin_X - unit_x - 10);
+      // line_col[1].transition()
+      //   .duration(1000)
+      //   .attr("x1", origin_X + unit_x + 10)
+      //   .attr("x2", origin_X + unit_x + 10);
+      // circles_be.transition()
+      //   .delay(500)
+      //   .duration(1000)
+      //   .style("opacity", 1);
+      // circles_af.transition()
+      //   .duration(100)
+      //   .style("opacity", 0);
       
       sw = true;
     }
