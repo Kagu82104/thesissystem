@@ -1,6 +1,6 @@
-body{
+/* body{
    padding-bottom: 100%;
-}
+} */
 .center {
   text-align: center;
 }
@@ -32,7 +32,7 @@ td.hover:hover{
   text-align: center;
 }
 .graph-auto{
-  height: 700px;
+  height: 300px;
 }
 .img-stroke{
   stroke:#ac0d0d; 
@@ -46,7 +46,7 @@ td.hover:hover{
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 600vh; /* Should be removed. Only for demonstration */
+  height: 100vh; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */

@@ -56,41 +56,39 @@ function Draw_Animation() {
       
   var svg_img = svgContainer_anime.append('image')
   .attr('image-rendering','optimizeQuality')
-  .attr('id','inputimg')
-  .attr('x','0')
-  .attr('y','0');
+  .attr('id','inputimg');
 
   var img = new Image();
   var inputpic = "data/dog-cycle-car.png";
 
   img.src = inputpic;
-    var picwidth = width;
+  var picwidth = width;
     //var picheight = ;
 
     svg_img.attr('width',picwidth).attr('xlink:href', inputpic);
-      below_y += img.height;  
+  
       
   
   var svg_img1 = svgContainer_anime.append('image')
   .attr('image-rendering','optimizeQuality')
-  .attr('id','outputimg')
-  .attr('x','0')
-  .attr('y',below_y);
+  .attr('id','outputimg');
+  below_y += $("#col1").height();
   var img1 = new Image();
   var outputpic = "data/predictions.png";
   
   img1.src = outputpic;
   img1.onload = function() 
   {
-    var picwidth = this.width*0.5;
     var picheight = this.height*0.5;
-    svg_img1.attr('height', picheight)
+    svg_img1.attr('x','0')
+      .attr('y',$("#col1").height()-picheight)
       .attr('width',picwidth)
       .attr('xlink:href', outputpic)
-    
+    line_col[0] = DrawLine_arrow(svgContainer_anime, origin_X,$('#inputimg').height(),$("#col1").height()-picheight-10); 
+    console.log($("#col1").height()-picheight-10-$('#inputimg').height()) ;
   }
   
-  line_col[0] = DrawLine_arrow(svgContainer_anime, origin_X,30,below_y);
+  
     var sw = true;
   svgContainer_anime.on("mousedown", animate);
                       
@@ -174,10 +172,11 @@ function init(Src, x, y,data){
   .attr("fill", data)
 return initinput;
 }
-function DrawConvolution(Src, x, y,color) {
+function DrawConvolution(Src, x, y,color,id) {
       var rect_t = Src.append("rect")
           .attr("x", x)
           .attr("y", y)
+          .attr("id",id)
           .attr("width", 150)
           .attr("height", 50)
           .attr("fill", color)
@@ -216,24 +215,24 @@ function DrawLine_arrow(Src, x, y1, y2) {
           .attr("y2", y2)
           .attr("stroke", "black")
           .attr("stroke-width", 3)
-          .attr("marker-end","url(#arrow)");
-// var line_col1 = Src.append("line")
-//           .attr("x1", x+8)
-//           .attr("y1", y1+3)
-//           .attr("x2", x)
-//           .attr("y2", y2)
-//           .attr("stroke", "black")
-//           .attr("stroke-width", 3);  
-// var line_col2 = Src.append("line")
-//           .attr("x1", x-8)
-//           .attr("y1", y1+3)
-//           .attr("x2", x)
-//           .attr("y2", y2)
-//           .attr("stroke", "black")
-//           .attr("stroke-width", 3);              
+          .attr("marker-end","url(#arrow)");            
   return line_col;
 }
-
+function DrawLine_arrow1(Src, object1,object2) {
+  var x1 = parseInt(object1.attr("x")) + object1.width()/2;
+  var x2 = parseInt(object2.attr("x")) + object2.width()/2;
+  var y1 = parseInt(object1.attr("y")) + object1.height();
+  var y2 = parseInt(object2.attr("y"))-13;
+  var line_col = Src.append("line")
+          .attr("x1", x1)
+          .attr("y1", y1)
+          .attr("x2", x2)
+          .attr("y2", y2)
+          .attr("stroke", "black")
+          .attr("stroke-width", 3)
+          .attr("marker-end","url(#arrow)");            
+  return line_col;
+}
 function DrawLine_Branch(Src, x, y1, y2) {
   var line_col = Src.append("line")
           .attr("x1", x)
@@ -249,11 +248,20 @@ function DrawLine_Branch(Src, x, y1, y2) {
 
   function animate() {
     if(sw) {
-      svg_img1.transition()
-      .duration(1000)
-        .attr('y',800);
       
-        
+        for (var i =  0; i < 31; i++) {
+          Rect[i] = DrawConvolution(svgContainer_anime,origin_X-75, $("#inputimg").height()+30+5+i*120,"#CA5237","conv_"+i);
+          below_y += 120;
+        }
+        line_col[0].remove();
+        DrawLine_arrow(svgContainer_anime,$("#inputimg").width()/2,$("#inputimg").height(),$("#inputimg").height()+23)
+        for (var i =  0; i < 30; i++) {
+          DrawLine_arrow1(svgContainer_anime,$("#conv_"+i),$('#conv_'+(i+1)));
+        }
+        svg_img1.transition().duration(1000).attr('y',below_y-$("#outputimg").height());
+        DrawLine_arrow(svgContainer_anime,$("#inputimg").width()/2,below_y-$("#outputimg").height()-30,below_y-$("#outputimg").height()+23);
+        $('body').attr({style: 'height: '+below_y});
+        $('svg').attr({style: 'height: '+below_y});        
       // Rect[3].transition()
       //   .duration(1000)
       //   .style("opacity", 1);
@@ -332,10 +340,11 @@ function DrawLine_Branch(Src, x, y1, y2) {
 }
 
 
-function DrawRect(Src, x, y) {
+function DrawRect(Src, x, y, id) {
   var rect_t = Src.append("rect")
           .attr("x", x)
           .attr("y", y)
+          .attr("id",id)
           .attr("width", 100)
           .attr("height", 50)
           .attr("fill", "white")
