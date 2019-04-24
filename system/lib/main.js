@@ -83,8 +83,8 @@ function Draw_Animation() {
       .attr('y', $("#col1").height() - picheight)
       .attr('width', picwidth)
       .attr('xlink:href', outputpic)
-    //line_col[0] = DrawLine_arrow(svgContainer_anime, origin_X, $('#inputimg').height(), $("#col1").height() - picheight - 10);
-    line_col[0] = DrawLine_arrow1(svgContainer_anime,$("#inputimg"),$("#outputimg"));
+    line_col[0] = DrawLine_arrow(svgContainer_anime, origin_X, $('#inputimg').height(), $("#col1").height() - picheight - 10);
+    //line_col[0] = DrawLine_arrow1(svgContainer_anime,$("#inputimg"),$("#outputimg"));
     console.log($("#col1").height() - picheight - 10 - $('#inputimg').height());
   }
 
@@ -250,16 +250,16 @@ function Draw_Animation() {
     if (sw) {
 
       for (var i = 0; i < 31; i++) {
-        Rect[i] = DrawConvolution(svgContainer_anime, origin_X - 75, $("#inputimg").height() + 30 + 5 + i * 120, "#CA5237", "conv_" + i);
+        Rect[i] = DrawConvolution(svgContainer_anime, origin_X - 75, $("#inputimg").height() + 65 + 5 + i * 120, "#CA5237", "conv_" + i);
         below_y += 120;
       }
       line_col[0].remove();
-      DrawLine_arrow(svgContainer_anime, $("#inputimg").width() / 2, $("#inputimg").height(), $("#inputimg").height() + 23)
+      DrawLine_arrow(svgContainer_anime, $("#inputimg").width() / 2, $("#inputimg").height(), $("#inputimg").height() + 57);
       for (var i = 0; i < 30; i++) {
         DrawLine_arrow1(svgContainer_anime, $("#conv_" + i), $('#conv_' + (i + 1)));
       }
       svg_img1.transition().duration(1000).attr('y', below_y - $("#outputimg").height());
-      DrawLine_arrow(svgContainer_anime, $("#inputimg").width() / 2, below_y - $("#outputimg").height() - 30, below_y - $("#outputimg").height() + 23);
+      DrawLine_arrow(svgContainer_anime, $("#inputimg").width() / 2, below_y - $("#outputimg").height() - 65, below_y - $("#outputimg").height()-11);
       $('body').attr({ style: 'height: ' + below_y });
       $('svg').attr({ style: 'height: ' + below_y });
       // Rect[3].transition()

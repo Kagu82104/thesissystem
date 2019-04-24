@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YOLO Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/d3.js"></script>
+    <!-- <script type="text/javascript" src="lib/d3.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="lib/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="column" id="col1"></div>
+      <div class="column" id="col2">
+        <div class="row">
+          <div class="col-md-6">
+            <table id="yolo_table" width="100%">
+              <tr>
+                <th>Layer</th>
+                <th>Type</th>
+                <th>Filters</th>
+                <th>Size/Stride</th>
+                <th>Output size</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>Convolutional</td>
+                <td>32</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">416x416</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>208x208</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Convolutional</td>
+                <td>64</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">208x208</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>104x104</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Convolutional</td>
+                <td>128</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">104x104</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Convolutional</td>
+                <td>64</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">104x104</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Convolutional</td>
+                <td>128</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">104x104</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>52x52</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">52x52</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Convolutional</td>
+                <td>128</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">52x52</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">52x52</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>26x26</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>13x13</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>Route</td>
+                <td>16</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>Convolutional</td>
+                <td>64</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>Reorg</td>
+                <td></td>
+                <td>/2</td>
+                <td>13x13</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>Route</td>
+                <td>27 24</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>Convolutional</td>
+                <td>425</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>Detection</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+
+            <!-- <img src="data/layer.png"  class="rounded img-fluid"> -->
+          </div>
+        </div>
+      </div>
+      <div class="column" id="col3">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="center">原圖</h3>
+            <img src="data/dog-cycle-car.png" class="rounded img-fluid" />
+          </div>
+          <div class="col-md-6">
+            <h3 class="center">結果</h3>
+            <img src="data/predictions.png" class="rounded img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="lib/main.js"></script>
+</html>
