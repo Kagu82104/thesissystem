@@ -1,6 +1,54 @@
-/* body{
-   padding-bottom: 100%;
-} */
+body{
+   /* padding-bottom: 100%; */
+   background-color: antiquewhite;
+}
+.qtip-default {
+  border: 1px solid #31343F;
+  border-radius: 5px;
+  background-color: #31343F;
+  color: #52637D;
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 18px;
+}
+.qtip {
+  position: absolute;
+  left: -28000px;
+  top: -28000px;
+  display: none;
+  max-width: 280px;
+  min-width: 50px;
+  font-size: 10.5px;
+  line-height: 12px;
+  direction: ltr;
+  box-shadow: none;
+  padding: 0;
+}
+.node {
+  fill: #FFB84D;
+}
+.node-type-source{
+  fill: #37A058;
+}
+.node-type-source .node-label {
+  color: #FFF;
+}
+.node-label {
+  font-size: 14px;
+  color: #563621;
+  padding: 1px;
+}
+* {
+  box-sizing: border-box;
+}
+.node-type-convolution, .node-type-deconvolution {
+  fill: #CA5237;
+}
+.edgePath path {
+  stroke: #554037;
+  fill: #554037;
+  stroke-width: 1.5px;
+}
 .center {
   text-align: center;
 }
@@ -44,6 +92,7 @@ td.hover:hover{
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
+  text-align: center;
   width: 33.33%;
   padding: 10px;
   height: 100vh; /* Should be removed. Only for demonstration */

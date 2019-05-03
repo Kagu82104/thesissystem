@@ -16,7 +16,1432 @@
   </head>
   <body>
     <div class="container">
-      <div class="column" id="col1"></div>
+      <!-- <div class="column" id="col1"></div> -->
+      <div class="column" id="net-group">
+        <h1 id="net-title">YOLO v2 Net</h1>
+        <svg id="net-svg" width="258" height="2414">
+          <defs>
+            <marker
+              id="arrow"
+              viewBox="0 0 10 10"
+              refX="9"
+              refY="5"
+              markerUnits="strokeWidth"
+              markerWidth="8"
+              markerHeight="6"
+              orient="auto"
+            >
+              <path
+                d="M 0 0 L 10 5 L 0 10 L 4 5 z"
+                style="stroke-width: 1; stroke-dasharray: 1, 0;"
+              ></path>
+            </marker>
+          </defs>
+          <g transform="translate(15)">
+            <g class="output">
+              <g class="clusters"></g>
+              <g class="edgePaths">
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M118.65149781050955,48.5L135.91015625,63.5L135.91015625,78.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,127L135.91015625,142L135.91015625,157"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,205.5L135.91015625,220.5L135.91015625,235.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,284L135.91015625,299L135.91015625,314"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,362.5L135.91015625,377.5L135.91015625,392.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,441L135.91015625,456L135.91015625,471"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,519.5L135.91015625,534.5L135.91015625,549.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,598L135.91015625,613L135.91015625,628"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,676.5L135.91015625,691.5L135.91015625,706.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,755L135.91015625,770L135.91015625,785"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,833.5L135.91015625,848.5L135.91015625,863.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,912L135.91015625,927L135.91015625,942"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,990.5L135.91015625,1005.5L135.91015625,1020.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,1069L135.91015625,1084L135.91015625,1099"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,1147.5L135.91015625,1162.5L135.91015625,1177.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,1226L135.91015625,1241L135.91015625,1256"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,1304.5L135.91015625,1319.5L135.91015625,1334.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M98.47566679936305,1383L75.3203125,1398L75.3203125,1413"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,1461.5L75.3203125,1476.5L75.3203125,1491.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,1540L75.3203125,1555L75.3203125,1570"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,1618.5L75.3203125,1633.5L75.3203125,1648.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,1697L75.3203125,1712L75.3203125,1727"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,1775.5L75.3203125,1790.5L75.3203125,1805.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,1854L75.3203125,1869L75.3203125,1884"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,1932.5L75.3203125,1947.5L75.3203125,1962.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M173.34464570063693,1383L196.5,1398L196.5,1437.25L196.5,1476.5L196.5,1515.75L196.5,1555L196.5,1594.25L196.5,1633.5L196.5,1672.75L196.5,1712L196.5,1751.25L196.5,1790.5L196.5,1829.75L196.5,1869L196.5,1908.25L196.5,1947.5L196.5,1962.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M75.3203125,2011L75.3203125,2026L98.47566679936305,2041"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M196.5,2011L196.5,2026L173.34464570063693,2041"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,2089.5L135.91015625,2104.5L135.91015625,2119.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,2168L135.91015625,2183L135.91015625,2198"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,2246.5L135.91015625,2261.5L135.91015625,2276.5"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M58.4765625,36.22855718085106L-15,63.5L-15,102.75L-15,142L-15,181.25L-15,220.5L-15,259.75L-15,299L-15,338.25L-15,377.5L-15,416.75L-15,456L-15,495.25L-15,534.5L-15,573.75L-15,613L-15,652.25L-15,691.5L-15,730.75L-15,770L-15,809.25L-15,848.5L-15,887.75L-15,927L-15,966.25L-15,1005.5L-15,1044.75L-15,1084L-15,1123.25L-15,1162.5L-15,1201.75L-15,1241L-15,1280.25L-15,1319.5L-15,1358.75L-15,1398L-15,1437.25L-15,1476.5L-15,1515.75L-15,1555L-15,1594.25L-15,1633.5L-15,1672.75L-15,1712L-15,1751.25L-15,1790.5L-15,1829.75L-15,1869L-15,1908.25L-15,1947.5L-15,1986.75L-15,2026L-15,2065.25L-15,2104.5L-15,2143.75L-15,2183L-15,2222.25L-15,2261.5L-15,2300.75L-15,2340L59.8828125,2367.7933843085107"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path
+                    class="path"
+                    d="M135.91015625,2325L135.91015625,2340L118.65149781050955,2355"
+                    marker-end="url(#arrow)"
+                    style="fill: none;"
+                  ></path>
+                </g>
+              </g>
+              <g class="edgeLabels">
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <text>
+                      <tspan xml:space="preserve" dy="1em" x="1"></tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g class="nodes">
+                <g
+                  class="node node-type-source"
+                  transform="translate(90.75,24.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="0"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-32.2734375"
+                    y="-24.25"
+                    width="64.546875"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-22.2734375,-14.25)">
+                      <foreignObject width="44.5546875" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">data</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,102.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="1"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-57.6328125"
+                    y="-24.25"
+                    width="115.265625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-47.6328125,-14.25)">
+                      <foreignObject width="95.2734375" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv1_32</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-pooling"
+                  transform="translate(135.91015625,181.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="2"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-58.5625"
+                    y="-24.25"
+                    width="117.125"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-48.5625,-14.25)">
+                      <foreignObject width="97.125" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">MaxPool1</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,259.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="3"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-57.6328125"
+                    y="-24.25"
+                    width="115.265625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-47.6328125,-14.25)">
+                      <foreignObject width="95.2734375" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv2_64</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-pooling"
+                  transform="translate(135.91015625,338.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="4"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-58.5625"
+                    y="-24.25"
+                    width="117.125"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-48.5625,-14.25)">
+                      <foreignObject width="97.125" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">MaxPool2</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,416.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="5"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-63.53125"
+                    y="-24.25"
+                    width="127.0625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-53.53125,-14.25)">
+                      <foreignObject width="107.0625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv3_128</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,495.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="6"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-57.6328125"
+                    y="-24.25"
+                    width="115.265625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-47.6328125,-14.25)">
+                      <foreignObject width="95.2734375" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv4_64</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,573.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="7"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-63.53125"
+                    y="-24.25"
+                    width="127.0625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-53.53125,-14.25)">
+                      <foreignObject width="107.0625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv5_128</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-pooling"
+                  transform="translate(135.91015625,652.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="8"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-58.5625"
+                    y="-24.25"
+                    width="117.125"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-48.5625,-14.25)">
+                      <foreignObject width="97.125" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">MaxPool3</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,730.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="9"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-63.53125"
+                    y="-24.25"
+                    width="127.0625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-53.53125,-14.25)">
+                      <foreignObject width="107.0625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv6_256</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,809.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="10"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-63.53125"
+                    y="-24.25"
+                    width="127.0625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-53.53125,-14.25)">
+                      <foreignObject width="107.0625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv7_128</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,887.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="11"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-63.53125"
+                    y="-24.25"
+                    width="127.0625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-53.53125,-14.25)">
+                      <foreignObject width="107.0625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv8_256</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-pooling"
+                  transform="translate(135.91015625,966.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="12"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-58.5625"
+                    y="-24.25"
+                    width="117.125"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-48.5625,-14.25)">
+                      <foreignObject width="97.125" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">MaxPool4</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,1044.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="13"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-63.53125"
+                    y="-24.25"
+                    width="127.0625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-53.53125,-14.25)">
+                      <foreignObject width="107.0625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv9_512</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,1123.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="14"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-69.421875"
+                    y="-24.25"
+                    width="138.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-59.421875,-14.25)">
+                      <foreignObject width="118.8515625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv10_256</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,1201.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="15"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-69.421875"
+                    y="-24.25"
+                    width="138.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-59.421875,-14.25)">
+                      <foreignObject width="118.8515625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv11_512</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,1280.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="16"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-69.421875"
+                    y="-24.25"
+                    width="138.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-59.421875,-14.25)">
+                      <foreignObject width="118.8515625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv12_256</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,1358.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="17"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-69.421875"
+                    y="-24.25"
+                    width="138.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-59.421875,-14.25)">
+                      <foreignObject width="118.8515625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv13_512</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-pooling"
+                  transform="translate(75.3203125,1437.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="18"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-58.5625"
+                    y="-24.25"
+                    width="117.125"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-48.5625,-14.25)">
+                      <foreignObject width="97.125" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">MaxPool5</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(75.3203125,1515.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="19"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-75.3203125"
+                    y="-24.25"
+                    width="150.640625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-65.3203125,-14.25)">
+                      <foreignObject width="130.640625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv14_1024</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(75.3203125,1594.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="20"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-69.421875"
+                    y="-24.25"
+                    width="138.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-59.421875,-14.25)">
+                      <foreignObject width="118.8515625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv15_512</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(75.3203125,1672.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="21"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-75.3203125"
+                    y="-24.25"
+                    width="150.640625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-65.3203125,-14.25)">
+                      <foreignObject width="130.640625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv16_1024</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(75.3203125,1751.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="22"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-69.421875"
+                    y="-24.25"
+                    width="138.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-59.421875,-14.25)">
+                      <foreignObject width="118.8515625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv17_512</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(75.3203125,1829.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="23"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-75.3203125"
+                    y="-24.25"
+                    width="150.640625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-65.3203125,-14.25)">
+                      <foreignObject width="130.640625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv18_1024</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(75.3203125,1908.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="24"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-75.3203125"
+                    y="-24.25"
+                    width="150.640625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-65.3203125,-14.25)">
+                      <foreignObject width="130.640625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv19_1024</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(75.3203125,1986.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="25"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-75.3203125"
+                    y="-24.25"
+                    width="150.640625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-65.3203125,-14.25)">
+                      <foreignObject width="130.640625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv20_1024</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-reshape"
+                  transform="translate(196.5,1986.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="26"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-35.859375"
+                    y="-24.25"
+                    width="71.71875"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-25.859375,-14.25)">
+                      <foreignObject width="51.7265625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">reorg</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-concat"
+                  transform="translate(135.91015625,2065.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="27"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-43.421875"
+                    y="-24.25"
+                    width="86.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-33.421875,-14.25)">
+                      <foreignObject width="66.84375" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">concat</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,2143.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="28"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-75.3203125"
+                    y="-24.25"
+                    width="150.640625"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-65.3203125,-14.25)">
+                      <foreignObject width="130.640625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv21_1024</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-convolution"
+                  transform="translate(135.91015625,2222.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="29"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-69.421875"
+                    y="-24.25"
+                    width="138.84375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-59.421875,-14.25)">
+                      <foreignObject width="118.8515625" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Conv22_125</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-region"
+                  transform="translate(135.91015625,2300.75)"
+                  style="opacity: 1;"
+                  data-hasqtip="30"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-43.75"
+                    y="-24.25"
+                    width="87.5"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-33.75,-14.25)">
+                      <foreignObject width="67.5" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">Region</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+                <g
+                  class="node node-type-sink"
+                  transform="translate(90.75,2379.25)"
+                  style="opacity: 1;"
+                  data-hasqtip="31"
+                >
+                  <rect
+                    rx="5"
+                    ry="5"
+                    x="-30.8671875"
+                    y="-24.25"
+                    width="61.734375"
+                    height="48.5"
+                  ></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-20.8671875,-14.25)">
+                      <foreignObject width="41.7421875" height="28.5"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="display: inline-block; white-space: nowrap;"
+                        >
+                          <div class="node-label">loss</div>
+                        </div></foreignObject
+                      >
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div id="qtip-0" class="qtip qtip-default  qtip-pos-rc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="true" data-qtip-id="0" style="z-index: 15001;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; right: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-0-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">data</span> · <span class="node-info-type">Data</span></div><div class="node-param-section-title node-param-key">transform param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">crop size: </span><span class="node-param-value">416</span></div><div class="node-param-row"><span class="node-param-key">mirror: </span><span class="node-param-value">true</span></div></div><div class="node-param-section-title node-param-key">data param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">source: </span><span class="node-param-value">PASCAL VOC 2007 train + 2012 train &amp; test</span></div><div class="node-param-row"><span class="node-param-key">batch size: </span><span class="node-param-value">32</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">data: </span><span class="node-param-value">[ 1, 3, 416, 416 ]</span></div><div class="node-param-row"><span class="node-param-key">label: </span><span class="node-param-value">[ 1 ]</span></div></div></div></div></div>
+      <div id="qtip-1" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-1-content" aria-hidden="true" data-qtip-id="1" style="z-index: 15001;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-1-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv1_32</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">32</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv1 32: </span><span class="node-param-value">[ 1, 32, 416, 416 ]</span></div></div></div></div></div>
+      <div id="qtip-2" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-2-content" aria-hidden="true" data-qtip-id="2" style="z-index: 15004;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-2-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">MaxPool1</span> · <span class="node-info-type">Pooling</span></div><div class="node-param-section-title node-param-key">pooling param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">pool: </span><span class="node-param-value">max</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">2</span></div><div class="node-param-row"><span class="node-param-key">stride: </span><span class="node-param-value">2</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">MaxPool1: </span><span class="node-param-value">[ 1, 32, 208, 208 ]</span></div></div></div></div></div>
+      <div id="qtip-3" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-3-content" aria-hidden="true" data-qtip-id="3" style="z-index: 15002;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-3-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv2_64</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">64</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv2 64: </span><span class="node-param-value">[ 1, 64, 208, 208 ]</span></div></div></div></div></div>
+      <div id="qtip-4" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-4-content" aria-hidden="true" data-qtip-id="4" style="z-index: 15002;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-4-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">MaxPool2</span> · <span class="node-info-type">Pooling</span></div><div class="node-param-section-title node-param-key">pooling param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">pool: </span><span class="node-param-value">max</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">2</span></div><div class="node-param-row"><span class="node-param-key">stride: </span><span class="node-param-value">2</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">MaxPool2: </span><span class="node-param-value">[ 1, 64, 104, 104 ]</span></div></div></div></div></div>
+      <div id="qtip-5" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-5-content" aria-hidden="true" data-qtip-id="5" style="z-index: 15013;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-5-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv3_128</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">128</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv3 128: </span><span class="node-param-value">[ 1, 128, 104, 104 ]</span></div></div></div></div></div>
+      <div id="qtip-6" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-6-content" aria-hidden="true" data-qtip-id="6" style="z-index: 15003;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-6-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv4_64</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">64</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">0</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv4 64: </span><span class="node-param-value">[ 1, 64, 104, 104 ]</span></div></div></div></div></div>
+      <div id="qtip-7" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-7-content" aria-hidden="true" data-qtip-id="7" style="z-index: 15008;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-7-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv5_128</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">128</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv5 128: </span><span class="node-param-value">[ 1, 128, 104, 104 ]</span></div></div></div></div></div>
+      <div id="qtip-8" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-8-content" aria-hidden="true" data-qtip-id="8" style="z-index: 15004;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-8-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">MaxPool3</span> · <span class="node-info-type">Pooling</span></div><div class="node-param-section-title node-param-key">pooling param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">pool: </span><span class="node-param-value">max</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">2</span></div><div class="node-param-row"><span class="node-param-key">stride: </span><span class="node-param-value">2</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">MaxPool3: </span><span class="node-param-value">[ 1, 128, 52, 52 ]</span></div></div></div></div></div>
+      <div id="qtip-9" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-9-content" aria-hidden="true" data-qtip-id="9" style="z-index: 15005;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-9-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv6_256</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">256</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv6 256: </span><span class="node-param-value">[ 1, 256, 52, 52 ]</span></div></div></div></div></div>
+      <div id="qtip-10" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-10-content" aria-hidden="true" data-qtip-id="10" style="z-index: 15011;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-10-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv7_128</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">128</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">0</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv7 128: </span><span class="node-param-value">[ 1, 128, 52, 52 ]</span></div></div></div></div></div>
+      <div id="qtip-11" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-11-content" aria-hidden="true" data-qtip-id="11" style="z-index: 15026;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-11-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv8_256</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">256</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv8 256: </span><span class="node-param-value">[ 1, 256, 52, 52 ]</span></div></div></div></div></div>
+      <div id="qtip-12" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-12-content" aria-hidden="true" data-qtip-id="12" style="z-index: 15006;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-12-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">MaxPool4</span> · <span class="node-info-type">Pooling</span></div><div class="node-param-section-title node-param-key">pooling param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">pool: </span><span class="node-param-value">max</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">2</span></div><div class="node-param-row"><span class="node-param-key">stride: </span><span class="node-param-value">2</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">MaxPool4: </span><span class="node-param-value">[ 1, 256, 26, 26 ]</span></div></div></div></div></div>
+      <div id="qtip-13" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-13-content" aria-hidden="true" data-qtip-id="13" style="z-index: 15017;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-13-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv9_512</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">512</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv9 512: </span><span class="node-param-value">[ 1, 512, 26, 26 ]</span></div></div></div></div></div>
+      <div id="qtip-14" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-14-content" aria-hidden="true" data-qtip-id="14" style="z-index: 15018;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-14-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv10_256</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">256</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">0</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv10 256: </span><span class="node-param-value">[ 1, 256, 26, 26 ]</span></div></div></div></div></div>
+      <div id="qtip-15" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-15-content" aria-hidden="true" data-qtip-id="15" style="z-index: 15002;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-15-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv11_512</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">512</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv11 512: </span><span class="node-param-value">[ 1, 512, 26, 26 ]</span></div></div></div></div></div>
+      <div id="qtip-16" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-16-content" aria-hidden="true" data-qtip-id="16" style="z-index: 15003;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-16-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv12_256</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">256</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">0</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv12 256: </span><span class="node-param-value">[ 1, 256, 26, 26 ]</span></div></div></div></div></div>
+      <div id="qtip-17" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-17-content" aria-hidden="true" data-qtip-id="17" style="z-index: 15007;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-17-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv13_512</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">512</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv13 512: </span><span class="node-param-value">[ 1, 512, 26, 26 ]</span></div></div></div></div></div>
+      <div id="qtip-18" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-18-content" aria-hidden="true" data-qtip-id="18" style="z-index: 15018;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-18-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">MaxPool5</span> · <span class="node-info-type">Pooling</span></div><div class="node-param-section-title node-param-key">pooling param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">pool: </span><span class="node-param-value">max</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">2</span></div><div class="node-param-row"><span class="node-param-key">stride: </span><span class="node-param-value">2</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">MaxPool5: </span><span class="node-param-value">[ 1, 512, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-19" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-19-content" aria-hidden="true" data-qtip-id="19" style="z-index: 15019;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-19-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv14_1024</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">1024</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv14 1024: </span><span class="node-param-value">[ 1, 1024, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-20" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-20-content" aria-hidden="true" data-qtip-id="20" style="z-index: 15028;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-20-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv15_512</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">512</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">0</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv15 512: </span><span class="node-param-value">[ 1, 512, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-21" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-21-content" aria-hidden="true" data-qtip-id="21" style="z-index: 15020;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-21-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv16_1024</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">1024</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv16 1024: </span><span class="node-param-value">[ 1, 1024, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-22" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-22-content" aria-hidden="true" data-qtip-id="22" style="z-index: 15021;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-22-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv17_512</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">512</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">0</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv17 512: </span><span class="node-param-value">[ 1, 512, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-23" class="qtip qtip-default  qtip-pos-lt" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-23-content" aria-hidden="true" data-qtip-id="23" style="z-index: 15008;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 5px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-23-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv18_1024</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">1024</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv18 1024: </span><span class="node-param-value">[ 1, 1024, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-24" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-24-content" aria-hidden="true" data-qtip-id="24" style="z-index: 15009;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-24-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv19_1024</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">1024</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv19 1024: </span><span class="node-param-value">[ 1, 1024, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-25" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-25-content" aria-hidden="true" data-qtip-id="25" style="z-index: 15011;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-25-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv20_1024</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">1024</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div><div class="node-param-section-title node-param-key">blob shapes</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">Conv20 1024: </span><span class="node-param-value">[ 1, 1024, 13, 13 ]</span></div></div></div></div></div>
+      <div id="qtip-26" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-26-content" aria-hidden="true" data-qtip-id="26" style="z-index: 15008;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-26-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">reorg</span> · <span class="node-info-type">Reshape</span></div></div></div></div>
+      <div id="qtip-27" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-27-content" aria-hidden="true" data-qtip-id="27" style="z-index: 15019;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-27-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">concat</span> · <span class="node-info-type">Concat</span></div><div class="node-param-section-title node-param-key">concat param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">axis: </span><span class="node-param-value">1</span></div></div></div></div></div>
+      <div id="qtip-28" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-28-content" aria-hidden="true" data-qtip-id="28" style="z-index: 15016;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-28-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv21_1024</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">1024</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">3</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">true</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">leakyrelu</span></div></div></div></div></div>
+      <div id="qtip-29" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-29-content" aria-hidden="true" data-qtip-id="29" style="z-index: 15012;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-29-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Conv22_125</span> · <span class="node-info-type">Convolution</span></div><div class="node-param-section-title node-param-key">convolution param</div><div class="node-param-section"><div class="node-param-row"><span class="node-param-key">num output: </span><span class="node-param-value">125</span></div><div class="node-param-row"><span class="node-param-key">pad: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">kernel size: </span><span class="node-param-value">1</span></div><div class="node-param-row"><span class="node-param-key">batch norm: </span><span class="node-param-value">false</span></div><div class="node-param-row"><span class="node-param-key">activation: </span><span class="node-param-value">linear</span></div></div></div></div></div>
+      <div id="qtip-30" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-30-content" aria-hidden="true" data-qtip-id="30" style="z-index: 15012;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-30-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">Region</span> · <span class="node-info-type">Region</span></div></div></div></div>
+      <div id="qtip-31" class="qtip qtip-default  qtip-pos-lc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-31-content" aria-hidden="true" data-qtip-id="31" style="z-index: 15012;"><div class="qtip-tip" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px; line-height: 8px; top: 50%; margin-top: -4px; left: -8px;"><canvas width="12" height="12" style="background-color: transparent !important; border: 0px !important; width: 8px; height: 8px;"></canvas></div><div class="qtip-content" id="qtip-31-content" aria-atomic="true"><div class="node-info-group"><div class="node-info-header"><span class="node-info-title">loss</span> · <span class="node-info-type">MSE</span></div></div></div></div>
+      
       <div class="column" id="col2">
         <div class="row">
           <div class="col-md-6">
