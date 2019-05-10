@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  3 MAY 2019 15:53
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6100 64-bit) (preloaded format=xelatex 2019.2.11)  6 MAY 2019 16:05
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2212,11 +2212,7 @@ Package: xeCJK-listings 2016/12/02 v3.4.4 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count346
 \l__xeCJK_listings_flag_int=\count347
 )
-(thesis.aux
-
-LaTeX Warning: Label `fig:yolov3' multiply defined.
-
-)
+(thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
@@ -2602,15 +2598,8 @@ File: fig/logo_bg.png Graphic file (type QTm)
 
 ] (10chap01introduction.tex
 Chapter 1.
-File: fig/yolopredictions.png Graphic file (type QTm)
-<use  "fig/yolopredictions.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 7--13
-
- []
-
-File: fig/map50blue.png Graphic file (type QTm)
-<use  "fig/map50blue.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 15--20
+) (20chap02relatedwork.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--1
 
  []
 
@@ -2619,28 +2608,11 @@ File: fig/logo_bg.png Graphic file (type QTm)
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-File: fig/Optimization4.png Graphic file (type QTm)
-<use  "fig/Optimization4.png" >
-File: fig/Optimization5.png Graphic file (type QTm)
- <use  "fig/Optimization5.png" >
-File: fig/system1.png Graphic file (type QTm)
-
-<use  "fig/system1.png" >) (20chap02relatedwork.tex
-Underfull \hbox (badness 10000) in paragraph at lines 35--1
-
- []
-
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [2]
-File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [3]
+ <use  "fig/logo_bg.png" > [2]
 Chapter 2.
 File: fig/logo_bg.png Graphic file (type QTm)
-<use  "fig/logo_bg.png" > [4
+<use  "fig/logo_bg.png" > [3
 
 ]
 Overfull \hbox (10.75766pt too wide) in paragraph at lines 63--64
@@ -2654,7 +2626,7 @@ EU1/TimesNewRoman(0)/m/n/12 Mask R-CNN\EU1/標楷體(0)/m/n/12 、| \EU1/TimesNe
 
 ) (30chap03methodology.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [5]
+ <use  "fig/logo_bg.png" > [4]
 Chapter 3.
 File: fig/ch3_1.png Graphic file (type QTm)
 <use  "fig/ch3_1.png" >
@@ -2662,35 +2634,35 @@ File: fig/ch3_2.png Graphic file (type QTm)
  <use  "fig/ch3_2.png" >) (40chap04results.tex
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [6
+<use  "fig/logo_bg.png" > [5
 
 ]
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [7]
+ <use  "fig/logo_bg.png" > [6]
 Chapter 4.
 ) (50chap05conclusions.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [8
+ <use  "fig/logo_bg.png" > [7
 
 ]
 Chapter 5.
 ) (AppendixA.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [9
+ <use  "fig/logo_bg.png" > [8
 
 ]) (AppendixB.tex
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [10
+<use  "fig/logo_bg.png" > [9
 
 ]) (Symbols.tex
 File: fig/logo_bg.png Graphic file (type QTm)
- <use  "fig/logo_bg.png" > [11
+ <use  "fig/logo_bg.png" > [10
 
 ])
 File: fig/logo_bg.png Graphic file (type QTm)
 
-<use  "fig/logo_bg.png" > [12
+<use  "fig/logo_bg.png" > [11
 
 ] (thesis.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
@@ -2706,18 +2678,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 47959 strings out of 428404
- 911811 string characters out of 3160537
- 1075717 words of memory out of 3000000
- 50631 multiletter control sequences out of 15000+200000
- 26735 words of font info for 87 fonts, out of 3000000 for 9000
+ 47937 strings out of 428404
+ 911356 string characters out of 3160537
+ 1075403 words of memory out of 3000000
+ 50616 multiletter control sequences out of 15000+200000
+ 26719 words of font info for 85 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  60i,18n,85p,10466b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.pdf (22 pages).
+Output written on thesis.pdf (21 pages).
