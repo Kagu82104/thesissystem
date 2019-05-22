@@ -16,10 +16,10 @@ body{
   left: -28000px;
   top: -28000px;
   display: none;
-  max-width: 280px;
+  max-width: 300px;
   min-width: 50px;
-  font-size: 10.5px;
-  line-height: 12px;
+  font-size: 16px;
+  color:#FFF;  
   direction: ltr;
   box-shadow: none;
   padding: 0;
@@ -30,6 +30,9 @@ body{
 .node {
   fill: #FFB84D;
 }
+.node-type-sink{
+ fill: #7F6A9B; 
+}
 .node-type-source{
   fill: #37A058;
 }
@@ -38,7 +41,7 @@ body{
 }
 .node-label {
   font-size: 14px;
-  color: #563621;
+  color: #FFF;
   padding: 1px;
 }
 * {
@@ -50,7 +53,7 @@ body{
 .edgePath path {
   stroke: #554037;
   fill: #554037;
-  stroke-width: 1.5px;
+  stroke-width: 2px;
 }
 .center {
   text-align: center;
