@@ -117,9 +117,71 @@
             <hr class="section-heading-spacer">
 
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
-					<h2 class="section-heading">開發模式</h2>
+                <div class="col-lg-12">
+					<h2 class="section-heading">YOLO v2 使用手冊</h2>
+					<a class="font18" href="https://pjreddie.com/darknet/yolov2/">作者網站 https://pjreddie.com/darknet/yolov2/</a>
+					<img class="img-responsive" src="img/官網.png"  alt="">
+					<br/>
+					<label class="font18">下載YOLO v2</label>
+					<img class="img-responsive" src="img/下載1.png"  alt="">
+					<br/>
+					<label class="font18">可以用github下載，也可以用git，這次環境都在window及windows Store內的ubuntu執行</label>
+					<img class="img-responsive" src="img/下載2.png"  alt="">
+					<br/>
+					<label class="font18">下載weight檔，並放在cfg資料夾</label>
+					<img class="img-responsive" src="img/weight.png"  alt=""><br/>
+					<label class="font18">開啟powershell</label>
+					<img class="img-responsive" src="img/powershell.png"  alt="">
+					<br/>
+					<label class="font18">輸入 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</label><br/>
+					<img class="img-responsive" src="img/powershell2.png"  alt="">
+					<br/>
+					<label class="font18">安裝完成後，開啟Micorsoft Store並輸入Ubuntu</label>
+					
+					<img class="img-responsive" src="img/ubuntu.png"  alt="">
+					<br/>
+					<img class="img-responsive" src="img/ubuntu2.png"  alt="">
+					<br/>
+					<label class="font18">下載完畢後，開啟等待安裝</label>
+					<img class="img-responsive" src="img/ubuntu3.png"  alt="">
+					<br/>
+					<label class="font18">為了能夠執行檔案，必須先安裝GCC </label><br/>
+					<label class="font18">輸入sudo apt-get update </label><br/>
+					<label class="font18">輸入sudo apt-get upgrade </label><br/>
+					<label class="font18">輸入sudo apt-get install build-essential</label><br/>
+
+					<label class="font18">最後檢查版本</label><br/>
+					<label class="font18">輸入gcc -v</label><br/>
+					<label class="font18">輸入make -v</label><br/>
+					
+					<img class="img-responsive" src="img/ubuntu4.png"  alt="">
+					<br/>
+					<label class="font18">下載atom</label>
+					<img class="img-responsive" src="img/atom.png"  alt=""><br/>
+					<label class="font18">安裝package</label>
+					<img class="img-responsive" src="img/atom2.png"  alt=""><br/>
+					<label class="font18">輸入platformio-ide-terminal</label>
+					<img class="img-responsive" src="img/atom3.png"  alt=""><br/>
+					<label class="font18">安裝完畢後，開啟YOLO(darknet-master資料夾)，開啟makefile檔</label>
+					<img class="img-responsive" src="img/atom4.png"  alt=""><br/>
+					<label class="font18">按下CTRL + ~ 開啟terminal，並輸入bash</label>
+					<img class="img-responsive" src="img/bash.png"  alt=""><br/>
+					<label class="font18">輸入make，執行</label>
+					<img class="img-responsive" src="img/make.png"  alt=""><br/>
+					<img class="img-responsive" src="img/make2.png"  alt=""><br/>
+					<label class="font18">執行完畢後，輸入./darknet detect cfg/yolov2.cfg yolov2.weights data/dog.jpg</label>
+					<label class="font18">原圖</label>
+					<img class="img-responsive" src="img/dog.jpg"  alt=""><br/>
+					<img class="img-responsive" src="img/detecor.png"  alt=""><br/>
+					<label class="font18">最後可以知道預測的結果</label>
+					<img class="img-responsive" src="img/complete.png"  alt=""><br/>
+					<label class="font18">在資料夾內也會產生圖片</label>
+					<img class="img-responsive" src="img/prediction_complete.png"  alt=""><br/>
+					<label class="font18">結果圖片</label>
+					<img class="img-responsive" src="img/predictions.jpg"  alt=""><br/>
+
                     <p class="font18"><a href="./system/index.html" target="_blank">進入系統</a></p>
+
                 </div>
                 <div class="col-lg-6 col-lg-offset-1 col-sm-6">
                     <!-- <img class="img-responsive" src="img/reference3.png"  alt=""> -->
