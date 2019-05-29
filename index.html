@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>卷積神經網路視覺化</title>
+    <title>YOLO v2演算法可視化系統</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.lp.css" />
     <link rel="stylesheet" type="text/css" href="css/landing-page.css" />
@@ -84,7 +84,7 @@
               class="intro-message"
               style="position: relative;padding-top: 0%;padding-bottom: 70%;"
             >
-              <h1 stroke="#000000" stroke-width="2px">卷積神經網路視覺化</h1>
+              <h1 stroke="#000000" stroke-width="2px">YOLO v2演算法可視化系統</h1>
             </div>
           </div>
         </div>
@@ -93,9 +93,9 @@
 
     <a name="demo_original"></a>
     <div class="content-section-a">
-      <p style="text-align: right">
+      <!--<p style="text-align: right">
         圖片來源:https://www.mathworks.com/solutions/deep-learning/convolutional-neural-network.html
-      </p>
+      </p>-->
       <div class="container">
         <hr class="section-heading-spacer" />
 
@@ -103,9 +103,9 @@
           <div class="col-lg-5 col-sm-6">
             <h2 class="section-heading">摘要</h2>
             <p class="font18">
-              介紹卷積神經網路的運作過程，比較其他種物件偵測的演算法，拆解運作過程。<br />
+              介紹YOLO v2及卷積神經網路的運作過程，比較其他種物件偵測的演算法，拆解運作過程。<br />
               現今大部分的演算法使用試誤法，本論文著重於解析卷積神經網路的架構及其運作方法。<br />
-              以簡單明瞭的方式闡述其過程，並且分析原本架構的問題，改善原本的架構。<br />
+              以簡單明瞭的方式闡述其過程，以實際。<br />
               以簡單清晰的方式讓人們了解卷積神經網路。
             </p>
           </div>
@@ -452,12 +452,13 @@ function draw() {
     .attr('y', 470)
     .attr('font-size', 16)
     .attr('fill', 'black')
-    .text('toggle movement');
+	.attr('class','center')
+    .text('Start / Stop');
   svg.append('rect')
     .attr('x', 500)
     .attr('y', 450)
     .attr('height', 30)
-    .attr('width', 150)
+    .attr('width', 120)
     .attr('fill', "rgba(200, 200, 200, 0.1)")
     .attr('stroke', 'black')
     .attr('stroke-width', '2')
