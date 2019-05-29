@@ -1,218 +1,588 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
+  <head>
     <title>卷積神經網路視覺化</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.lp.css">
-	<link rel="stylesheet" type="text/css" href="css/landing-page.css">
-    <link href='http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.lp.css" />
+    <link rel="stylesheet" type="text/css" href="css/landing-page.css" />
+    <link
+      href="http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
     <style type="text/css">
-    h1 {
-        font-family: 'cwTeXFangSong';
-    }
-    .center {
-    	text-align: center;
-	}
-	.font18{
-		font-size: 18px;
-	}
-	.cd-top.cd-top--show { 
- /* the button becomes visible */ 
- visibility: visible;
- opacity: 1;
-} 
+      h1 {
+        font-family: "cwTeXFangSong";
+      }
+      .center {
+        text-align: center;
+      }
+      .font18 {
+        font-size: 18px;
+      }
+      .cd-top.cd-top--show {
+        /* the button becomes visible */
+        visibility: visible;
+        opacity: 1;
+      }
 
-.cd-top.cd-top--fade-out { 
- /* if the user keeps scrolling down, the button is out of focus and becomes less visible */ 
- opacity: .5; 
-}
+      .cd-top.cd-top--fade-out {
+        /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+        opacity: 0.5;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+  <body onload="start()">
+    <nav
+      class="navbar navbar-default navbar-fixed-top topnav"
+      role="navigation"
+    >
+      <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> -->
-                <a class="navbar-brand topnav" href="http://www.cc.ntut.edu.tw/~tjhsieh/">國立臺北科技大學資訊工程系計算機圖學實驗室</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#top">回頂端</a>
-                    </li>
-					<li>
-                        <a href="">研究動機</a>
-                    </li>
-                    <li>
-                        <a href="system/index.html">系統</a>
-                    </li>
-					<li>
-                        <a href="reference/index.html">參考文獻</a>
-                    </li>
-                </ul>
-            </div>
-
+          <a
+            class="navbar-brand topnav"
+            href="http://www.cc.ntut.edu.tw/~tjhsieh/"
+            >國立臺北科技大學資訊工程系計算機圖學實驗室</a
+          >
         </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#top">回頂端</a>
+            </li>
+            <li>
+              <a href="">研究動機</a>
+            </li>
+            <li>
+              <a href="system/index.html">系統</a>
+            </li>
+            <li>
+              <a href="reference/index.html">參考文獻</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-
 
     <!-- Header -->
     <a name="top"></a>
     <div class="intro-header">
-        <div class="container" style="height:350px;">
-
-            <div class="row">
-                <div class="col-lg-12" style="height:300px;">
-                    <div class="intro-message" style="position: relative;padding-top: 0%;padding-bottom: 70%;">
-                        <h1 stroke="#000000" stroke-width="2px">卷積神經網路視覺化</h1>
-                    </div>
-                </div>
+      <div class="container" style="height:350px;">
+        <div class="row">
+          <div class="col-lg-12" style="height:300px;">
+            <div
+              class="intro-message"
+              style="position: relative;padding-top: 0%;padding-bottom: 70%;"
+            >
+              <h1 stroke="#000000" stroke-width="2px">卷積神經網路視覺化</h1>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
-	<a  name="demo_original"></a>
-	<div class="content-section-a">
-    <p style="text-align: right">圖片來源:https://www.mathworks.com/solutions/deep-learning/convolutional-neural-network.html</p>
-        <div class="container">
-        	
-            <hr class="section-heading-spacer">
+    <a name="demo_original"></a>
+    <div class="content-section-a">
+      <p style="text-align: right">
+        圖片來源:https://www.mathworks.com/solutions/deep-learning/convolutional-neural-network.html
+      </p>
+      <div class="container">
+        <hr class="section-heading-spacer" />
 
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-					<h2 class="section-heading">摘要</h2>
-                    <p class="font18">
-                        介紹卷積神經網路的運作過程，比較其他種物件偵測的演算法，拆解運作過程。<br/>
-                        現今大部分的演算法使用試誤法，本論文著重於解析卷積神經網路的架構及其運作方法。<br/>
-                        以簡單明瞭的方式闡述其過程，並且分析原本架構的問題，改善原本的架構。<br/>
-                        以簡單清晰的方式讓人們了解卷積神經網路。
-                    </p>
-                </div>
-                <div class="col-lg-6 col-lg-offset-1 col-sm-6">
-                    <!-- <img class="img-responsive" src="img/reference1.png"  alt=""> -->
-                    
-                </div>
-            </div>
-			<hr class="section-heading-spacer">
-			<div class="row">
-                <div class="col-lg-5 col-sm-6">
-					<h2 class="section-heading">相關系統</h2>
-                    <p class="font18"><a href="https://transcranial.github.io/keras-js/#/densenet121" target="_blank">
-                    	
-                    </a></p>
-                </div>
-                <div class="col-lg-6 col-lg-offset-1 col-sm-6">
-                    <!-- <img class="img-responsive" src="img/reference2.png"  alt=""> -->
-                    
-                </div>
-            </div>
-            <hr class="section-heading-spacer">
-
-            <div class="row">
-                <div class="col-lg-12">
-					<h2 class="section-heading">YOLO v2 使用手冊</h2>
-					<a class="font18" href="https://pjreddie.com/darknet/yolov2/">作者網站 https://pjreddie.com/darknet/yolov2/</a>
-					<img class="img-responsive" src="img/官網.png"  alt="">
-					<br/>
-					<label class="font18">下載YOLO v2</label>
-					<img class="img-responsive" src="img/下載1.png"  alt="">
-					<br/>
-					<label class="font18">可以用github下載，也可以用git，這次環境都在window及windows Store內的ubuntu執行</label>
-					<img class="img-responsive" src="img/下載2.png"  alt="">
-					<br/>
-					<label class="font18">下載weight檔，並放在cfg資料夾</label>
-					<img class="img-responsive" src="img/weight.png"  alt=""><br/>
-					<label class="font18">開啟powershell</label>
-					<img class="img-responsive" src="img/powershell.png"  alt="">
-					<br/>
-					<label class="font18">輸入 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</label><br/>
-					<img class="img-responsive" src="img/powershell2.png"  alt="">
-					<br/>
-					<label class="font18">安裝完成後，開啟Micorsoft Store並輸入Ubuntu</label>
-					
-					<img class="img-responsive" src="img/ubuntu.png"  alt="">
-					<br/>
-					<img class="img-responsive" src="img/ubuntu2.png"  alt="">
-					<br/>
-					<label class="font18">下載完畢後，開啟等待安裝</label>
-					<img class="img-responsive" src="img/ubuntu3.png"  alt="">
-					<br/>
-					<label class="font18">為了能夠執行檔案，必須先安裝GCC </label><br/>
-					<label class="font18">輸入sudo apt-get update </label><br/>
-					<label class="font18">輸入sudo apt-get upgrade </label><br/>
-					<label class="font18">輸入sudo apt-get install build-essential</label><br/>
-
-					<label class="font18">最後檢查版本</label><br/>
-					<label class="font18">輸入gcc -v</label><br/>
-					<label class="font18">輸入make -v</label><br/>
-					
-					<img class="img-responsive" src="img/ubuntu4.png"  alt="">
-					<br/>
-					<label class="font18">下載atom</label>
-					<img class="img-responsive" src="img/atom.png"  alt=""><br/>
-					<label class="font18">安裝package</label>
-					<img class="img-responsive" src="img/atom2.png"  alt=""><br/>
-					<label class="font18">輸入platformio-ide-terminal</label>
-					<img class="img-responsive" src="img/atom3.png"  alt=""><br/>
-					<label class="font18">安裝完畢後，開啟YOLO(darknet-master資料夾)，開啟makefile檔</label>
-					<img class="img-responsive" src="img/atom4.png"  alt=""><br/>
-					<label class="font18">按下CTRL + ~ 開啟terminal，並輸入bash</label>
-					<img class="img-responsive" src="img/bash.png"  alt=""><br/>
-					<label class="font18">輸入make，執行</label>
-					<img class="img-responsive" src="img/make.png"  alt=""><br/>
-					<img class="img-responsive" src="img/make2.png"  alt=""><br/>
-					<label class="font18">執行完畢後，輸入./darknet detect cfg/yolov2.cfg yolov2.weights data/dog.jpg</label>
-					<label class="font18">原圖</label>
-					<img class="img-responsive" src="img/dog.jpg"  alt=""><br/>
-					<img class="img-responsive" src="img/detecor.png"  alt=""><br/>
-					<label class="font18">最後可以知道預測的結果</label>
-					<img class="img-responsive" src="img/complete.png"  alt=""><br/>
-					<label class="font18">在資料夾內也會產生圖片</label>
-					<img class="img-responsive" src="img/prediction_complete.png"  alt=""><br/>
-					<label class="font18">結果圖片</label>
-					<img class="img-responsive" src="img/predictions.jpg"  alt=""><br/>
-
-                    <p class="font18"><a href="./system/index.html" target="_blank">進入系統</a></p>
-
-                </div>
-                <div class="col-lg-6 col-lg-offset-1 col-sm-6">
-                    <!-- <img class="img-responsive" src="img/reference3.png"  alt=""> -->
-                    
-                </div>
-            </div>
-            
-
-
-
-
-
-
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <h2 class="section-heading">摘要</h2>
+            <p class="font18">
+              介紹卷積神經網路的運作過程，比較其他種物件偵測的演算法，拆解運作過程。<br />
+              現今大部分的演算法使用試誤法，本論文著重於解析卷積神經網路的架構及其運作方法。<br />
+              以簡單明瞭的方式闡述其過程，並且分析原本架構的問題，改善原本的架構。<br />
+              以簡單清晰的方式讓人們了解卷積神經網路。
+            </p>
+          </div>
+          <div class="col-lg-6 col-lg-offset-1 col-sm-6">
+            <!-- <img class="img-responsive" src="img/reference1.png"  alt=""> -->
+          </div>
         </div>
+        <hr class="section-heading-spacer" />
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <h2 class="section-heading">相關系統</h2>
+            <p class="font18">
+              <a
+                href="https://transcranial.github.io/keras-js/#/densenet121"
+                target="_blank"
+              >
+              </a>
+            </p>
+          </div>
+          <div class="col-lg-6 col-lg-offset-1 col-sm-6">
+            <!-- <img class="img-responsive" src="img/reference2.png"  alt=""> -->
+          </div>
+        </div>
+        <hr class="section-heading-spacer" />
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">YOLO v2 使用手冊</h2>
+            <a class="font18" href="https://pjreddie.com/darknet/yolov2/"
+              >作者網站 https://pjreddie.com/darknet/yolov2/</a
+            >
+            <img class="img-responsive" src="img/官網.png" alt="" />
+            <br />
+            <label class="font18">下載YOLO v2</label>
+            <img class="img-responsive" src="img/下載1.png" alt="" />
+            <br />
+            <label class="font18"
+              >可以用github下載，也可以用git，這次環境都在window及windows
+              Store內的ubuntu執行</label
+            >
+            <img class="img-responsive" src="img/下載2.png" alt="" />
+            <br />
+            <label class="font18">下載weight檔，並放在cfg資料夾</label>
+            <img class="img-responsive" src="img/weight.png" alt="" /><br />
+            <label class="font18">開啟powershell</label>
+            <img class="img-responsive" src="img/powershell.png" alt="" />
+            <br />
+            <label class="font18"
+              >輸入 Enable-WindowsOptionalFeature -Online -FeatureName
+              Microsoft-Windows-Subsystem-Linux</label
+            ><br />
+            <img class="img-responsive" src="img/powershell2.png" alt="" />
+            <br />
+            <label class="font18"
+              >安裝完成後，開啟Micorsoft Store並輸入Ubuntu</label
+            >
+
+            <img class="img-responsive" src="img/ubuntu.png" alt="" />
+            <br />
+            <img class="img-responsive" src="img/ubuntu2.png" alt="" />
+            <br />
+            <label class="font18">下載完畢後，開啟等待安裝</label>
+            <img class="img-responsive" src="img/ubuntu3.png" alt="" />
+            <br />
+            <label class="font18">為了能夠執行檔案，必須先安裝GCC </label><br />
+            <label class="font18">輸入sudo apt-get update </label><br />
+            <label class="font18">輸入sudo apt-get upgrade </label><br />
+            <label class="font18"
+              >輸入sudo apt-get install build-essential</label
+            ><br />
+
+            <label class="font18">最後檢查版本</label><br />
+            <label class="font18">輸入gcc -v</label><br />
+            <label class="font18">輸入make -v</label><br />
+
+            <img class="img-responsive" src="img/ubuntu4.png" alt="" />
+            <br />
+            <label class="font18">下載atom</label>
+            <img class="img-responsive" src="img/atom.png" alt="" /><br />
+            <label class="font18">安裝package</label>
+            <img class="img-responsive" src="img/atom2.png" alt="" /><br />
+            <label class="font18">輸入platformio-ide-terminal</label>
+            <img class="img-responsive" src="img/atom3.png" alt="" /><br />
+            <label class="font18"
+              >安裝完畢後，開啟YOLO(darknet-master資料夾)，開啟makefile檔</label
+            >
+            <img class="img-responsive" src="img/atom4.png" alt="" /><br />
+            <label class="font18">按下CTRL + ~ 開啟terminal，並輸入bash</label>
+            <img class="img-responsive" src="img/bash.png" alt="" /><br />
+            <label class="font18">輸入make，執行</label>
+            <img class="img-responsive" src="img/make.png" alt="" /><br />
+            <img class="img-responsive" src="img/make2.png" alt="" /><br />
+            <label class="font18"
+              >執行完畢後，輸入./darknet detect cfg/yolov2.cfg yolov2.weights
+              data/dog.jpg</label><br/>
+            <label class="font18">原圖</label>
+            <img class="img-responsive" src="img/dog.jpg" alt="" /><br />
+            <img class="img-responsive" src="img/detecor.png" alt="" /><br />
+            <label class="font18">最後可以知道預測的結果</label>
+            <img class="img-responsive" src="img/complete.png" alt="" /><br />
+            <label class="font18">在資料夾內也會產生圖片</label>
+            <img
+              class="img-responsive"
+              src="img/prediction_complete.png"
+              alt=""
+            /><br />
+            <label class="font18">結果圖片</label>
+            <img
+              class="img-responsive"
+              src="img/predictions.jpg"
+              alt=""
+            /><br />
+			<label class="font18"><a href="http://cs231n.github.io/convolutional-networks/">卷積運作示意圖 資料來源:http://cs231n.github.io/convolutional-networks/</a></label>
+            <div id="draw" style="display:none;">
+              
+            </div>
+			
+            <p class="font18">
+              <a href="./system/index.html" target="_blank">進入系統</a>
+            </p>
+          </div>
+          <div class="col-lg-6 col-lg-offset-1 col-sm-6">
+            <!-- <img class="img-responsive" src="img/reference3.png"  alt=""> -->
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
-        <div class="container">
-            <hr class="section-heading-spacer">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright text-muted small"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type"></span><br>
-			互動式向量圖形編輯，由<a xmlns:cc="http://creativecommons.org/ns#" href="http://www.cc.ntut.edu.tw/~tjhsieh/" property="cc:attributionName" rel="cc:attributionURL">國立臺北科技大學資訊工程系計算機圖學實驗室</a>製作，
-			以<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">創用CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a>釋出。
-			姓名標示-非商業性-相同方式分享 CC BY-NC-SA
-			本授權條款允許使用者對本著作進行重混、調整，以及依原著作建立新著作，但僅限於非商業目的之使用。唯使用者就其新創著作，必須按照表彰
-			原作：國立臺北科技大學資訊工程系計算機圖學實驗室，並且將產出之新創著作採用相同的授權條款釋出。</p>
-                </div>
-            </div>
+      <div class="container">
+        <hr class="section-heading-spacer" />
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="copyright text-muted small">
+              <a
+                rel="license"
+                href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                ><img
+                  alt="創用 CC 授權條款"
+                  style="border-width:0"
+                  src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a
+              ><span
+                xmlns:dct="http://purl.org/dc/terms/"
+                href="http://purl.org/dc/dcmitype/InteractiveResource"
+                property="dct:title"
+                rel="dct:type"
+              ></span
+              ><br />
+              互動式向量圖形編輯，由<a
+                xmlns:cc="http://creativecommons.org/ns#"
+                href="http://www.cc.ntut.edu.tw/~tjhsieh/"
+                property="cc:attributionName"
+                rel="cc:attributionURL"
+                >國立臺北科技大學資訊工程系計算機圖學實驗室</a
+              >製作， 以<a
+                rel="license"
+                href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                >創用CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a
+              >釋出。 姓名標示-非商業性-相同方式分享 CC BY-NC-SA
+              本授權條款允許使用者對本著作進行重混、調整，以及依原著作建立新著作，但僅限於非商業目的之使用。唯使用者就其新創著作，必須按照表彰
+              原作：國立臺北科技大學資訊工程系計算機圖學實驗室，並且將產出之新創著作採用相同的授權條款釋出。
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
-</body>
-<script src="lib/jquery-2.1.3.min.js"></script>
-<script src="lib/bootstrap.min.js"></script>
+  </body>
+  <script src="lib/jquery-2.1.3.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="lib/utils.js"></script>
+  <script src="lib/d3.js"></script>
+  <script>
+  var sw1=0;
+  document.addEventListener('keydown', display);
+  function display(e) {
+  var x = e.keyCode;
+  switch (x) {
+    case 27:
+      $("#draw").css("display","block");
+		sw1=1;
+		break;
+  }
+}
+  
+var W1 = 7;
+var H1 = 7;
+var D1 = 3;
+
+var K = 2;
+var F = 3;
+var S = 2; // stride
+
+var cs = 25; // cell size
+
+var X = new U.Vol(W1, H1, D1); // input volume
+for(var q=0;q<X.w.length;q++) {
+  X.w[q] = Math.floor(Math.random()*3);
+  // 0 pad with P = 1
+  for(var d=0;d<X.depth;d++) {
+    for(var x=0;x<X.sx;x++) {
+      for(var y=0;y<X.sy;y++) {
+        if(x === 0 || x === (X.sx - 1) || y === 0 || y === (X.sy - 1)) {
+          X.set(x,y,d,0);
+        }
+      }  
+    }
+  }
+}
+
+var Ws = [];
+var bs = [];
+for(var k=0;k<K;k++) {
+  var W = new U.Vol(F, F, D1);
+  for(var q=0;q<W.w.length;q++) {
+    W.w[q] = Math.floor(Math.random()*3) - 1;
+  }
+  Ws.push(W);
+  var b = new U.Vol(1,1,1);
+  b.w[0] = 1 - k;
+  bs.push(b);
+}
+
+function conv_forward(V, Ws, bs, stride) {
+  // optimized code by @mdda that achieves 2x speedup over previous version
+  var out_sy = ((V.sy-W.sy)/stride +1);
+  var out_sx = ((V.sx-W.sx)/stride +1);
+  var A = new U.Vol(out_sx |0, out_sy |0, Ws.length |0, 0.0);
+  
+  var V_sx = V.sx |0;
+  var V_sy = V.sy |0;
+  var xy_stride = stride |0;
+
+  for(var d=0;d<Ws.length;d++) {
+    var f = Ws[d];
+    var x = 0;
+    var y = 0;
+    for(var ay=0; ay<out_sy; y+=xy_stride,ay++) {  // xy_stride
+      x = 0;
+      for(var ax=0; ax<out_sx; x+=xy_stride,ax++) {  // xy_stride
+
+        // convolve centered at this particular location
+        var a = 0.0;
+        for(var fy=0;fy<f.sy;fy++) {
+          var oy = y+fy; // coordinates in the original input array coordinates
+          for(var fx=0;fx<f.sx;fx++) {
+            var ox = x+fx;
+            if(oy>=0 && oy<V_sy && ox>=0 && ox<V_sx) {
+              for(var fd=0;fd<f.depth;fd++) {
+                // avoid function call overhead (x2) for efficiency, compromise modularity :(
+                a += f.w[((f.sx * fy)+fx)*f.depth+fd] * V.w[((V_sx * oy)+ox)*V.depth+fd];
+              }
+            }
+          }
+        }
+        a += bs[d].w[0];
+        A.set(ax, ay, d, a);
+      }
+    }
+  }
+  return A;
+}
+
+function renderVol(svg, V, xoff, yoff, col, title, vid) {
+
+  var pad = 3;
+  var dpad = 20;
+
+  var gyoff = 20;
+
+  var txt = title + ' (' + V.sx + 'x' + V.sy + 'x' + V.depth + ')';
+  // 1 padding exception
+  //if(vid === 'x') { txt = title + ' (' + (V.sx-2) + 'x' + (V.sy-2) + 'x' + V.depth + ')'; }
+
+  svg.append('text')
+    .attr('x', xoff)
+    .attr('y', yoff - 5)
+    .attr('font-size', 16)
+    .attr('fill', 'black')
+    .text(txt);
+
+  for(var d = 0; d < V.depth; d++) {
+
+    svg.append('text')
+      .attr('x', xoff)
+      .attr('y', yoff + d * (V.sy * (cs + pad) + dpad) + gyoff - 5)
+      .attr('font-size', 16)
+      .attr('fill', 'black')
+      .attr('style', 'font-family: courier;')
+      .text(vid + '[:,:,'+d+']');
+
+    for(var x = 0; x < V.sx; x++) {
+      for(var y = 0; y < V.sy; y++) {
+
+        var xcoord = xoff + x * (cs + pad);
+        var ycoord = yoff + y * (cs + pad) + d * (V.sy * (cs + pad) + dpad) + gyoff;
+
+        var thecol = col;
+        if(vid === 'x' && (x === 0 || y === 0 || x === V.sx - 1 || y === V.sy - 1)) {thecol = '#DDD';}
+
+        svg.append('rect')
+          .attr('x', xcoord)
+          .attr('y', ycoord)
+          .attr('height', cs)
+          .attr('width', cs)
+          .attr('fill', thecol)
+          .attr('stroke', 'none')
+          .attr('stroke-width', '2')
+          .attr('id', vid+'_'+x+'_'+y+'_'+d)
+          .attr('class', vid);
+
+        svg.append('text')
+          .attr('x', xcoord + 5)
+          .attr('y', ycoord + 15)
+          .attr('font-size', 16)
+          .attr('fill', 'black')
+          .text(V.get(x,y,d).toFixed(0));
+      }
+    }
+  }
+}
+
+function draw() {
+  var d3elt = d3.select('#draw');
+  svg = d3elt.append('svg').attr('width', '100%').attr('height', '110%')
+        .append('g').attr('transform', '');
+
+  var yoff = 20;
+  // render input volume
+  renderVol(svg, X, 10, yoff, '#DAF7A6', 'Input Volume (+pad 1)', 'x');
+
+  for(var i=0;i<Ws.length;i++) {
+    // render weights
+    renderVol(svg, Ws[i], 270 + i*170, yoff, '#FDD', 'Filter W'+i, 'w'+i);
+    // render biases
+    renderVol(svg, bs[i], 270 + i*170, 350 + yoff, '#FDD', 'Bias b'+i, 'b'+i);
+  }
+
+  // render output
+  renderVol(svg, O, 600, yoff, '#FFC300', 'Output Volume', 'o');
+
+  // render controls
+  
+  svg.append('text')
+    .attr('x', 520)
+    .attr('y', 470)
+    .attr('font-size', 16)
+    .attr('fill', 'black')
+    .text('toggle movement');
+  svg.append('rect')
+    .attr('x', 500)
+    .attr('y', 450)
+    .attr('height', 30)
+    .attr('width', 150)
+    .attr('fill', "rgba(200, 200, 200, 0.1)")
+    .attr('stroke', 'black')
+    .attr('stroke-width', '2')
+    .attr('style', 'cursor:pointer;')
+    .on('click', function() {
+      // toggle 
+      if(iid === -1) {
+        iid = setInterval(focusCell, 1000);
+      } else {
+        clearInterval(iid);
+        iid = -1;
+      }
+    });
+}
+
+var fxg = 0;
+var fyg = 0;
+var fdg = 0;
+function focusCell() {
+  
+  // first unfocus all
+  for(var i=0;i<Ws.length;i++) {
+    d3.selectAll('.w'+i).attr('stroke', 'none');
+    d3.selectAll('.b'+i).attr('stroke', 'none');
+  }
+  d3.selectAll('.x').attr('stroke', 'none');
+  d3.selectAll('.o').attr('stroke', 'none');
+
+  var fx = fxg;
+  var fy = fyg;
+  var fd = fdg;
+
+  // highlight the output cell
+  var csel = d3.select('#o'+'_'+fx+'_'+fy+'_'+fd);
+  csel.attr('stroke', '#AA0000');
+
+  // highlight the weights
+  d3.selectAll('.w'+fd).attr('stroke', '#AA0000');
+  // highlight the bias
+  d3.selectAll('.b'+fd).attr('stroke', '#AA0000');
+
+  d3.selectAll('.ll').remove();
+
+  // highlight the input cell
+  for(var d=0;d<D1;d++) {
+    for(var x=0;x<F;x++) {
+      for(var y=0;y<F;y++) {
+        var ix = fx * S + x;
+        var iy = fy * S + y;
+        var id = d;
+        var csel = d3.select('#x'+'_'+ix+'_'+iy+'_'+id);
+        csel.attr('stroke', '#00A');
+
+        // connect with line
+        if(x === 0 && y === 0) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', csel.attr('x'))
+            .attr('y1', csel.attr('y'))
+            .attr('x2', wsel.attr('x'))
+            .attr('y2', wsel.attr('y'))
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        if(x === 0 && y === (F-1)) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', csel.attr('x'))
+            .attr('y1', parseFloat(csel.attr('y')) + cs)
+            .attr('x2', wsel.attr('x'))
+            .attr('y2', parseFloat(wsel.attr('y')) + cs)
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        if(x === (F-1) && y === 0) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', parseFloat(csel.attr('x')) + cs)
+            .attr('y1', csel.attr('y'))
+            .attr('x2', parseFloat(wsel.attr('x')) + cs)
+            .attr('y2', wsel.attr('y'))
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        if(x === (F-1) && y === (F-1)) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', parseFloat(csel.attr('x')) + cs)
+            .attr('y1', parseFloat(csel.attr('y')) + cs)
+            .attr('x2', parseFloat(wsel.attr('x')) + cs)
+            .attr('y2', parseFloat(wsel.attr('y')) + cs)
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        
+      }
+    }
+  }
+
+  // output focus cycle
+  fxg++;
+  if(fxg >= O.sx) {
+    fxg = 0;
+    fyg++;
+    if(fyg >=O.sy) {
+      fyg = 0;
+      fdg++;
+      if(fdg >= O.depth) {
+        fdg = 0;
+      }
+    }
+  }
+
+}
+
+iid = -1;
+function start() {
+  O = conv_forward(X, Ws, bs, S);
+  draw();
+  iid = setInterval(focusCell, 1000);
+}
+
+</script>
 </html>
