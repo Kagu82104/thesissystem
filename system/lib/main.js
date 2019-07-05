@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //window.onresize = updateWindow;
   width = $('#col1').width();
   height = $('#col1').height();
@@ -7,7 +7,7 @@ $(document).ready(function() {
   result_X = (width * 3) / 2;
   result_Y = height / 2;
   below_y = 0;
-  rule1();
+  //rule1();
   rule2();
 });
 
@@ -1390,8 +1390,9 @@ function Draw_cube() {
   var svgContainer_anime = d3
     .select('#net-group')
     .append('svg')
-    .attr('width', '100%')
-    .attr('height', '100%');
+    .attr('id', 'net-svg')
+    .attr('width', '258')
+    .attr('height', '2414');
 
   var defs = svgContainer_anime.append('defs');
 
@@ -1423,35 +1424,78 @@ function Draw_cube() {
 
   img.src = inputpic;
   var picwidth = width;
-  //var picheight = ;
+  svg_img.attr('width', $("#net-svg").width()).attr('xlink:href', inputpic);
 
-  svg_img.attr('width', picwidth).attr('xlink:href', inputpic);
 
-  var svg_img1 = svgContainer_anime
-    .append('image')
-    .attr('image-rendering', 'optimizeQuality')
-    .attr('id', 'outputimg');
-  below_y += $('#col1').height();
-  var img1 = new Image();
-  var outputpic = 'data/predictions.png';
+  var gtransform = svgContainer_anime.append('g').attr('transform','translate(15)');
+  var goutput = gtransform.append('g').attr('class','output');
+  var gedgepaths = goutput.append('g').attr('class','edgePaths');
+  var gedgepath = gedgepaths.append('g').attr('class','edgePath').attr('style','opacity:1');
+  var path1 = gedgepath.append('path').attr('class','path').attr('d','M120,194.5 L175,214.5 L175,244.5').attr('marker-end','url(#arrow)').attr('style','fill:none');
+  // var gedgeLabels = goutput.append('g').attr('class','edgeLabels');
+  // var gedgeLabel = gedgeLabels.append('g').attr('style','opacity:1');
+  // var glabel = gedgeLabel.append('g').attr('class','label');
+  // var text1 = glabel.append('text');
+  // var tspan1 = text1.append('tspan').attr('xml:space','preserve').attr('dy','1em').attr('x',1);
+  var gcubeinput = goutput.append('g').attr('id','cubeinput').attr('class','nodes');
+  var gnodetypesource = gcubeinput.append('g').attr('class',"node node-type-source").attr('transform','translate(90.75,24.25)').attr('style',"opacity:1").attr('id',"tip-0");
+  var rect1 = gnodetypesource.append('rect').attr('rx','5').attr('ry','5').attr('x','30').attr('y','225').attr('width','64.546875').attr('height','48.5');
+  
+  /*
+  <g transform="translate(15)">
+    <g class="output">
+     
+     
+    <g id="cubeinput" class="nodes">
+      <g
+        class="node node-type-source"
+        transform="translate(90.75,24.25)"
+        style="opacity: 1;"
+        id="tip-0"
+      >
+        <rect
+          rx="5"
+          ry="5"
+          x="-32.2734375"
+          y="-24.25"
+          width="64.546875"
+          height="48.5"
+        ></rect>
+        <g class="label">
+          <g transform="translate(-22.2734375,-14.25)">
+            <foreignObject width="44.5546875" height="28.5"
+            ><div
+              style="display: inline-block; white-space: nowrap;"
+            >
+                <div class="node-label">Input</div>
+              </div></foreignObject
+            >
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+          </g >
+*/
 
-  img1.src = outputpic;
-  img1.onload = function () {
-    var picheight = this.height * 0.5;
-    svg_img1
-      .attr('x', '0')
-      .attr('y', $('#col1').height() - picheight)
-      .attr('width', picwidth)
-      .attr('xlink:href', outputpic);
-    line_col[0] = DrawLine_arrow(
-      svgContainer_anime,
-      origin_X,
-      $('#inputimg').height(),
-      $('#col1').height() - picheight - 10
-    );
-    //line_col[0] = DrawLine_arrow1(svgContainer_anime,$("#inputimg"),$("#outputimg"));
-    console.log($('#col1').height() - picheight - 10 - $('#inputimg').height());
-  };
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Draw_Animation() {
   var svgContainer_anime = d3
     .select('#col1')
@@ -1502,7 +1546,7 @@ function Draw_Animation() {
   var outputpic = 'data/predictions.png';
 
   img1.src = outputpic;
-  img1.onload = function() {
+  img1.onload = function () {
     var picheight = this.height * 0.5;
     svg_img1
       .attr('x', '0')
@@ -1815,10 +1859,10 @@ function DrawCircle_F(Src, cirData) {
     .append('circle');
 
   var circleAttributes = circles
-    .attr('cx', function(d) {
+    .attr('cx', function (d) {
       return d.x;
     })
-    .attr('cy', function(d) {
+    .attr('cy', function (d) {
       return d.y;
     })
     .attr('r', 7)
@@ -1835,10 +1879,10 @@ function DrawCircle_S(Src, cirData) {
     .append('circle');
 
   var circleAttributes = circles
-    .attr('cx', function(d) {
+    .attr('cx', function (d) {
       return d.x;
     })
-    .attr('cy', function(d) {
+    .attr('cy', function (d) {
       return d.y;
     })
     .attr('r', 5)
@@ -1899,10 +1943,10 @@ function DrawLineGraph(Src, lineData) {
   //This is the accessor function
   var lineFunction = d3.svg
     .line()
-    .x(function(d) {
+    .x(function (d) {
       return d.x;
     })
-    .y(function(d) {
+    .y(function (d) {
       return d.y;
     })
     .interpolate('linear');
