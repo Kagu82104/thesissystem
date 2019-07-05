@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YOLO Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="lib/bootstrap.min.css"
+    />
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/d3.js"></script>
+    <!-- <script type="text/javascript" src="lib/d3.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="lib/main.css" />
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+      <div>
+      <!-- <div class="column" id="col1"></div> -->
+      <div class="column" id="net-group" style="height:100%">
+        <h1 id="net-title">YOLO v2 Net</h1>
+        
+      </div>
+      <div id="qtip-0" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+        <div class="qtip-content" id="qtip-0-content" >
+          <div class="node-info-group">
+              data · Data<br/>
+              transform param<br/>
+              crop size: 416<br/>
+              mirror: true<br/>
+              data param<br/>
+              source: PASCAL VOC 2007 train + 2012 train &amp; test<br/>
+              batch size: 32<br/>
+              blob shapes<br/>
+              data: [ 1, 3, 416, 416 ]<br/>
+              label: [ 1 ]<br/>
+              activation: leakyrelu
+          </div>
+        </div>
+      </div>
+      <div id="qtip-1" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-1-content" >
+    <div class="node-info-group">
+      Conv1_32 · Convolution<br/>
+      convolution param<br/>
+      num output: 32<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv1 32: [ 1, 32, 416, 416 ]
+    </div>
+  </div>
+</div>
+      <div id="qtip-2" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-2-content" >
+    <div class="node-info-group">
+      MaxPool1 · Pooling<br/>
+      pooling param<br/>
+      pool: max<br/>
+      kernel size: 2<br/>
+      stride: 2<br/>
+      blob shapes<br/>
+      MaxPool1: [ 1, 32, 208, 208 ]
+    </div>
+  </div>
+</div>
+      <div id="qtip-3" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-3-content" >
+    <div class="node-info-group">
+      Conv2_64 · Convolution<br/>
+      convolution param<br/>
+      num output: 64<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv2 64: [ 1, 64, 208, 208 ]
+    </div>
+  </div>
+</div>
+      <div id="qtip-4" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-4-content" >
+    <div class="node-info-group">
+      MaxPool2 · Pooling<br/>
+      pooling param<br/>
+      pool: max<br/>
+      kernel size: 2<br/>
+      stride: 2<br/>
+      blob shapes<br/>
+      MaxPool2: [ 1, 64, 104, 104 ]
+    </div>
+  </div>
+</div>
+      <div id="qtip-5" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-5-content" >
+    <div class="node-info-group">
+      Conv3_128 · Convolution<br/>
+      convolution param<br/>
+      num output: 128<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+       blob shapes<br/>
+      Conv3 128: [ 1, 128, 104, 104 ]
+    </div>
+  </div>
+</div>
+      <div id="qtip-6" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-6-content" >
+    <div class="node-info-group">
+      Conv4_64 · Convolution<br/>
+      convolution param<br/>
+      num output: 64<br/>
+      pad: 0<br/>
+      kernel size: 1<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv4 64: [ 1, 64, 104, 104 ]
+    </div>
+  </div>
+</div>
+      <div id="qtip-7" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-7-content" >
+    <div class="node-info-group">
+      Conv5_128 · Convolution<br/>
+      convolution param<br/>
+      num output: 128<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation:leakyrelu<br/>
+      blob shapes<br/>
+      Conv5 128: [ 1, 128, 104, 104 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-8" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-8-content" >
+    <div class="node-info-group">
+      MaxPool3 · Pooling<br/>
+      pooling param<br/>
+      pool: max<br/>
+      kernel size: 2<br/>
+      stride: 2<br/>
+      blob shapes<br/>
+      MaxPool3: [ 1, 128, 52, 52 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-9" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-9-content" >
+    <div class="node-info-group">
+      Conv6_256 · Convolution<br/>
+      convolution param<br/>
+      num output: 256<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv6 256: [ 1, 256, 52, 52 ]<br/>
+    </div>
+  </div>
+</div>
+      <div id="qtip-10" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-10-content" >
+    <div class="node-info-group">
+      Conv7_128 · Convolution<br/>
+      convolution param<br/>
+      num output: 128<br/>
+      pad: 0<br/>
+      kernel size: 1<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv7 128: [ 1, 128, 52, 52 ]
+    </div>
+  </div>
+</div>
+     <div id="qtip-11" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-11-content" >
+    <div class="node-info-group">
+      Conv8_256 · Convolution<br/>
+      convolution param<br/>
+      num output: 256<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv8 256: [ 1, 256, 52, 52 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-12" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-12-content" >
+    <div class="node-info-group">
+      MaxPool4 · Pooling<br/>
+      pooling param<br/>
+      pool:max<br/>
+      kernel size: 2<br/>
+      stride: 2<br/>
+      blob shapes<br/>
+      MaxPool4: [ 1, 256, 26, 26 ]
+    </div>
+  </div>
+</div>
+ <div id="qtip-13" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-13-content" >
+    <div class="node-info-group">
+      Conv9_512 · Convolution<br/>
+      convolution param<br/>
+      num output: 512<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv9 512: [ 1, 512, 26, 26 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-14" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-14-content" >
+    <div class="node-info-group">
+      Conv10_256 · Convolution<br/>
+      convolution param<br/>
+      num output: 256<br/>
+      pad: 0<br/>
+      kernel size: 1<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv10 256: [ 1, 256, 26, 26 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-15" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-15-content" >
+    <div class="node-info-group">
+      Conv11_512 · Convolution<br/>
+      convolution param<br/>
+      num output: 512<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv11 512: [ 1, 512, 26, 26 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-16" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-16-content" >
+    <div class="node-info-group">
+      Conv12_256 · Convolution<br/>
+      convolution param<br/>
+      num output: 256<br/>
+      pad: 0<br/>
+      kernel size: 1<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv12 256: [ 1, 256, 26, 26 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-17" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-17-content" >
+    <div class="node-info-group">
+      Conv13_512 · Convolution<br/>
+      convolution param<br/>
+      num output: 512<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv13 512: [ 1, 512, 26, 26 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-18" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-18-content" >
+    <div class="node-info-group">
+      MaxPool5 · Pooling<br/>
+      pooling param<br/>
+      pool: max<br/>
+      kernel size: 2<br/>
+      stride: 2<br/>
+      blob shapes<br/>
+      MaxPool5: [ 1, 512, 13, 13 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-19" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-19-content" >
+    <div class="node-info-group">
+      Conv14_1024 · Convolution<br/>
+      convolution param<br/>
+      num output: 1024<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv14 1024: [ 1, 1024, 13, 13 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-20" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-20-content" >
+    <div class="node-info-group">
+      Conv15_512 · Convolution<br/>
+      convolution param<br/>
+      num output: 512<br/>
+      pad: 0<br/>
+      kernel size: 1<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv15 512: [ 1, 512, 13, 13 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-21" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-21-content" >
+    <div class="node-info-group">
+      Conv16_1024 · Convolution<br/>
+      convolution param<br/>
+      num output: 1024<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv16 1024: [ 1, 1024, 13, 13 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-22" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-22-content" >
+    <div class="node-info-group">
+      Conv17_512 · Convolution<br/>
+      convolution param<br/>
+      num output: 512<br/>
+      pad: 0<br/>
+      kernel size: 1<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv17 512: [ 1, 512, 13, 13 ]<br/>
+    </div>
+  </div>
+</div>
+<div id="qtip-23" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-23-content" >
+    <div class="node-info-group">
+      Conv18_1024 · Convolution<br/>
+      convolution param<br/>
+      num output: 1024<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv18 1024: [ 1, 1024, 13, 13 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-24" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-24-content" >
+    <div class="node-info-group">
+      Conv19_1024 · Convolution<br/>
+      convolution param<br/>
+      num output: 1024<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv19 1024: [ 1, 1024, 13, 13 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-25" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-25-content" >
+    <div class="node-info-group">
+      Conv20_1024 · Convolution<br/>
+      convolution param<br/>
+      num output: 1024<br/>
+      pad: 1<br/>
+      kernel size: 3<br/>
+      batch norm: true<br/>
+      activation: leakyrelu<br/>
+      blob shapes<br/>
+      Conv20 1024: [ 1, 1024, 13, 13 ]
+    </div>
+  </div>
+</div>
+<div id="qtip-26" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-26-content" >
+    <div class="node-info-group">
+      reorg · Reshape
+    </div>
+  </div>
+</div>
+<div id="qtip-27" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-27-content" >
+    <div class="node-info-group">
+      concat · Concat<br/>
+      concat param<br/>
+      axis: 1
+    </div>
+  </div>
+</div>
+      <div id="qtip-28" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+        <div class="qtip-content" id="qtip-28-content" >
+          <div class="node-info-group">
+              Conv21_1024 · Convolution<br/>
+              convolution param<br/>
+              num output: 1024<br/>
+              pad: 1<br/>
+              kernel size: 3<br/>
+              batch norm: true<br/>
+              activation: leakyrelu<br/>
+          </div>
+        </div>
+      </div>
+      <div id="qtip-29" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-29-content" >
+    <div class="node-info-group">
+      Conv22_125 · Convolution<br/>
+      convolution param<br/>
+      num output: 125<br/>
+      pad: 1<br/>
+      kernel size: 1<br/>
+      batch norm: false<br/>
+      activation: linear
+    </div>
+  </div>
+</div>
+<div id="qtip-30" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-30-content" >
+    <div class="node-info-group">
+      Region ·Region
+    </div>
+  </div>
+</div>
+<div id="qtip-31" class="qtip qtip-default  qtip-pos-lc" style="z-index: 15016;">
+  <div class="qtip-content" id="qtip-31-content" >
+    <div class="node-info-group">
+      Dectection
+    </div>
+  </div>
+</div>
+
+      <div class="column" id="col2" style="height:100%">
+        <div class="row">
+          <div class="col-md-6">
+            <table id="yolo_table" width="100%">
+              <tr>
+                <th>Layer</th>
+                <th>Type</th>
+                <th>Filters</th>
+                <th>Size/Stride</th>
+                <th>Output size</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>Convolutional</td>
+                <td>32</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">416x416</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>208x208</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Convolutional</td>
+                <td>64</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">208x208</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>104x104</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Convolutional</td>
+                <td>128</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">104x104</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Convolutional</td>
+                <td>64</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">104x104</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Convolutional</td>
+                <td>128</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">104x104</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>52x52</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">52x52</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Convolutional</td>
+                <td>128</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">52x52</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">52x52</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>26x26</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Convolutional</td>
+                <td>256</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">26x26</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Maxpool</td>
+                <td></td>
+                <td>2x2/2</td>
+                <td>13x13</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>Convolutional</td>
+                <td>512</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>Route</td>
+                <td>16</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+              <tr>
+                <td>26</td>
+                <td>Reorg</td>
+                <td></td>
+                <td>/2</td>
+                <td>13x13</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>Route</td>
+                <td>26 24</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>Convolutional</td>
+                <td>1024</td>
+                <td class="hover green">3x3/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>Convolutional</td>
+                <td>125</td>
+                <td class="hover green">1x1/1</td>
+                <td class="hover blue">13x13</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>Detection</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+
+            <!-- <img src="data/layer.png"  class="rounded img-fluid"> -->
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <h3 class="center">原圖</h3>
+            <img src="data/dog-cycle-car.png" class="rounded img-fluid" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="center">結果</h3>
+            <img src="data/predictions.png" class="rounded img-fluid" />
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="column" id="placehere" style="height:100%">
+      <h3 class="center">第0層卷積結果</h3>
+    </div>
+  </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="lib/main.js"></script>
+  <script type="text/javascript" src="lib/conv.js"></script>
+</html>
