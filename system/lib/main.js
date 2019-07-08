@@ -1438,8 +1438,14 @@ function Draw_cube() {
   // var text1 = glabel.append('text');
   // var tspan1 = text1.append('tspan').attr('xml:space','preserve').attr('dy','1em').attr('x',1);
   var gcubeinput = goutput.append('g').attr('id','cubeinput').attr('class','nodes');
-  var gnodetypesource = gcubeinput.append('g').attr('class',"node node-type-source").attr('transform','translate(90.75,24.25)').attr('style',"opacity:1").attr('id',"tip-0");
-  var rect1 = gnodetypesource.append('rect').attr('rx','5').attr('ry','5').attr('x','30').attr('y','225').attr('width','64.546875').attr('height','48.5');
+  var gnodetypeconvolution = gcubeinput.append('g').attr('class',"node node-type-convolution").attr('transform','translate(85.75,24.25)').attr('style',"opacity:1").attr('id',"tip-1");
+  var rect1 = gnodetypeconvolution.append('rect').attr('rx','5').attr('ry','5').attr('x','30').attr('y','222.5').attr('width','115.265625').attr('height','48.5');
+  var glabel1 = gnodetypeconvolution.append('g').attr('class','label');
+  var gtransform1 = glabel1.append('g').attr('transform','translate(35,200.25)');
+  var foreignObject1 = gtransform1.append('foreignObject').attr('width','95.2734375').attr('height','28.5');
+  var div1 = foreignObject1.append('div').attr('style','display:inline-block;white-space: nowrap;');
+  var divnodelabel = div1.append('div').attr('class','node-label').text(function(d){return 'Conv1-32';});
+  //var cube1 = gnodetypesource.append('path').attr('d','M0 0 L')
   
   /*
   <g transform="translate(15)">
