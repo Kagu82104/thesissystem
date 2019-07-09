@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   //window.onresize = updateWindow;
   width = $('#col1').width();
   height = $('#col1').height();
@@ -1424,56 +1424,93 @@ function Draw_cube() {
 
   img.src = inputpic;
   var picwidth = width;
-  svg_img.attr('width', $("#net-svg").width()).attr('xlink:href', inputpic);
+  svg_img.attr('width', $('#net-svg').width()).attr('xlink:href', inputpic);
 
-
-  var gtransform = svgContainer_anime.append('g').attr('transform','translate(15)');
-  var goutput = gtransform.append('g').attr('class','output');
-  var gedgepaths = goutput.append('g').attr('class','edgePaths');
-  var gedgepath = gedgepaths.append('g').attr('class','edgePath').attr('style','opacity:1');
-  var path1 = gedgepath.append('path').attr('class','path').attr('d','M120,194.5 L175,214.5 L175,244.5').attr('marker-end','url(#arrow)').attr('style','fill:none');
+  var gtransform = svgContainer_anime
+    .append('g')
+    .attr('transform', 'translate(15)');
+  var goutput = gtransform.append('g').attr('class', 'output');
+  var gedgepaths = goutput.append('g').attr('class', 'edgePaths');
+  var gedgepath = gedgepaths
+    .append('g')
+    .attr('class', 'edgePath')
+    .attr('style', 'opacity:1');
+  var path1 = gedgepath
+    .append('path')
+    .attr('class', 'path')
+    .attr('d', 'M120,194.5 L175,214.5 L175,244.5')
+    .attr('marker-end', 'url(#arrow)')
+    .attr('style', 'fill:none');
   // var gedgeLabels = goutput.append('g').attr('class','edgeLabels');
   // var gedgeLabel = gedgeLabels.append('g').attr('style','opacity:1');
   // var glabel = gedgeLabel.append('g').attr('class','label');
   // var text1 = glabel.append('text');
   // var tspan1 = text1.append('tspan').attr('xml:space','preserve').attr('dy','1em').attr('x',1);
-  var gcubeinput = goutput.append('g').attr('id','cubeinput').attr('class','nodes');
-  var gnodetypeconvolution = gcubeinput.append('g').attr('class',"node node-type-convolution").attr('transform','translate(85.75,24.25)').attr('style',"opacity:1").attr('id',"tip-1");
-  var rect1 = gnodetypeconvolution.append('rect').attr('rx','5').attr('ry','5').attr('x','30').attr('y','222.5').attr('width','115.265625').attr('height','48.5');
-  var glabel1 = gnodetypeconvolution.append('g').attr('class','label');
-  var gtransform1 = glabel1.append('g').attr('transform','translate(35,200.25)');
-  var foreignObject1 = gtransform1.append('foreignObject').attr('width','95.2734375').attr('height','28.5');
-  var div1 = foreignObject1.append('div').attr('style','display:inline-block;white-space: nowrap;');
-  var divnodelabel = div1.append('div').attr('class','node-label').text(function(d){return 'Conv1-32';});
+  var gcubeinput = goutput
+    .append('g')
+    .attr('id', 'cubeinput')
+    .attr('class', 'nodes');
+  var gnodetypeconvolution = gcubeinput
+    .append('g')
+    .attr('class', 'node node-type-convolution')
+    .attr('transform', 'translate(85.75,24.25)')
+    .attr('style', 'opacity:1')
+    .attr('id', 'tip-1');
+  var rect1 = gnodetypeconvolution
+    .append('rect')
+    .attr('rx', '5')
+    .attr('ry', '5')
+    .attr('x', '30')
+    .attr('y', '222.5')
+    .attr('width', '115.265625')
+    .attr('height', '48.5');
+  var glabel1 = gnodetypeconvolution
+    .append('g')
+    .attr('id', 'label1')
+    .attr('class', 'label');
+  var gtransform1 = glabel1
+    .append('g')
+    .attr('transform', 'translate(35,200.25)');
+  var foreignObject1 = gtransform1
+    .append('foreignObject')
+    .attr('width', '95.2734375')
+    .attr('height', '28.5');
+  var div1 = foreignObject1
+    .append('div')
+    .attr('style', 'display: inline-block; white-space: nowrap;');
+  var divnodelabel = div1
+    .append('div')
+    .attr('class', 'node-label')
+    .text(function(d) {
+      return 'Conv1_32';
+    });
   //var cube1 = gnodetypesource.append('path').attr('d','M0 0 L')
-  
+
   /*
   <g transform="translate(15)">
     <g class="output">
-     
-     
     <g id="cubeinput" class="nodes">
       <g
-        class="node node-type-source"
-        transform="translate(90.75,24.25)"
+        class="node node-type-convolution"
+        transform="translate(135.91015625,102.75)"
         style="opacity: 1;"
-        id="tip-0"
+        id="tip-1"
       >
         <rect
           rx="5"
           ry="5"
-          x="-32.2734375"
+          x="-57.6328125"
           y="-24.25"
-          width="64.546875"
+          width="115.265625"
           height="48.5"
         ></rect>
         <g class="label">
-          <g transform="translate(-22.2734375,-14.25)">
-            <foreignObject width="44.5546875" height="28.5"
-            ><div
-              style="display: inline-block; white-space: nowrap;"
-            >
-                <div class="node-label">Input</div>
+          <g transform="translate(-47.6328125,-14.25)">
+            <foreignObject width="95.2734375" height="28.5"
+              ><div
+                style="display: inline-block; white-space: nowrap;"
+              >
+                <div class="node-label">Conv1_32</div>
               </div></foreignObject
             >
           </g>
@@ -1483,24 +1520,7 @@ function Draw_cube() {
   </g>
           </g >
 */
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function Draw_Animation() {
   var svgContainer_anime = d3
@@ -1552,7 +1572,7 @@ function Draw_Animation() {
   var outputpic = 'data/predictions.png';
 
   img1.src = outputpic;
-  img1.onload = function () {
+  img1.onload = function() {
     var picheight = this.height * 0.5;
     svg_img1
       .attr('x', '0')
@@ -1865,10 +1885,10 @@ function DrawCircle_F(Src, cirData) {
     .append('circle');
 
   var circleAttributes = circles
-    .attr('cx', function (d) {
+    .attr('cx', function(d) {
       return d.x;
     })
-    .attr('cy', function (d) {
+    .attr('cy', function(d) {
       return d.y;
     })
     .attr('r', 7)
@@ -1885,10 +1905,10 @@ function DrawCircle_S(Src, cirData) {
     .append('circle');
 
   var circleAttributes = circles
-    .attr('cx', function (d) {
+    .attr('cx', function(d) {
       return d.x;
     })
-    .attr('cy', function (d) {
+    .attr('cy', function(d) {
       return d.y;
     })
     .attr('r', 5)
@@ -1949,10 +1969,10 @@ function DrawLineGraph(Src, lineData) {
   //This is the accessor function
   var lineFunction = d3.svg
     .line()
-    .x(function (d) {
+    .x(function(d) {
       return d.x;
     })
-    .y(function (d) {
+    .y(function(d) {
       return d.y;
     })
     .interpolate('linear');
