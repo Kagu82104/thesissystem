@@ -1470,20 +1470,15 @@ function Draw_cube() {
     .attr('class', 'label');
   var gtransform1 = glabel1
     .append('g')
-    .attr('transform', 'translate(35,200.25)');
+    .attr('transform', 'translate(40,230.25)');
   var foreignObject1 = gtransform1
     .append('foreignObject')
     .attr('width', '95.2734375')
-    .attr('height', '28.5');
-  var div1 = foreignObject1
-    .append('div')
-    .attr('style', 'display: inline-block; white-space: nowrap;');
-  var divnodelabel = div1
-    .append('div')
+    .attr('height', '28.5')
+    .attr('style', 'display: inline-block; white-space: nowrap;')
     .attr('class', 'node-label')
-    .text(function(d) {
-      return 'Conv1_32';
-    });
+    .html('Conv1_32');
+
   //var cube1 = gnodetypesource.append('path').attr('d','M0 0 L')
 
   /*
