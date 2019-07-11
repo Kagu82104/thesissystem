@@ -1470,7 +1470,7 @@ function Draw_cube() {
     .attr('class', 'label');
   var gtransform1 = glabel1
     .append('g')
-    .attr('transform', 'translate(40,230.25)');
+    .attr('transform', 'translate(40,235.25)');
   var foreignObject1 = gtransform1
     .append('foreignObject')
     .attr('width', '95.2734375')
@@ -1479,7 +1479,7 @@ function Draw_cube() {
     .attr('class', 'node-label')
     .html('Conv1_32');
 
-  //var cube1 = gnodetypesource.append('path').attr('d','M0 0 L')
+  
 
   /*
   <g transform="translate(15)">
