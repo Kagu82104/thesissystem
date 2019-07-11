@@ -1,12 +1,12 @@
-body{
-   /* padding-bottom: 100%; */
-   background-color: antiquewhite;
+body {
+  /* padding-bottom: 100%; */
+  background-color: antiquewhite;
 }
 .qtip-default {
-  border: 1px solid #31343F;
+  border: 1px solid #31343f;
   border-radius: 5px;
-  background-color: #31343F;
-  color: #52637D;
+  background-color: #31343f;
+  color: #52637d;
   font-family: 'Roboto';
   font-size: 12px;
   line-height: 18px;
@@ -19,36 +19,42 @@ body{
   max-width: 300px;
   min-width: 50px;
   font-size: 16px;
-  color:#FFF;  
+  color: #fff;
   direction: ltr;
   box-shadow: none;
   padding: 0;
 }
-.qtip-content{
+.qtip-content {
   display: hidden;
 }
 .node {
-  fill: #FFB84D;
+  fill: #ffb84d;
 }
-.node-type-sink{
- fill: #7F6A9B; 
+.node-type-sink {
+  fill: #7f6a9b;
 }
-.node-type-source{
-  fill: #37A058;
+.node-type-source {
+  fill: #37a058;
 }
 .node-type-source .node-label {
-  color: #FFF;
+  color: #fff;
 }
 .node-label {
   font-size: 14px;
-  color: #FFF;
+  color: #fff;
+  padding: 1px;
+}
+.cube-label {
+  font-size: 14px;
+  color: #000;
   padding: 1px;
 }
 * {
   box-sizing: border-box;
 }
-.node-type-convolution, .node-type-deconvolution {
-  fill: #CA5237;
+.node-type-convolution,
+.node-type-deconvolution {
+  fill: #ca5237;
 }
 .edgePath path {
   stroke: #554037;
@@ -61,13 +67,13 @@ body{
 .yellow {
   color: yellow;
 }
-td.hover:hover{
+td.hover:hover {
   color: red;
 }
-.blue{
+.blue {
   color: blue;
 }
-.green{
+.green {
   color: green;
 }
 .wrapper {
@@ -76,21 +82,21 @@ td.hover:hover{
   overflow: hidden;
 }
 .ImgInline {
-  display:inline-block;
+  display: inline-block;
 }
-.air{
+.air {
   position: absolute;
   z-index: 1;
 }
 #content p {
   text-align: center;
 }
-.graph-auto{
+.graph-auto {
   height: 300px;
 }
-.img-stroke{
-  stroke:#ac0d0d; 
-  stroke-width:3;
+.img-stroke {
+  stroke: #ac0d0d;
+  stroke-width: 3;
 }
 * {
   box-sizing: border-box;
@@ -106,7 +112,7 @@ td.hover:hover{
 
 /* Clear floats after the columns */
 .container:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }

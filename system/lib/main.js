@@ -1456,30 +1456,83 @@ function Draw_cube() {
     .attr('transform', 'translate(85.75,24.25)')
     .attr('style', 'opacity:1')
     .attr('id', 'tip-1');
-  var rect1 = gnodetypeconvolution
-    .append('rect')
-    .attr('rx', '5')
-    .attr('ry', '5')
-    .attr('x', '30')
-    .attr('y', '222.5')
-    .attr('width', '115.265625')
-    .attr('height', '48.5');
+  // var rect1 = gnodetypeconvolution
+  //   .append('rect')
+  //   .attr('rx', '5')
+  //   .attr('ry', '5')
+  //   .attr('x', '30')
+  //   .attr('y', '222.5')
+  //   .attr('width', '115.265625')
+  //   .attr('height', '48.5');
+  var gcube1 = gnodetypeconvolution
+    .append('g')
+    .attr('id', 'layer1')
+    .attr('transform', 'translate(35,35)');
+  gcube1
+    .append('path')
+    .attr('style', 'fill:#353564;stroke:none;stroke-width:3;')
+    .attr(
+      'd',
+      'm 110.06666,186.93331 0,108.70439 -3.84654,1.36228 0,-107.95695 z'
+    );
+  gcube1
+    .append('path')
+    .attr('style', 'fill:#afafde;stroke:none;stroke-width:3;')
+    .attr(
+      'd',
+      'm 110.06666,295.6377 -106.9555294,0 L 6.7089235e-8,296.99998 106.22012,296.99998 Z'
+    );
+  gcube1
+    .append('path')
+    .attr('style', 'fill:#8686bf;stroke:none;stroke-width:3;')
+    .attr(
+      'd',
+      'm 110.06666,186.93331 -106.9555294,0 0,108.70439 106.9555294,0 z'
+    );
+  gcube1
+    .append('path')
+    .attr('style', 'fill:#d7d7ff;stroke:none;stroke-width:3;')
+    .attr(
+      'd',
+      'm 3.1111306,186.93331 0,108.70439 -3.111130532910765,1.36228 7e-15,-107.95695 z'
+    );
+  gcube1
+    .append('path')
+    .attr('style', 'fill:#4d4d9f;stroke:none;stroke-width:3;')
+    .attr(
+      'd',
+      'm 110.06666,186.93331 -106.9555294,0 L 6.7089242e-8,189.04303 106.22012,189.04303 Z'
+    );
+  gcube1
+    .append('path')
+    .attr('style', 'fill:#e9e9ff;stroke:none;stroke-width:3;')
+    .attr(
+      'd',
+      'm 106.22012,189.04303 -106.220119932910748,0 -7e-15,107.95695 106.220119932910762,0 z'
+    );
+
   var glabel1 = gnodetypeconvolution
     .append('g')
     .attr('id', 'label1')
-    .attr('class', 'label');
-  var gtransform1 = glabel1
+    .attr('class', 'label')
     .append('g')
-    .attr('transform', 'translate(40,235.25)');
-  var foreignObject1 = gtransform1
+    .attr('transform', 'translate(80,185.25)')
     .append('foreignObject')
     .attr('width', '95.2734375')
     .attr('height', '28.5')
     .attr('style', 'display: inline-block; white-space: nowrap;')
-    .attr('class', 'node-label')
+    .attr('class', 'cube-label')
     .html('Conv1_32');
-
-  
+  // var gtransform1 = glabel1
+  //   .append('g')
+  //   .attr('transform', 'translate(80,185.25)');
+  // var foreignObject1 = gtransform1
+  //   .append('foreignObject')
+  //   .attr('width', '95.2734375')
+  //   .attr('height', '28.5')
+  //   .attr('style', 'display: inline-block; white-space: nowrap;')
+  //   .attr('class', 'cube-label')
+  //   .html('Conv1_32');
 
   /*
   <g transform="translate(15)">
