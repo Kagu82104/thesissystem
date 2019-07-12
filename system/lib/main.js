@@ -1464,9 +1464,20 @@ function Draw_cube() {
   //   .attr('y', '222.5')
   //   .attr('width', '115.265625')
   //   .attr('height', '48.5');
+  var glabel1 = gnodetypeconvolution
+    .append('g')
+    .attr('id', 'label1')
+    .attr('class', 'label')
+    .attr('transform', 'translate(80,185.25)')
+    .append('foreignObject')
+    .attr('width', '95.2734375')
+    .attr('height', '28.5')
+    .attr('style', 'display: inline-block; white-space: nowrap;')
+    .attr('class', 'cube-label')
+    .html('Conv1_32');
   var gcube1 = gnodetypeconvolution
     .append('g')
-    .attr('id', 'layer1')
+    .attr('id', 'tip-1')
     .attr('transform', 'translate(35,35)');
   gcube1
     .append('path')
@@ -1511,18 +1522,6 @@ function Draw_cube() {
       'm 106.22012,189.04303 -106.220119932910748,0 -7e-15,107.95695 106.220119932910762,0 z'
     );
 
-  var glabel1 = gnodetypeconvolution
-    .append('g')
-    .attr('id', 'label1')
-    .attr('class', 'label')
-    .append('g')
-    .attr('transform', 'translate(80,185.25)')
-    .append('foreignObject')
-    .attr('width', '95.2734375')
-    .attr('height', '28.5')
-    .attr('style', 'display: inline-block; white-space: nowrap;')
-    .attr('class', 'cube-label')
-    .html('Conv1_32');
   // var gtransform1 = glabel1
   //   .append('g')
   //   .attr('transform', 'translate(80,185.25)');
