@@ -28,7 +28,14 @@ var circles_be;
 var circles_af;
 var line_op;
 var Text = []; //[0...2] = O, P, TEXT
-
+var cube1 = [
+  'm 110.06666,186.93331 0,108.70439 -3.84654,1.36228 0,-107.95695 z',
+  'm 110.06666,295.6377 -106.9555294,0 L 6.7089235e-8,296.99998 106.22012,296.99998 Z',
+  'm 110.06666,186.93331 -106.9555294,0 0,108.70439 106.9555294,0 z',
+  'm 3.1111306,186.93331 0,108.70439 -3.111130532910765,1.36228 7e-15,-107.95695 z',
+  'm 110.06666,186.93331 -106.9555294,0 L 6.7089242e-8,189.04303 106.22012,189.04303 Z',
+  'm 106.22012,189.04303 -106.220119932910748,0 -7e-15,107.95695 106.220119932910762,0 z'
+];
 function rule1() {
   Draw_Animation();
 }
@@ -41,8 +48,8 @@ function Draw_cube() {
     .select('#net-group')
     .append('svg')
     .attr('id', 'net-svg')
-    .attr('width', '258')
-    .attr('height', '2414');
+    .attr('width', '300')
+    .attr('height', '3000');
 
   var defs = svgContainer_anime.append('defs');
 
@@ -78,7 +85,7 @@ function Draw_cube() {
 
   var gtransform = svgContainer_anime
     .append('g')
-    .attr('transform', 'translate(15)');
+    .attr('transform', 'translate(15,31)');
   var goutput = gtransform.append('g').attr('class', 'output');
   DrawPath(goutput,'M120,194.5 L175,214.5 L175,244.5');//conv1_32
   DrawPath(goutput,'M175,357.5 L175,400');//maxpool1
@@ -101,68 +108,49 @@ function Draw_cube() {
     .append('g')
     .attr('id', 'cubeinput')
     .attr('class', 'nodes');
-  var gnodetypeconvolution = gcubeinput
-    .append('g')
-    .attr('class', 'node node-type-convolution')
-    .attr('transform', 'translate(85.75,24.25)')
-    .attr('style', 'opacity:1')
-    .attr('id', 'tip-1');
-  var glabel1 = gnodetypeconvolution
-    .append('g')
-    .attr('id', 'label1')
-    .attr('class', 'label')
-    .attr('transform', 'translate(80,185.25)')
-    .append('foreignObject')
-    .attr('width', '95.2734375')
-    .attr('height', '28.5')
-    .attr('style', 'display: inline-block; white-space: nowrap;')
-    .attr('class', 'cube-label')
-    .html('Conv1_32');
-  var gcube1 = gnodetypeconvolution
-    .append('g')
-    .attr('transform', 'translate(35,35)');
-  var cube1 = [
-  'm 110.06666,186.93331 0,108.70439 -3.84654,1.36228 0,-107.95695 z',
-  'm 110.06666,295.6377 -106.9555294,0 L 6.7089235e-8,296.99998 106.22012,296.99998 Z',
-  'm 110.06666,186.93331 -106.9555294,0 0,108.70439 106.9555294,0 z',
-  'm 3.1111306,186.93331 0,108.70439 -3.111130532910765,1.36228 7e-15,-107.95695 z',
-  'm 110.06666,186.93331 -106.9555294,0 L 6.7089242e-8,189.04303 106.22012,189.04303 Z',
-  'm 106.22012,189.04303 -106.220119932910748,0 -7e-15,107.95695 106.220119932910762,0 z'
-];
-    DrawCube(gcube1,cube1);
-    
-    var gcubeinput = goutput
-    .append('g')
-    .attr('id', 'cubeinput')
-    .attr('class', 'nodes');
-  var gnodetypeconvolution = gcubeinput
-    .append('g')
-    .attr('class', 'node node-type-convolution')
-    .attr('transform', 'translate(85.75,180)')
-    .attr('style', 'opacity:1')
-    .attr('id', 'tip-2');
-  var glabel1 = gnodetypeconvolution
-    .append('g')
-    .attr('class', 'label')
-    .attr('transform', 'translate(80,185.25)')
-    .append('foreignObject')
-    .attr('width', '95.2734375')
-    .attr('height', '28.5')
-    .attr('style', 'display: inline-block; white-space: nowrap;')
-    .attr('class', 'cube-label')
-    .html('MaxPool');
-  var gcube1 = gnodetypeconvolution
-    .append('g')
-    .attr('transform', 'translate(35,35)');
-  var cube1 = [
-  'm 110.06666,186.93331 0,108.70439 -3.84654,1.36228 0,-107.95695 z',
-  'm 110.06666,295.6377 -106.9555294,0 L 6.7089235e-8,296.99998 106.22012,296.99998 Z',
-  'm 110.06666,186.93331 -106.9555294,0 0,108.70439 106.9555294,0 z',
-  'm 3.1111306,186.93331 0,108.70439 -3.111130532910765,1.36228 7e-15,-107.95695 z',
-  'm 110.06666,186.93331 -106.9555294,0 L 6.7089242e-8,189.04303 106.22012,189.04303 Z',
-  'm 106.22012,189.04303 -106.220119932910748,0 -7e-15,107.95695 106.220119932910762,0 z'
-];
-    DrawCube(gcube1,cube1);
+//
+DrawNode(gcubeinput,'85.75','24.25','tip-1','Conv1_32','convolution');
+DrawNode(gcubeinput,'85.75','175.75','tip-2','MaxPool1','convolution');
+DrawNode(gcubeinput,'85.75','333.25','tip-3','Conv2_64','convolution');
+DrawNode(gcubeinput,'85.75','487.75','tip-4','MaxPool2','convolution');
+DrawNode(gcubeinput,'85.75','642.25','tip-5','Conv3_128','convolution');
+DrawNode(gcubeinput,'85.75','796.75','tip-6','Conv4_64','convolution');
+DrawNode(gcubeinput,'85.75','951.25','tip-7','Conv5_128','convolution');
+DrawNode(gcubeinput,'85.75','1105.75','tip-8','MaxPool3','convolution');
+DrawNode(gcubeinput,'85.75','1260.25','tip-9','Conv6_256','convolution');
+DrawNode(gcubeinput,'85.75','1414.75','tip-10','Conv7_128','convolution');
+DrawNode(gcubeinput,'85.75','1569.25','tip-11','Conv8_256','convolution');
+DrawNode(gcubeinput,'85.75','1723.75','tip-12','MaxPool4','convolution');
+DrawNode(gcubeinput,'85.75','1878.25','tip-13','Conv9_512','convolution');
+DrawNode(gcubeinput,'85.75','2032.75','tip-14','Conv10_256','convolution');
+DrawNode(gcubeinput,'85.75','2187.25','tip-15','Conv11_512','convolution');
+DrawNode(gcubeinput,'85.75','2341.75','tip-16','Conv12_256','convolution');
+DrawNode(gcubeinput,'85.75','2496.25','tip-17','Conv13_512','convolution');
+
+}
+
+function DrawNode(cubeinput,nodex,nodey,id,txt,nodetype){
+var gnodetypeconvolution = cubeinput
+.append('g')
+.attr('class', 'node node-type-'+nodetype)
+.attr('transform', 'translate('+nodex+','+nodey+')')//155.75
+.attr('style', 'opacity:1')
+.attr('id', id);//id
+var glabel1 = gnodetypeconvolution
+.append('g')
+.attr('class', 'label')
+.attr('transform', 'translate(80,185.25)')
+.append('foreignObject')
+.attr('width', '95.2734375')
+.attr('height', '28.5')
+.attr('style', 'display: inline-block; white-space: nowrap;')
+.attr('class', 'cube-label')
+.html(txt);
+var gcube1 = gnodetypeconvolution
+.append('g')
+.attr('transform', 'translate(35,35)');
+DrawCube(gcube1,cube1);
+//
 }
 
 function DrawPath(g,path){
