@@ -49,7 +49,7 @@ function Draw_cube() {
     .append('svg')
     .attr('id', 'net-svg')
     .attr('width', '300')
-    .attr('height', '3000');
+    .attr('height', '8000');
 
   var defs = svgContainer_anime.append('defs');
 
@@ -87,88 +87,213 @@ function Draw_cube() {
     .append('g')
     .attr('transform', 'translate(15,31)');
   var goutput = gtransform.append('g').attr('class', 'output');
-  DrawPath(goutput,'M120,194.5 L175,214.5 L175,244.5');//conv1_32
-  DrawPath(goutput,'M175,357.5 L175,400');//maxpool1
-  DrawPath(goutput,'M175,512 L175,554.5');//conv2
-  DrawPath(goutput,'M175,666.5 L175,709');//Maxpool2
-  DrawPath(goutput,'M175,821 L175,863');//conv3
-  DrawPath(goutput,'M175,975.5 L175,1018');//conv4
-  DrawPath(goutput,'M175,1130 L175,1172.5');//conv5
-  DrawPath(goutput,'M175,1284.5 L175,1326.5');//Maxpool3
-  DrawPath(goutput,'M175,1439 L175,1481.5');//conv6
-  DrawPath(goutput,'M175,1593.5 L175,1636');//conv7
-  DrawPath(goutput,'M175,1748 L175,1790.5');//conv8
-  DrawPath(goutput,'M175,1902.5 L175,1945');//Maxpool
-  DrawPath(goutput,'M175,2057 L175,2099.5');//conv9
-  DrawPath(goutput,'M175,2211.5 L175,2254');//conv10
-  DrawPath(goutput,'M175,2366 L175,2408.5');//conv11
-  DrawPath(goutput,'M175,2520.5 L175,2563');//conv12
-  DrawPath(goutput,'M175,2675 L175,2717.5');//conv13
+  DrawPath(goutput, 'M120,194.5 L175,214.5 L175,244.5'); //conv1_32  154.5 42.5
+  DrawPath(goutput, 'M175,357.5 L175,400'); //maxpool1
+  DrawPath(goutput, 'M175,512 L175,554.5'); //conv2
+  DrawPath(goutput, 'M175,666.5 L175,709'); //Maxpool2
+  DrawPath(goutput, 'M175,821 L175,863'); //conv3
+  DrawPath(goutput, 'M175,975.5 L175,1018'); //conv4
+  DrawPath(goutput, 'M175,1130 L175,1172.5'); //conv5
+  DrawPath(goutput, 'M175,1284.5 L175,1326.5'); //Maxpool3
+  DrawPath(goutput, 'M175,1439 L175,1481.5'); //conv6
+  DrawPath(goutput, 'M175,1593.5 L175,1636'); //conv7
+  DrawPath(goutput, 'M175,1748 L175,1790.5'); //conv8
+  DrawPath(goutput, 'M175,1902.5 L175,1945'); //Maxpool4
+  DrawPath(goutput, 'M175,2057 L175,2099.5'); //conv9
+  DrawPath(goutput, 'M175,2211.5 L175,2254'); //conv10
+  DrawPath(goutput, 'M175,2366 L175,2408.5'); //conv11
+  DrawPath(goutput, 'M175,2520.5 L175,2563'); //conv12
+  DrawPath(goutput, 'M175,2675 L175,2717.5'); //conv13
+  DrawPath(goutput, 'M175,2829.5 L100,2849.5 L100,2872'); //Maxpool5
+  DrawPath(goutput, 'M100,2984 L100,3026.5'); //conv14
+  DrawPath(goutput, 'M100,3138.5 L100,3181'); //conv15
+  DrawPath(goutput, 'M100,3293 L100,3335.5'); //conv16
+  DrawPath(goutput, 'M100,3447.5 L100,3490'); //conv17
+  DrawPath(goutput, 'M100,3605 L100,3644.5'); //conv18
+  DrawPath(goutput, 'M100,3756.5 L100,3799'); //conv19
+  DrawPath(goutput, 'M100,3911 L100,3953.5'); //conv20
+  // DrawPath(goutput, 'M100,4065.5 L100,4108'); //conv21
+  // DrawPath(goutput, 'M100,4220 L100,4262.5'); //conv22
   var gcubeinput = goutput
     .append('g')
     .attr('id', 'cubeinput')
     .attr('class', 'nodes');
-//
-DrawNode(gcubeinput,'85.75','24.25','tip-1','Conv1_32','convolution');
-DrawNode(gcubeinput,'85.75','175.75','tip-2','MaxPool1','convolution');
-DrawNode(gcubeinput,'85.75','333.25','tip-3','Conv2_64','convolution');
-DrawNode(gcubeinput,'85.75','487.75','tip-4','MaxPool2','convolution');
-DrawNode(gcubeinput,'85.75','642.25','tip-5','Conv3_128','convolution');
-DrawNode(gcubeinput,'85.75','796.75','tip-6','Conv4_64','convolution');
-DrawNode(gcubeinput,'85.75','951.25','tip-7','Conv5_128','convolution');
-DrawNode(gcubeinput,'85.75','1105.75','tip-8','MaxPool3','convolution');
-DrawNode(gcubeinput,'85.75','1260.25','tip-9','Conv6_256','convolution');
-DrawNode(gcubeinput,'85.75','1414.75','tip-10','Conv7_128','convolution');
-DrawNode(gcubeinput,'85.75','1569.25','tip-11','Conv8_256','convolution');
-DrawNode(gcubeinput,'85.75','1723.75','tip-12','MaxPool4','convolution');
-DrawNode(gcubeinput,'85.75','1878.25','tip-13','Conv9_512','convolution');
-DrawNode(gcubeinput,'85.75','2032.75','tip-14','Conv10_256','convolution');
-DrawNode(gcubeinput,'85.75','2187.25','tip-15','Conv11_512','convolution');
-DrawNode(gcubeinput,'85.75','2341.75','tip-16','Conv12_256','convolution');
-DrawNode(gcubeinput,'85.75','2496.25','tip-17','Conv13_512','convolution');
-
+  //
+  DrawNode(gcubeinput, '85.75', '24.25', 'tip-1', 'Conv1_32', 'convolution');
+  DrawNode(gcubeinput, '85.75', '175.75', 'tip-2', 'MaxPool1', 'pooling');
+  DrawNode(gcubeinput, '85.75', '333.25', 'tip-3', 'Conv2_64', 'convolution');
+  DrawNode(gcubeinput, '85.75', '487.75', 'tip-4', 'MaxPool2', 'pooling');
+  DrawNode(gcubeinput, '85.75', '642.25', 'tip-5', 'Conv3_128', 'convolution');
+  DrawNode(gcubeinput, '85.75', '796.75', 'tip-6', 'Conv4_64', 'convolution');
+  DrawNode(gcubeinput, '85.75', '951.25', 'tip-7', 'Conv5_128', 'convolution');
+  DrawNode(gcubeinput, '85.75', '1105.75', 'tip-8', 'MaxPool3', 'pooling');
+  DrawNode(gcubeinput, '85.75', '1260.25', 'tip-9', 'Conv6_256', 'convolution');
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '1414.75',
+    'tip-10',
+    'Conv7_128',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '1569.25',
+    'tip-11',
+    'Conv8_256',
+    'convolution'
+  );
+  DrawNode(gcubeinput, '85.75', '1723.75', 'tip-12', 'MaxPool4', 'pooling');
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '1878.25',
+    'tip-13',
+    'Conv9_512',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '2032.75',
+    'tip-14',
+    'Conv10_256',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '2187.25',
+    'tip-15',
+    'Conv11_512',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '2341.75',
+    'tip-16',
+    'Conv12_256',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '2496.25',
+    'tip-17',
+    'Conv13_512',
+    'convolution'
+  );
+  DrawNode(gcubeinput, '16.5', '2650.75', 'tip-18', 'MaxPool5', 'pooling');
+  DrawNode(
+    gcubeinput,
+    '16.5',
+    '2805.25',
+    'tip-19',
+    'Conv14_1024',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '16.5',
+    '2959.75',
+    'tip-19',
+    'Conv14_1024',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '16.5',
+    '3114.25',
+    'tip-19',
+    'Conv14_1024',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '16.5',
+    '3268.75',
+    'tip-19',
+    'Conv14_1024',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '16.5',
+    '3423.25',
+    'tip-19',
+    'Conv14_1024',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '16.5',
+    '3577.75',
+    'tip-19',
+    'Conv14_1024',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '16.5',
+    '3732.25',
+    'tip-19',
+    'Conv14_1024',
+    'convolution'
+  );
 }
 
-function DrawNode(cubeinput,nodex,nodey,id,txt,nodetype){
-var gnodetypeconvolution = cubeinput
-.append('g')
-.attr('class', 'node node-type-'+nodetype)
-.attr('transform', 'translate('+nodex+','+nodey+')')//155.75
-.attr('style', 'opacity:1')
-.attr('id', id);//id
-var glabel1 = gnodetypeconvolution
-.append('g')
-.attr('class', 'label')
-.attr('transform', 'translate(80,185.25)')
-.append('foreignObject')
-.attr('width', '95.2734375')
-.attr('height', '28.5')
-.attr('style', 'display: inline-block; white-space: nowrap;')
-.attr('class', 'cube-label')
-.html(txt);
-var gcube1 = gnodetypeconvolution
-.append('g')
-.attr('transform', 'translate(35,35)');
-DrawCube(gcube1,cube1);
-//
+function DrawNode(cubeinput, nodex, nodey, id, txt, nodetype) {
+  var gnodetypeconvolution = cubeinput
+    .append('g')
+    .attr('class', 'node node-type-' + nodetype)
+    .attr('transform', 'translate(' + nodex + ',' + nodey + ')') //155.75
+    .attr('style', 'opacity:1')
+    .attr('id', id); //id
+  var glabel1 = gnodetypeconvolution
+    .append('g')
+    .attr('class', 'label')
+    .attr('transform', 'translate(80,185.25)')
+    .append('foreignObject')
+    .attr('width', '95.2734375')
+    .attr('height', '28.5')
+    .attr('style', 'display: inline-block; white-space: nowrap;')
+    .attr('class', 'cube-label')
+    .html(txt);
+  var gcube1 = gnodetypeconvolution
+    .append('g')
+    .attr('transform', 'translate(35,35)');
+  DrawCube(gcube1, cube1);
+  //
 }
 
-function DrawPath(g,path){
-  g.append('g').attr('class', 'edgePaths').append('g')
-  .attr('class', 'edgePath')
-  .attr('style', 'opacity:1').append('path')
-  .attr('class', 'path')
-  .attr('d', path)
-  .attr('marker-end', 'url(#arrow)')
-  .attr('style', 'fill:none');
+function DrawPath(g, path) {
+  g.append('g')
+    .attr('class', 'edgePaths')
+    .append('g')
+    .attr('class', 'edgePath')
+    .attr('style', 'opacity:1')
+    .append('path')
+    .attr('class', 'path')
+    .attr('d', path)
+    .attr('marker-end', 'url(#arrow)')
+    .attr('style', 'fill:none');
 }
 
-function DrawCube(g,cube){
-  var cubecolor = ['#353564','#afafde','#8686bf','#d7d7ff','#4d4d9f','#e9e9ff'];
-  for(var i=0;i<6;i++){
+function DrawCube(g, cube) {
+  var cubecolor = [
+    '#353564',
+    '#afafde',
+    '#8686bf',
+    '#d7d7ff',
+    '#4d4d9f',
+    '#e9e9ff'
+  ];
+  for (var i = 0; i < 6; i++) {
     g.append('path')
-    .attr('style', 'fill:'+cubecolor[i]+';stroke:none;stroke-width:3;')
-    .attr('d',cube[i]);
+      .attr('style', 'fill:' + cubecolor[i] + ';stroke:none;stroke-width:3;')
+      .attr('d', cube[i]);
   }
 }
 
