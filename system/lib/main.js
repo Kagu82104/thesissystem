@@ -71,7 +71,9 @@ function Draw_cube() {
     .attr('d', arrow_path)
     .attr('fill', '#554037');
 
-  var pattern1 = defs.append('pattern').attr('id','imgpattern').append('image').attr('xlink:href','data/img/conv1_0.jpg')
+  var pattern1 = defs.append('pattern').attr('id','imgpattern').append('image').attr("x", 0).attr("y", 0).attr('xlink:href','data/img/conv1_0.jpg').attr("width", 400)
+  .attr("height", 400)
+  .attr("id", "fillImage");
 //input
   var svg_img = svgContainer_anime
     .append('image')
@@ -134,134 +136,134 @@ var gtransform = svgContainer_anime
   DrawPath(goutput, 'M175,4219 L175,4262.5'); //conv21
   DrawPath(goutput, 'M175,4373.5 L175,4417'); //conv22
   DrawPath(goutput, 'M175,4528 L175,4571.5'); //conv23
-  DrawPath(goutput, 'M175,4682 L175,4703 L160,4728.5'); //conv23
+  DrawPath(goutput, 'M175,4682 L175,4703 L160,4728.5'); //inputtooutput
   var gcubeinput = goutput
     .append('g')
     .attr('id', 'cubeinput')
     .attr('class', 'nodes');
   //
-  DrawNode(gcubeinput, '85.75', '24.25', 'tip-1', 'Conv1_32', 'convolution');
+  DrawNodeConvolution(gcubeinput, '85.75', '24.25', 'tip-1', 'Conv1_32', 'convolution','data/img/conv1_0.jpg');
   DrawNode(gcubeinput, '85.75', '175.75', 'tip-2', 'MaxPool1', 'pooling');
-  DrawNode(gcubeinput, '85.75', '333.25', 'tip-3', 'Conv2_64', 'convolution');
+  DrawNodeConvolution(gcubeinput, '85.75', '333.25', 'tip-3', 'Conv2_64', 'convolution','data/img/conv2_0.jpg');
   DrawNode(gcubeinput, '85.75', '487.75', 'tip-4', 'MaxPool2', 'pooling');
-  DrawNode(gcubeinput, '85.75', '642.25', 'tip-5', 'Conv3_128', 'convolution');
-  DrawNode(gcubeinput, '85.75', '796.75', 'tip-6', 'Conv4_64', 'convolution');
-  DrawNode(gcubeinput, '85.75', '951.25', 'tip-7', 'Conv5_128', 'convolution');
+  DrawNodeConvolution(gcubeinput, '85.75', '642.25', 'tip-5', 'Conv3_128', 'convolution','data/img/conv3_0.jpg');
+  DrawNodeConvolution(gcubeinput, '85.75', '796.75', 'tip-6', 'Conv4_64', 'convolution','data/img/conv4_0.jpg');
+  DrawNodeConvolution(gcubeinput, '85.75', '951.25', 'tip-7', 'Conv5_128', 'convolution','data/img/conv5_0.jpg');
   DrawNode(gcubeinput, '85.75', '1105.75', 'tip-8', 'MaxPool3', 'pooling');
-  DrawNode(gcubeinput, '85.75', '1260.25', 'tip-9', 'Conv6_256', 'convolution');
-  DrawNode(
+  DrawNodeConvolution(gcubeinput, '85.75', '1260.25', 'tip-9', 'Conv6_256', 'convolution','data/img/conv6_0.jpg');
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '1414.75',
     'tip-10',
     'Conv7_128',
-    'convolution'
+    'convolution','data/img/conv7_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '1569.25',
     'tip-11',
     'Conv8_256',
-    'convolution'
+    'convolution','data/img/conv8_0.jpg'
   );
   DrawNode(gcubeinput, '85.75', '1723.75', 'tip-12', 'MaxPool4', 'pooling');
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '1878.25',
     'tip-13',
     'Conv9_512',
-    'convolution'
+    'convolution','data/img/conv9_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '2032.75',
     'tip-14',
     'Conv10_256',
-    'convolution'
+    'convolution','data/img/conv10_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '2187.25',
     'tip-15',
     'Conv11_512',
-    'convolution'
+    'convolution','data/img/conv11_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '2341.75',
     'tip-16',
     'Conv12_256',
-    'convolution'
+    'convolution','data/img/conv12_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '2496.25',
     'tip-17',
     'Conv13_512',
-    'convolution'
+    'convolution','data/img/conv13_0.jpg'
   );
   DrawNode(gcubeinput, '16.5', '2650.75', 'tip-18', 'MaxPool5', 'pooling');
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '16.5',
     '2805.25',
     'tip-19',
     'Conv14_1024',
-    'convolution'
+    'convolution','data/img/conv14_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '16.5',
     '2959.75',
     'tip-20',
     'Conv15_512',
-    'convolution'
+    'convolution','data/img/conv15_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '16.5',
     '3114.25',
     'tip-21',
     'Conv16_1024',
-    'convolution'
+    'convolution','data/img/conv16_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '16.5',
     '3268.75',
     'tip-22',
     'Conv17_512',
-    'convolution'
+    'convolution','data/img/conv17_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '16.5',
     '3423.25',
     'tip-23',
     'Conv18_1024',
-    'convolution'
+    'convolution','data/img/conv18_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '16.5',
     '3577.75',
     'tip-24',
     'Conv19_1024',
-    'convolution'
+    'convolution','data/img/conv19_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '16.5',
     '3732.25',
     'tip-25',
     'Conv20_1024',
-    'convolution'
+    'convolution','data/img/conv20_0.jpg'
   );
   DrawNode(
     gcubeinput,
@@ -279,22 +281,22 @@ var gtransform = svgContainer_anime
     'concat',
     'concat'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '4041.25',
     'tip-28',
     'Conv21_1024',
     'convolution',
-    'conv21_0'
+    'data/img/conv21_0.jpg'
   );
-  DrawNode(
+  DrawNodeConvolution(
     gcubeinput,
     '85.75',
     '4195.75',
     'tip-29',
     'Conv22_125',
-    'convolution'
+    'convolution','data/img/conv22_0.jpg'
   );
   DrawNode(
     gcubeinput,
@@ -355,7 +357,7 @@ function DrawNode2(cubeinput, nodex, nodey, id, txt, nodetype) {
     DrawCube(gcube1, cube1);
   //
 }
-function DrawNodeConvolution(cubeinput, nodex, nodey, id, txt, nodetype,img) {
+function DrawNodeConvolution(cubeinput, nodex, nodey, id, txt, nodetype,image) {
   var gnodetypeconvolution = cubeinput
     .append('g')
     .attr('class', 'node node-type-' + nodetype)
@@ -365,7 +367,7 @@ function DrawNodeConvolution(cubeinput, nodex, nodey, id, txt, nodetype,img) {
   var glabel1 = gnodetypeconvolution
     .append('g')
     .attr('class', 'label')
-    .attr('transform', 'translate(40,185.25)')
+    .attr('transform', 'translate(85,185.25)')
     .append('foreignObject')
     .attr('width', '95.2734375')
     .attr('height', '28.5')
@@ -375,7 +377,7 @@ function DrawNodeConvolution(cubeinput, nodex, nodey, id, txt, nodetype,img) {
   var gcube1 = gnodetypeconvolution
     .append('g')
     .attr('transform', 'translate(35,35)');
-    DrawCubeConvolution(gcube1, cube1,img);
+    DrawCubeConvolution(gcube1, cube1,image);
   //
 }
 function DrawPath(g, path) {
@@ -406,7 +408,7 @@ function DrawCube(g, cube) {
       .attr('d', cube[i]);
   }
 }
-function DrawCubeConvolution(g, cube,img) {
+function DrawCubeConvolution(g, cube,image) {
   var cubecolor = [
     '#353564',
     '#afafde',
@@ -420,8 +422,18 @@ function DrawCubeConvolution(g, cube,img) {
       .attr('style', 'fill:' + cubecolor[i] + ';stroke:none;stroke-width:3;')
       .attr('d', cube[i]);
   }
-  g.append('path').attr('style', 'stroke:none;stroke-width:3;')
-      .attr('d', cube[i]).attr('fill','url(#imgpattern)');
+  //input
+  var svg_img1 = g
+    .append('image')
+    .attr('image-rendering', 'optimizeQuality')
+    .attr('id', 'conv1_0').attr('x','6.7089242e-8').attr('y','189');
+
+  var img = new Image();
+  var inputpic = image;
+
+  img.src = inputpic;
+  svg_img1.attr('width','106.35').attr('xlink:href', inputpic);
+      
 }
 function Draw_Animation() {
   var svgContainer_anime = d3
