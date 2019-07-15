@@ -48,7 +48,7 @@ function Draw_cube() {
     .select('#net-group')
     .append('svg')
     .attr('id', 'net-svg')
-    .attr('width', '300')
+    .attr('width', '350')
     .attr('height', '8000');
 
   var defs = svgContainer_anime.append('defs');
@@ -71,6 +71,8 @@ function Draw_cube() {
     .attr('d', arrow_path)
     .attr('fill', '#554037');
 
+  var pattern1 = defs.append('pattern').attr('id','imgpattern').append('image').attr('xlink:href','data/img/conv1_0.jpg')
+//input
   var svg_img = svgContainer_anime
     .append('image')
     .attr('image-rendering', 'optimizeQuality')
@@ -83,37 +85,56 @@ function Draw_cube() {
   var picwidth = width;
   svg_img.attr('width', $('#net-svg').width()).attr('xlink:href', inputpic);
 
-  var gtransform = svgContainer_anime
-    .append('g')
-    .attr('transform', 'translate(15,31)');
+  //output
+  var svg_img = svgContainer_anime
+  .append('image')
+  .attr('image-rendering', 'optimizeQuality')
+  .attr('id', 'outputimg').attr('x',50).attr('y','4798');
+
+var img1 = new Image();
+var outputpic = 'data/predictions.png';
+
+img1.src = outputpic;
+svg_img.attr('width', $('#net-svg').width()).attr('xlink:href', outputpic);
+
+var gtransform = svgContainer_anime
+  .append('g')
+  .attr('transform', 'translate(40,68.5)');
+//
   var goutput = gtransform.append('g').attr('class', 'output');
   DrawPath(goutput, 'M120,194.5 L175,214.5 L175,244.5'); //conv1_32  154.5 42.5
-  DrawPath(goutput, 'M175,357.5 L175,400'); //maxpool1
-  DrawPath(goutput, 'M175,512 L175,554.5'); //conv2
-  DrawPath(goutput, 'M175,666.5 L175,709'); //Maxpool2
-  DrawPath(goutput, 'M175,821 L175,863'); //conv3
-  DrawPath(goutput, 'M175,975.5 L175,1018'); //conv4
-  DrawPath(goutput, 'M175,1130 L175,1172.5'); //conv5
-  DrawPath(goutput, 'M175,1284.5 L175,1326.5'); //Maxpool3
-  DrawPath(goutput, 'M175,1439 L175,1481.5'); //conv6
-  DrawPath(goutput, 'M175,1593.5 L175,1636'); //conv7
-  DrawPath(goutput, 'M175,1748 L175,1790.5'); //conv8
-  DrawPath(goutput, 'M175,1902.5 L175,1945'); //Maxpool4
-  DrawPath(goutput, 'M175,2057 L175,2099.5'); //conv9
-  DrawPath(goutput, 'M175,2211.5 L175,2254'); //conv10
-  DrawPath(goutput, 'M175,2366 L175,2408.5'); //conv11
-  DrawPath(goutput, 'M175,2520.5 L175,2563'); //conv12
-  DrawPath(goutput, 'M175,2675 L175,2717.5'); //conv13
-  DrawPath(goutput, 'M175,2829.5 L100,2849.5 L100,2872'); //Maxpool5
-  DrawPath(goutput, 'M100,2984 L100,3026.5'); //conv14
-  DrawPath(goutput, 'M100,3138.5 L100,3181'); //conv15
-  DrawPath(goutput, 'M100,3293 L100,3335.5'); //conv16
-  DrawPath(goutput, 'M100,3447.5 L100,3490'); //conv17
-  DrawPath(goutput, 'M100,3605 L100,3644.5'); //conv18
-  DrawPath(goutput, 'M100,3756.5 L100,3799'); //conv19
-  DrawPath(goutput, 'M100,3911 L100,3953.5'); //conv20
-  // DrawPath(goutput, 'M100,4065.5 L100,4108'); //conv21
-  // DrawPath(goutput, 'M100,4220 L100,4262.5'); //conv22
+  DrawPath(goutput, 'M100,194.5 L30,214.5 L30,4703 L50,4728.5'); //input_output
+  DrawPath(goutput, 'M175,355 L175,397'); //maxpool1
+  DrawPath(goutput, 'M175,508 L175,554.5'); //conv2
+  DrawPath(goutput, 'M175,665 L175,709'); //Maxpool2
+  DrawPath(goutput, 'M175,820 L175,863'); //conv3
+  DrawPath(goutput, 'M175,974.5 L175,1018'); //conv4
+  DrawPath(goutput, 'M175,1129 L175,1172.5'); //conv5
+  DrawPath(goutput, 'M175,1283.5 L175,1326.5'); //Maxpool3
+  DrawPath(goutput, 'M175,1438 L175,1481.5'); //conv6
+  DrawPath(goutput, 'M175,1592.5 L175,1636'); //conv7
+  DrawPath(goutput, 'M175,1747 L175,1790.5'); //conv8
+  DrawPath(goutput, 'M175,1901.5 L175,1945'); //Maxpool4
+  DrawPath(goutput, 'M175,2056 L175,2099.5'); //conv9
+  DrawPath(goutput, 'M175,2210.5 L175,2254'); //conv10
+  DrawPath(goutput, 'M175,2365 L175,2408.5'); //conv11
+  DrawPath(goutput, 'M175,2519.5 L175,2563'); //conv12
+  DrawPath(goutput, 'M175,2674 L175,2717.5'); //conv13
+  DrawPath(goutput, 'M150,2828.5 L105,2849.5 L105,2872'); //Maxpool5
+  DrawPath(goutput, 'M200,2828.5 L245,2849.5 L245,3953.5'); //reorg
+  DrawPath(goutput, 'M105,2983 L105,3026.5'); //conv14
+  DrawPath(goutput, 'M105,3137.5 L105,3181'); //conv15
+  DrawPath(goutput, 'M105,3292 L105,3335.5'); //conv16
+  DrawPath(goutput, 'M105,3446.5 L105,3490'); //conv17
+  DrawPath(goutput, 'M105,3601 L105,3644.5'); //conv18
+  DrawPath(goutput, 'M105,3755.5 L105,3799'); //conv19
+  DrawPath(goutput, 'M105,3910 L105,3953.5'); //conv20
+  DrawPath(goutput, 'M105,4064.5 L105,4085.5 L140,4108'); //concat
+  DrawPath(goutput, 'M245,4064.5 L245,4085.5 L200,4108'); //concat
+  DrawPath(goutput, 'M175,4219 L175,4262.5'); //conv21
+  DrawPath(goutput, 'M175,4373.5 L175,4417'); //conv22
+  DrawPath(goutput, 'M175,4528 L175,4571.5'); //conv23
+  DrawPath(goutput, 'M175,4682 L175,4703 L160,4728.5'); //conv23
   var gcubeinput = goutput
     .append('g')
     .attr('id', 'cubeinput')
@@ -198,50 +219,94 @@ function Draw_cube() {
     gcubeinput,
     '16.5',
     '2959.75',
-    'tip-19',
-    'Conv14_1024',
+    'tip-20',
+    'Conv15_512',
     'convolution'
   );
   DrawNode(
     gcubeinput,
     '16.5',
     '3114.25',
-    'tip-19',
-    'Conv14_1024',
+    'tip-21',
+    'Conv16_1024',
     'convolution'
   );
   DrawNode(
     gcubeinput,
     '16.5',
     '3268.75',
-    'tip-19',
-    'Conv14_1024',
+    'tip-22',
+    'Conv17_512',
     'convolution'
   );
   DrawNode(
     gcubeinput,
     '16.5',
     '3423.25',
-    'tip-19',
-    'Conv14_1024',
+    'tip-23',
+    'Conv18_1024',
     'convolution'
   );
   DrawNode(
     gcubeinput,
     '16.5',
     '3577.75',
-    'tip-19',
-    'Conv14_1024',
+    'tip-24',
+    'Conv19_1024',
     'convolution'
   );
   DrawNode(
     gcubeinput,
     '16.5',
     '3732.25',
-    'tip-19',
-    'Conv14_1024',
+    'tip-25',
+    'Conv20_1024',
     'convolution'
   );
+  DrawNode(
+    gcubeinput,
+    '155',
+    '3732.25',
+    'tip-26',
+    'reorg',
+    'reshap'
+  );
+  DrawNode2(
+    gcubeinput,
+    '85.75',
+    '3886.75',
+    'tip-27',
+    'concat',
+    'concat'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '4041.25',
+    'tip-28',
+    'Conv21_1024',
+    'convolution',
+    'conv21_0'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '4195.75',
+    'tip-29',
+    'Conv22_125',
+    'convolution'
+  );
+  DrawNode(
+    gcubeinput,
+    '85.75',
+    '4350.25',
+    'tip-30',
+    'Region',
+    'region'
+  );
+  //DrawNode(gcubeinput,'50','4504.75','tip-31','Detection','sink');
+
+
 }
 
 function DrawNode(cubeinput, nodex, nodey, id, txt, nodetype) {
@@ -254,7 +319,7 @@ function DrawNode(cubeinput, nodex, nodey, id, txt, nodetype) {
   var glabel1 = gnodetypeconvolution
     .append('g')
     .attr('class', 'label')
-    .attr('transform', 'translate(80,185.25)')
+    .attr('transform', 'translate(85,185.25)')
     .append('foreignObject')
     .attr('width', '95.2734375')
     .attr('height', '28.5')
@@ -267,7 +332,52 @@ function DrawNode(cubeinput, nodex, nodey, id, txt, nodetype) {
   DrawCube(gcube1, cube1);
   //
 }
-
+function DrawNode2(cubeinput, nodex, nodey, id, txt, nodetype) {
+  var gnodetypeconvolution = cubeinput
+    .append('g')
+    .attr('class', 'node node-type-' + nodetype)
+    .attr('transform', 'translate(' + nodex + ',' + nodey + ')') //155.75
+    .attr('style', 'opacity:1')
+    .attr('id', id); //id
+  var glabel1 = gnodetypeconvolution
+    .append('g')
+    .attr('class', 'label')
+    .attr('transform', 'translate(40,185.25)')
+    .append('foreignObject')
+    .attr('width', '95.2734375')
+    .attr('height', '28.5')
+    .attr('style', 'display: inline-block; white-space: nowrap;')
+    .attr('class', 'cube-label')
+    .html(txt);
+  var gcube1 = gnodetypeconvolution
+    .append('g')
+    .attr('transform', 'translate(35,35)');
+    DrawCube(gcube1, cube1);
+  //
+}
+function DrawNodeConvolution(cubeinput, nodex, nodey, id, txt, nodetype,img) {
+  var gnodetypeconvolution = cubeinput
+    .append('g')
+    .attr('class', 'node node-type-' + nodetype)
+    .attr('transform', 'translate(' + nodex + ',' + nodey + ')') //155.75
+    .attr('style', 'opacity:1')
+    .attr('id', id); //id
+  var glabel1 = gnodetypeconvolution
+    .append('g')
+    .attr('class', 'label')
+    .attr('transform', 'translate(40,185.25)')
+    .append('foreignObject')
+    .attr('width', '95.2734375')
+    .attr('height', '28.5')
+    .attr('style', 'display: inline-block; white-space: nowrap;')
+    .attr('class', 'cube-label')
+    .html(txt);
+  var gcube1 = gnodetypeconvolution
+    .append('g')
+    .attr('transform', 'translate(35,35)');
+    DrawCubeConvolution(gcube1, cube1,img);
+  //
+}
 function DrawPath(g, path) {
   g.append('g')
     .attr('class', 'edgePaths')
@@ -296,7 +406,23 @@ function DrawCube(g, cube) {
       .attr('d', cube[i]);
   }
 }
-
+function DrawCubeConvolution(g, cube,img) {
+  var cubecolor = [
+    '#353564',
+    '#afafde',
+    '#8686bf',
+    '#d7d7ff',
+    '#4d4d9f',
+    '#e9e9ff'
+  ];
+  for (var i = 0; i < 5; i++) {
+    g.append('path')
+      .attr('style', 'fill:' + cubecolor[i] + ';stroke:none;stroke-width:3;')
+      .attr('d', cube[i]);
+  }
+  g.append('path').attr('style', 'stroke:none;stroke-width:3;')
+      .attr('d', cube[i]).attr('fill','url(#imgpattern)');
+}
 function Draw_Animation() {
   var svgContainer_anime = d3
     .select('#col1')
@@ -324,6 +450,7 @@ function Draw_Animation() {
     .attr('d', arrow_path)
     .attr('fill', '#000');
 
+  
   var svg_img = svgContainer_anime
     .append('image')
     .attr('image-rendering', 'optimizeQuality')
