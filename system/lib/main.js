@@ -49,7 +49,7 @@ function Draw_cube() {
     .append('svg')
     .attr('id', 'net-svg')
     .attr('width', '350')
-    .attr('height', '8000');
+    .attr('height', '5100');
 
   var defs = svgContainer_anime.append('defs');
 
