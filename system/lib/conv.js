@@ -365,5 +365,816 @@ $(function () {
 				$("#net-group").find("div.air:last").remove();
 			}
 		);
-	});
+    });
+    
+    $("#rect0").click(function(){
+        $("#placehere").empty();
+        var title_value = 0;
+        var pic_times = 32;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 416);
+            elem.setAttribute("width", 416);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect1").click(function(){
+        $("#placehere").empty();
+        var title_value = 1;
+        var pic_times = 32;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第1層池化結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/maxpool" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 208);
+            elem.setAttribute("width", 208);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect2").click(function(){
+        $("#placehere").empty();
+        var title_value = 2;
+        var pic_times = 64;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 208);
+            elem.setAttribute("width", 208);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect3").click(function(){
+        $("#placehere").empty();
+        var title_value = 3;
+        var pic_times = 64;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層池化結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/maxpool" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 104);
+            elem.setAttribute("width", 104);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect4").click(function(){
+        $("#placehere").empty();
+        var title_value = 4;
+        var pic_times = 128;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 104);
+            elem.setAttribute("width", 104);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect5").click(function(){
+        $("#placehere").empty();
+        var title_value = 5;
+        var pic_times = 64;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 104);
+            elem.setAttribute("width", 104);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect6").click(function(){
+        $("#placehere").empty();
+        var title_value = 6;
+        var pic_times = 128;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 104);
+            elem.setAttribute("width", 104);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect7").click(function(){
+        $("#placehere").empty();
+        var title_value = 7;
+        var pic_times = 128;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層池化結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/maxpool" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 52);
+            elem.setAttribute("width", 52);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect8").click(function(){
+        $("#placehere").empty();
+        var title_value = 8;
+        var pic_times = 256;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 52);
+            elem.setAttribute("width", 52);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect9").click(function(){
+        $("#placehere").empty();
+        var title_value = 9;
+        var pic_times = 128;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 52);
+            elem.setAttribute("width", 52);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect10").click(function(){
+        $("#placehere").empty();
+        var title_value = 10;
+        var pic_times = 256;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 52);
+            elem.setAttribute("width", 52);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect11").click(function(){
+        $("#placehere").empty();
+        var title_value = 11;
+        var pic_times = 256;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 26);
+            elem.setAttribute("width", 26);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect12").click(function(){
+        $("#placehere").empty();
+        var title_value = 12;
+        var pic_times = 512;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 26);
+            elem.setAttribute("width", 26);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect13").click(function(){
+        $("#placehere").empty();
+        var title_value = 13;
+        var pic_times = 256;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 26);
+            elem.setAttribute("width", 26);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect14").click(function(){
+        $("#placehere").empty();
+        var title_value = 14;
+        var pic_times = 512;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 26);
+            elem.setAttribute("width", 26);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect15").click(function(){
+        $("#placehere").empty();
+        var title_value = 15;
+        var pic_times = 256;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 26);
+            elem.setAttribute("width", 26);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect16").click(function(){
+        $("#placehere").empty();
+        var title_value = 16;
+        var pic_times = 512;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 26);
+            elem.setAttribute("width", 26);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect17").click(function(){
+        $("#placehere").empty();
+        var title_value = 17;
+        var pic_times = 512;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層池化結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/maxpool" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect18").click(function(){
+        $("#placehere").empty();
+        var title_value = 18;
+        var pic_times = 1024;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect19").click(function(){
+        $("#placehere").empty();
+        var title_value = 19;
+        var pic_times = 512;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect20").click(function(){
+        $("#placehere").empty();
+        var title_value = 20;
+        var pic_times = 1024;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect21").click(function(){
+        $("#placehere").empty();
+        var title_value = 21;
+        var pic_times = 512;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect22").click(function(){
+        $("#placehere").empty();
+        var title_value = 22;
+        var pic_times = 1024;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect23").click(function(){
+        $("#placehere").empty();
+        var title_value = 23;
+        var pic_times = 1024;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect24").click(function(){
+        $("#placehere").empty();
+        var title_value = 24;
+        var pic_times = 1024;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect25").click(function(){
+        $("#placehere").empty();
+        var title_value = 28;
+        var pic_times = 1024;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
+    $("#rect26").click(function(){
+        $("#placehere").empty();
+        var title_value = 29;
+        var pic_times = 125;
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第"+title_value+"層卷積結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (var j = 0; j < pic_times; j++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + j;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/img/conv" + title_value + "_" + j + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + j;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", 13);
+            elem.setAttribute("width", 13);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + j).appendChild(elem);
+        }
+    })
 });

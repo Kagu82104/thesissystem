@@ -2,6 +2,9 @@ body {
   /* padding-bottom: 100%; */
   background-color: antiquewhite;
 }
+rect{
+  stroke-width: 3px;
+}
 .qtip-default {
   border: 1px solid #31343f;
   border-radius: 5px;
