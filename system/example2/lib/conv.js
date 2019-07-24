@@ -298,8 +298,6 @@ $(function () {
 		var title_value = $.trim($(this).parents().eq(0).find("td:eq(0)").text());
 		var title_name = $.trim($(this).parents().eq(0).find("td:eq(1)").text());
         var pic_times = $.trim($(this).parents().eq(0).find("td:eq(2)").text());
-        if(title_value=="28"){title_value=29;}
-        else if(title_value=="29"){title_value=30;}
 		if ($.trim($(this).index()) == 4) {
 			if (title_name === "Convolutional") {
 				$("#placehere").empty();
