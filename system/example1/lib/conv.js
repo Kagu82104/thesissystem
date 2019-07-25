@@ -406,9 +406,10 @@ $(function () {
 			}
 		}
 		else if ($.trim($(this).index()) == 3) {
+            if(title_name == "Convolutional"){
 			$("#placehere").empty();
 			var title_h3 = document.createElement("h3");
-			title_h3.className = "center";
+            title_h3.className = "center";
 			var t = document.createTextNode("第" + title_value + "層濾鏡結果");
 			title_h3.appendChild(t);
 			document.getElementById('placehere').append(title_h3);
@@ -431,7 +432,37 @@ $(function () {
 
 				document.getElementById('placehere').appendChild(div);
 				document.getElementById("divcon" + title_value + "_" + i).appendChild(elem);
-			}
+            }
+        }
+        else if(title_name == "Maxpool"){
+			$("#placehere").empty();
+			var title_h3 = document.createElement("h3");
+            title_h3.className = "center";
+            var pic_times = $.trim($(this).parent().prev().find("td:eq(2)").text());
+			var t = document.createTextNode("第" + title_value + "層濾鏡結果");
+			title_h3.appendChild(t);
+			document.getElementById('placehere').append(title_h3);
+			for (i = 0; i < pic_times; i++) {
+				var elem = document.createElement("img");
+				var div = document.createElement("div");
+				div.id = "divcon" + title_value + "_" + i;
+				div.className = "ImgInline"
+				elem.setAttribute("src", "data/yolo_v2_generated/layer_vis_l" + title_value + "_f" + i + ".jpg");
+				elem.className = "col-xs-6 rounded img-fluid";
+				elem.id = "img" + title_value + "_" + i;
+				var img_size = 100;
+				if (pic_times == 128) { img_size /= 1.5; }
+				else if (pic_times == 256) { img_size /= 2; }
+				else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+				else if (pic_times == 512) { img_size /= 3; }
+				else if (pic_times == 1024) { img_size /= 4; }
+				elem.setAttribute("height", img_size);
+				elem.setAttribute("width", img_size);
+
+				document.getElementById('placehere').appendChild(div);
+				document.getElementById("divcon" + title_value + "_" + i).appendChild(elem);
+            }
+        }
 		};
 		$("img.col-xs-6").hover(
 			function () {
@@ -443,7 +474,6 @@ $(function () {
 			}
 		);
     });
-    
     $("#rect0").click(function(){
         $("#placehere").empty();
         var title_value = 0;
@@ -1519,3 +1549,274 @@ $(function () {
 		);
     })
 });
+$("#tip-1").click(function(){
+    $("#placehere").empty();
+    var title_value = 0;
+    var title_name = "Convolutional";
+    var pic_times = 32;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+
+$("#tip-2").click(function(){
+    $("#placehere").empty();
+    var title_value = 1;
+    var title_name = "Maxpool";
+    var pic_times = 32;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-3").click(function(){
+    $("#placehere").empty();
+    var title_value = 2;
+    var title_name = "Convolutional";
+    var pic_times = 64;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-4").click(function(){
+    $("#placehere").empty();
+    var title_value = 3;
+    var title_name = "Maxpool";
+    var pic_times = 64;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-5").click(function(){
+    $("#placehere").empty();
+    var title_value = 4;
+    var title_name = "Convolutional";
+    var pic_times = 128;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-6").click(function(){
+    $("#placehere").empty();
+    var title_value = 5;
+    var title_name = "Convolutional";
+    var pic_times = 64;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-7").click(function(){
+    $("#placehere").empty();
+    var title_value = 6;
+    var title_name = "Convolutional";
+    var pic_times = 128;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-8").click(function(){
+    $("#placehere").empty();
+    var title_value = 7;
+    var title_name = "Maxpool";
+    var pic_times = 128;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-9").click(function(){
+    $("#placehere").empty();
+    var title_value = 8;
+    var title_name = "Convolutional";
+    var pic_times = 256;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-10").click(function(){
+    $("#placehere").empty();
+    var title_value = 9;
+    var title_name = "Convolutional";
+    var pic_times = 32;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-11").click(function(){
+    $("#placehere").empty();
+    var title_value = 10;
+    var title_name = "Convolutional";
+    var pic_times = 128;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-12").click(function(){
+    $("#placehere").empty();
+    var title_value = 11;
+    var title_name = "Maxpool";
+    var pic_times = 256;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-13").click(function(){
+    $("#placehere").empty();
+    var title_value = 12;
+    var title_name = "Convolutional";
+    var pic_times = 512;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-14").click(function(){
+    $("#placehere").empty();
+    var title_value = 13;
+    var title_name = "Convolutional";
+    var pic_times = 256;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-15").click(function(){
+    $("#placehere").empty();
+    var title_value = 14;
+    var title_name = "Convolutional";
+    var pic_times = 512;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-16").click(function(){
+    $("#placehere").empty();
+    var title_value = 15;
+    var title_name = "Convolutional";
+    var pic_times = 256;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-17").click(function(){
+    $("#placehere").empty();
+    var title_value = 16;
+    var title_name = "Convolutional";
+    var pic_times = 512;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-18").click(function(){
+    $("#placehere").empty();
+    var title_value = 17;
+    var title_name = "Maxpool";
+    var pic_times = 512;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-19").click(function(){
+    $("#placehere").empty();
+    var title_value = 18;
+    var title_name = "Convolutional";
+    var pic_times = 1024;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-20").click(function(){
+    $("#placehere").empty();
+    var title_value = 19;
+    var title_name = "Convolutional";
+    var pic_times = 512;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-21").click(function(){
+    $("#placehere").empty();
+    var title_value = 20;
+    var title_name = "Convolutional";
+    var pic_times = 1024;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-22").click(function(){
+    $("#placehere").empty();
+    var title_value = 21;
+    var title_name = "Convolutional";
+    var pic_times = 512;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-23").click(function(){
+    $("#placehere").empty();
+    var title_value = 22;
+    var title_name = "Convolutional";
+    var pic_times = 1024;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-24").click(function(){
+    $("#placehere").empty();
+    var title_value = 23;
+    var title_name = "Convolutional";
+    var pic_times = 1024;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-25").click(function(){
+    $("#placehere").empty();
+    var title_value = 24;
+    var title_name = "Convolutional";
+    var pic_times = 1024;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-26").click(function(){
+    $("#placehere").empty();
+    var title_value = 25;
+    var title_name = "Convolutional";
+    var pic_times = 32;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-27").click(function(){
+    $("#placehere").empty();
+    var title_value = 26;
+    var title_name = "Convolutional";
+    var pic_times = 32;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-28").click(function(){
+    $("#placehere").empty();
+    var title_value = 29;
+    var title_name = "Convolutional";
+    var pic_times = 1024;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-29").click(function(){
+    $("#placehere").empty();
+    var title_value = 30;
+    var title_name = "Convolutional";
+    var pic_times = 425;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+$("#tip-30").click(function(){
+    $("#placehere").empty();
+    var title_value = 29;
+    var title_name = "Convolutional";
+    var pic_times = 32;
+    Convolutionaltxt(title_name,title_value,pic_times);
+})
+
+function Convolutionaltxt(title_name,title_value,pic_times){
+    if(title_name == "Convolutional"){
+        $("#placehere").empty();
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第" + title_value + "層濾鏡結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (i = 0; i < pic_times; i++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + i;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/yolo_v2_generated/layer_vis_l" + title_value + "_f" + i + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + i;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", img_size);
+            elem.setAttribute("width", img_size);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + i).appendChild(elem);
+        }
+    }
+    else if(title_name == "Maxpool"){
+        $("#placehere").empty();
+        var title_h3 = document.createElement("h3");
+        title_h3.className = "center";
+        var t = document.createTextNode("第" + title_value + "層濾鏡結果");
+        title_h3.appendChild(t);
+        document.getElementById('placehere').append(title_h3);
+        for (i = 0; i < pic_times; i++) {
+            var elem = document.createElement("img");
+            var div = document.createElement("div");
+            div.id = "divcon" + title_value + "_" + i;
+            div.className = "ImgInline"
+            elem.setAttribute("src", "data/yolo_v2_generated/layer_vis_l" + title_value + "_f" + i + ".jpg");
+            elem.className = "col-xs-6 rounded img-fluid";
+            elem.id = "img" + title_value + "_" + i;
+            var img_size = 100;
+            if (pic_times == 128) { img_size /= 1.5; }
+            else if (pic_times == 256) { img_size /= 2; }
+            else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
+            else if (pic_times == 512) { img_size /= 3; }
+            else if (pic_times == 1024) { img_size /= 4; }
+            elem.setAttribute("height", img_size);
+            elem.setAttribute("width", img_size);
+
+            document.getElementById('placehere').appendChild(div);
+            document.getElementById("divcon" + title_value + "_" + i).appendChild(elem);
+        }
+    }
+
+}

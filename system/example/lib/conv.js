@@ -1589,28 +1589,28 @@ $("#tip-6").click(function(){
     $("#placehere").empty();
     var title_value = 5;
     var title_name = "Convolutional";
-    var pic_times = 128;
+    var pic_times = 64;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-7").click(function(){
     $("#placehere").empty();
     var title_value = 6;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 128;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-8").click(function(){
     $("#placehere").empty();
     var title_value = 7;
     var title_name = "Maxpool";
-    var pic_times = 32;
+    var pic_times = 128;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-9").click(function(){
     $("#placehere").empty();
     var title_value = 8;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 256;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-10").click(function(){
@@ -1624,105 +1624,105 @@ $("#tip-11").click(function(){
     $("#placehere").empty();
     var title_value = 10;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 128;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-12").click(function(){
     $("#placehere").empty();
     var title_value = 11;
     var title_name = "Maxpool";
-    var pic_times = 32;
+    var pic_times = 256;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-13").click(function(){
     $("#placehere").empty();
     var title_value = 12;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 512;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-14").click(function(){
     $("#placehere").empty();
     var title_value = 13;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 256;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-15").click(function(){
     $("#placehere").empty();
     var title_value = 14;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 512;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-16").click(function(){
     $("#placehere").empty();
     var title_value = 15;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 256;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-17").click(function(){
     $("#placehere").empty();
     var title_value = 16;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 512;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-18").click(function(){
     $("#placehere").empty();
     var title_value = 17;
     var title_name = "Maxpool";
-    var pic_times = 32;
+    var pic_times = 512;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-19").click(function(){
     $("#placehere").empty();
     var title_value = 18;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 1024;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-20").click(function(){
     $("#placehere").empty();
     var title_value = 19;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 512;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-21").click(function(){
     $("#placehere").empty();
     var title_value = 20;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 1024;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-22").click(function(){
     $("#placehere").empty();
     var title_value = 21;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 512;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-23").click(function(){
     $("#placehere").empty();
     var title_value = 22;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 1024;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-24").click(function(){
     $("#placehere").empty();
     var title_value = 23;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 1024;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-25").click(function(){
     $("#placehere").empty();
     var title_value = 24;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 1024;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-26").click(function(){
@@ -1741,16 +1741,16 @@ $("#tip-27").click(function(){
 })
 $("#tip-28").click(function(){
     $("#placehere").empty();
-    var title_value = 27;
+    var title_value = 29;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 1024;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-29").click(function(){
     $("#placehere").empty();
-    var title_value = 28;
+    var title_value = 30;
     var title_name = "Convolutional";
-    var pic_times = 32;
+    var pic_times = 425;
     Convolutionaltxt(title_name,title_value,pic_times);
 })
 $("#tip-30").click(function(){
