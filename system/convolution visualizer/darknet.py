@@ -113,7 +113,7 @@ class Darknet(nn.Module):
                         rangemaxarray = c_array[0][i].max()
                         currarray = ((c_array[0][i]-rangeminarray)*255/(rangemaxarray-rangeminarray))
                         data = transforms.ToPILImage()(currarray.astype(np.uint8)).convert('L')
-                        savename = '../example4/data/img/conv'+ str(ind) +'_'+str(i)+'.jpg'
+                        savename = '../example/data/img/conv'+ str(ind) +'_'+str(i)+'.jpg'
                         data.save(savename)
                 # if ind == 0 :
                 #     readimg = cv2.imread('data/input.jpg')
@@ -158,7 +158,7 @@ class Darknet(nn.Module):
                         rangemaxarray = c_array[0][i].max()
                         currarray = ((c_array[0][i]-rangeminarray)*255/(rangemaxarray-rangeminarray))
                         data = transforms.ToPILImage()(currarray.astype(np.uint8)).convert('L')
-                        savename = '../example4/data/img/maxpool' + str(ind) +'_'+str(i)+'.jpg'
+                        savename = '../example/data/img/maxpool' + str(ind) +'_'+str(i)+'.jpg'
                         data.save(savename)                    
                 if block['type'] == 'reorg':
                     c_array = x.cpu().detach().numpy()
@@ -169,7 +169,7 @@ class Darknet(nn.Module):
                         rangemaxarray = c_array[0][i].max()
                         currarray = ((c_array[0][i]-rangeminarray)*255/(rangemaxarray-rangeminarray))
                         data = transforms.ToPILImage()(currarray.astype(np.uint8)).convert('L')
-                        savename = '../example4/data/img/conv' + str(ind) +'_'+str(i)+'.jpg'
+                        savename = '../example/data/img/conv' + str(ind) +'_'+str(i)+'.jpg'
                         data.save(savename)
                     
             elif block['type'] == 'route':
