@@ -23,7 +23,11 @@ def detect(cfgfile, weightfile, imgfile):
         m.cuda()
 
     img = Image.open(imgfile).convert('RGB')
-    img.save("../example4/data/input.jpg")
+    if not os.path.exists('../example/data'):
+        os.makedirs('../example/data')
+    img.save("../example/data/input.jpg")
+    if not os.path.exists('../example/data/img'):
+        os.makedirs('../example/data/img')    
     sized = img.resize((m.width, m.height))
     #print(sized)
     #imageoutput(sized,savename='convolution.jpg')
@@ -36,7 +40,7 @@ def detect(cfgfile, weightfile, imgfile):
             print('%s: Predicted in %f seconds.' % (imgfile, (finish-start)))
 
     class_names = load_class_names(namesfile)
-    plot_boxes(img, boxes, '../example/data/predictions.jpg', class_names)
+    plot_boxes(img, boxes, 'data/predictions.jpg', class_names)
 
 def detect_cv2(cfgfile, weightfile, imgfile):
     import cv2

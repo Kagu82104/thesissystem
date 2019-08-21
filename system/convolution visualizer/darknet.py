@@ -5,9 +5,7 @@ import numpy as np
 import cv2
 from region_loss import RegionLoss
 from cfg import *
-from PIL import Image, ImageDraw
 from torchvision import transforms
-from utils import *
 #from layers.batchnorm.bn import BN2d
 
 class MaxPoolStride1(nn.Module):
@@ -131,12 +129,12 @@ class Darknet(nn.Module):
                     # G = (G + r1+g1+b1)/2
                     # B = (B + r1+g1+b1)/2
                     # rgbArray = np.zeros((416,416,3), 'uint8')
-                    # # rgbArray[:,:, 0] = R
-                    # # rgbArray[:,:, 1] = G
-                    # # rgbArray[:,:, 2] = B
-                    # # img = Image.fromarray(rgbArray)
-                    # # img = Image.merge('RGB',[R,G,B])
-                    # # img.save('myimg.jpeg')
+                    # rgbArray[:,:, 0] = R
+                    # rgbArray[:,:, 1] = G
+                    # rgbArray[:,:, 2] = B
+                    # img = Image.fromarray(rgbArray)
+                    # img = Image.merge('RGB',[R,G,B])
+                    # img.save('myimg.jpeg')
                     # readimg = cv2.cvtColor(readimg,cv2.COLOR_BGR2RGB)
                     # res = cv2.resize(readimg,(416,416),interpolation=cv2.INTER_CUBIC)
                     # R,G,B = cv2.split(res)
