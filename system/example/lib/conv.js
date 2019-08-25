@@ -361,11 +361,8 @@ $(function () {
 					elem.className = "col-xs-6 rounded img-fluid";
 					elem.id = "img" + title_value + "_" + i;
 					var img_size = 100;
-					if (pic_times == 128) { img_size /= 1.5; }
-					else if (pic_times == 256) { img_size /= 2; }
-					else if (pic_times == 256 || pic_times == 425) { img_size /= 2.5; }
-					else if (pic_times == 512) { img_size /= 3; }
-					else if (pic_times == 1024) { img_size /= 4; }
+					img_size /= 1.5;
+					
 					elem.setAttribute("height", img_size);
 					elem.setAttribute("width", img_size);
 
